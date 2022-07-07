@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>act.retrievals.aeri &#8212; Atmospheric data Community Toolkit 0.post1+gbfc1447 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/doc_shared.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-8YN80YZDD8');
+                </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="ACT Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+  <nav class="navbar navbar-dark navbar-expand-lg bg-arm fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../index.html">
+<p class="title">Atmospheric data Community Toolkit</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../userguide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../API/index.html">
+  API Reference Manual
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../source/auto_examples/index.html">
+  ACT Example Gallery
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog.html">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://github.com/ARM-DOE/ACT/issues">
+  GitHub Issue Tracker
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ARM-DOE/ACT" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+  </nav>
+
+
+    <div class="container-fluid" id="banner"></div>
+
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <h1>Source code for act.retrievals.aeri</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Functions for aeri retrievals.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brentq</span>
+
+<span class="kn">from</span> <span class="nn">act.retrievals.irt</span> <span class="kn">import</span> <span class="n">irt_response_function</span><span class="p">,</span> <span class="n">sum_function_irt</span>
+
+
+<div class="viewcode-block" id="aeri2irt"><a class="viewcode-back" href="../../../API/generated/act.retrievals.aeri2irt.html#act.retrievals.aeri2irt">[docs]</a><span class="k">def</span> <span class="nf">aeri2irt</span><span class="p">(</span>
+    <span class="n">aeri_ds</span><span class="p">,</span>
+    <span class="n">wnum_name</span><span class="o">=</span><span class="s1">&#39;wnum&#39;</span><span class="p">,</span>
+    <span class="n">rad_name</span><span class="o">=</span><span class="s1">&#39;mean_rad&#39;</span><span class="p">,</span>
+    <span class="n">hatch_name</span><span class="o">=</span><span class="s1">&#39;hatchOpen&#39;</span><span class="p">,</span>
+    <span class="n">tolerance</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">temp_low</span><span class="o">=</span><span class="mf">150.0</span><span class="p">,</span>
+    <span class="n">temp_high</span><span class="o">=</span><span class="mf">320.0</span><span class="p">,</span>
+    <span class="n">maxiter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function will integrate over the correct wavenumber values to produce</span>
+<span class="sd">    the effective IRT temperature.</span>
+
+<span class="sd">    As a note from the ARM IRT Instrument Handbook</span>
+<span class="sd">    A positive bias of the sky temperature is exhibited by the downwelling IRT,</span>
+<span class="sd">    compared to the AERI, during clear-sky conditions when the sky temperature</span>
+<span class="sd">    is less than ~180K. The effect depends on the characteristics of the</span>
+<span class="sd">    individual IRT and the internal reference temperature of the IRT. The</span>
+<span class="sd">    greatest difference compared to AERI will occur when the sky is very clear,</span>
+<span class="sd">    dry, and cold and the ambient temperature is relatively hot, maximizing the</span>
+<span class="sd">    difference in temperature between the sky and instrument, and the</span>
+<span class="sd">    calibration of the IRT at the lower limit of 223K was not performed</span>
+<span class="sd">    accurately. This bias is especially apparent at high-latitude sites</span>
+<span class="sd">    (e.g., NSA, OLI, and AWR).</span>
+
+<span class="sd">    https://www.arm.gov/publications/tech_reports/handbooks/irt_handbook.pdf</span>
+
+<span class="sd">    Author - Ken Kehoe</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    aeri_ds : Xarray Dataset Object</span>
+<span class="sd">        The Dataset object containing AERI data.</span>
+<span class="sd">    wnum_name : str</span>
+<span class="sd">        The variable name for coordinate dimention of wave number Xarray Dataset.</span>
+<span class="sd">    hatch_name : str or None</span>
+<span class="sd">        The variable name for hatch status. If set to None will not try to set</span>
+<span class="sd">        when hatch is not opent to NaN.</span>
+<span class="sd">    rad_name : str</span>
+<span class="sd">        The variable name for mean radiance in Xarray Dataset.</span>
+<span class="sd">    tolerance : float</span>
+<span class="sd">        The tolerance value to try and match for returned temperature.</span>
+<span class="sd">    temp_low : float</span>
+<span class="sd">        The initial low value to use in zbren function to invert radiances.</span>
+<span class="sd">    temp_high : float</span>
+<span class="sd">        The initial low value to use in zbren function to invert radiances.</span>
+<span class="sd">    maxiter : int</span>
+<span class="sd">        The maximum number if iterations to use with invertion process.</span>
+<span class="sd">        Prevents runaway processes.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    obj : Xarray Dataset Object or None</span>
+<span class="sd">        The aeri_ds Dataset with new DataArray of temperatures added under</span>
+<span class="sd">        variable name &#39;aeri_irt_equiv_temperature&#39;.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get data values</span>
+    <span class="n">rf_wnum</span><span class="p">,</span> <span class="n">rf</span> <span class="o">=</span> <span class="n">irt_response_function</span><span class="p">()</span>
+    <span class="n">wnum</span> <span class="o">=</span> <span class="n">aeri_ds</span><span class="p">[</span><span class="n">wnum_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">mean_rad</span> <span class="o">=</span> <span class="n">aeri_ds</span><span class="p">[</span><span class="n">rad_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="c1"># Pull out AERI data for correct wavenumbers and apply response function --;</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">wnum</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">rf_wnum</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.001</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">wnum</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">rf_wnum</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.001</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">index</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No wavenumbers match for aeri2irt&#39;</span><span class="p">)</span>
+
+    <span class="n">wnum</span> <span class="o">=</span> <span class="n">wnum</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">mean_rad</span> <span class="o">=</span> <span class="n">mean_rad</span><span class="p">[:,</span> <span class="n">index</span><span class="p">]</span>
+    <span class="c1"># If the wavenumbers in AERI data are not close enough to response function</span>
+    <span class="c1"># match the wavenumbers and adjust.</span>
+    <span class="n">atol</span> <span class="o">=</span> <span class="mf">0.001</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">wnum</span><span class="p">,</span> <span class="n">rf_wnum</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="n">atol</span><span class="p">)):</span>
+        <span class="n">index_wnum</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">index_rf</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">wnum</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">wnum</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">-</span> <span class="n">rf_wnum</span><span class="p">))</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">wnum</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">rf_wnum</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">atol</span><span class="o">=</span><span class="n">atol</span><span class="p">):</span>
+                <span class="n">index_wnum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span>
+                <span class="n">index_rf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="n">mean_rad</span> <span class="o">=</span> <span class="n">mean_rad</span><span class="p">[:,</span> <span class="n">index_wnum</span><span class="p">]</span>
+        <span class="n">rf</span> <span class="o">=</span> <span class="n">rf</span><span class="p">[</span><span class="n">index_rf</span><span class="p">]</span>
+
+    <span class="c1"># Apply response function to AERI radiance</span>
+    <span class="n">mean_rad</span> <span class="o">=</span> <span class="n">mean_rad</span> <span class="o">*</span> <span class="n">rf</span>
+
+    <span class="c1"># Sum along wavenumber dimention to get a single value for each time step</span>
+    <span class="n">mean_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nansum</span><span class="p">(</span><span class="n">mean_rad</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Loop over each time step of the AERI data and through the use of</span>
+    <span class="c1"># solving for zero determine the AERI equivlante IRT sky temperature.</span>
+    <span class="n">aeri_irt_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">mean_rad</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">mean_rad</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="c1"># Look for when the hatch is not in Open position and set values to NaN.</span>
+    <span class="k">if</span> <span class="n">hatch_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">flag_values</span> <span class="o">=</span> <span class="n">aeri_ds</span><span class="p">[</span><span class="n">hatch_name</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;flag_values&#39;</span><span class="p">]</span>
+        <span class="n">flag_meanings</span> <span class="o">=</span> <span class="n">aeri_ds</span><span class="p">[</span><span class="n">hatch_name</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;flag_meanings&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">flag_meanings</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">flag_meanings</span> <span class="o">=</span> <span class="n">flag_meanings</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">flag_meanings</span> <span class="o">=</span> <span class="p">[</span><span class="n">att</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">flag_meanings</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">flag_values</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">flag_values</span> <span class="o">=</span> <span class="n">flag_values</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">flag_values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">att</span><span class="p">)</span> <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">flag_values</span><span class="p">]</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">flag_values</span><span class="p">[</span><span class="n">flag_meanings</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">)]</span>
+        <span class="n">mean_rad</span><span class="p">[</span><span class="n">aeri_ds</span><span class="p">[</span><span class="n">hatch_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">!=</span> <span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mean_rad</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">mean_rad</span><span class="p">[</span><span class="n">ii</span><span class="p">]):</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">aeri_irt_vals</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span>
+                    <span class="n">sum_function_irt</span><span class="p">,</span>
+                    <span class="n">temp_low</span><span class="p">,</span>
+                    <span class="n">temp_high</span><span class="p">,</span>
+                    <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">mean_rad</span><span class="p">[</span><span class="n">ii</span><span class="p">],),</span>
+                    <span class="n">xtol</span><span class="o">=</span><span class="n">tolerance</span><span class="p">,</span>
+                    <span class="n">maxiter</span><span class="o">=</span><span class="n">maxiter</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="c1"># Add new values to Xarray Dataset</span>
+    <span class="n">aeri_ds</span><span class="p">[</span><span class="s1">&#39;aeri_irt_equiv_temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+        <span class="n">aeri_irt_vals</span><span class="p">,</span>
+        <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Derived IRT equivalent temperatrues from AERI&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">},</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">aeri_ds</span></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2018-2022, ACT Developers.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

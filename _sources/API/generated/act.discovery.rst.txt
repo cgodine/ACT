@@ -1,0 +1,30 @@
+﻿act.discovery
+=============
+
+.. rubric:: Description
+
+.. automodule:: act.discovery
+
+.. currentmodule:: act.discovery
+
+
+
+
+.. rubric:: Functions
+
+.. autosummary::
+    :toctree: .
+    
+    croptype
+    
+    download_data
+    
+    get_airnow_bounded_obs
+    
+    get_airnow_forecast
+    
+    get_airnow_obs
+    
+    get_asos
+    
+

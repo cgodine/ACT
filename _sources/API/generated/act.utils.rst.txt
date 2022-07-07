@@ -1,0 +1,71 @@
+﻿act.utils
+=========
+
+.. rubric:: Description
+
+.. automodule:: act.utils
+
+.. currentmodule:: act.utils
+
+
+.. rubric:: Classes
+
+.. autosummary::
+    :toctree: .
+    
+    ChangeUnits
+    
+
+
+
+
+.. rubric:: Functions
+
+.. autosummary::
+    :toctree: .
+    
+    accumulate_precip
+    
+    add_in_nan
+    
+    add_solar_variable
+    
+    assign_coordinates
+    
+    calc_cog_sog
+    
+    calculate_dqr_times
+    
+    convert_to_potential_temp
+    
+    convert_units
+    
+    create_pyart_obj
+    
+    date_parser
+    
+    dates_between
+    
+    datetime64_to_datetime
+    
+    decode_present_weather
+    
+    destination_azimuth_distance
+    
+    determine_time_delta
+    
+    get_missing_value
+    
+    height_adjusted_pressure
+    
+    height_adjusted_temperature
+    
+    numpy_to_arm_date
+    
+    planck_converter
+    
+    reduce_time_ranges
+    
+    ts_weighted_average
+    
+
