@@ -1,59 +1,63 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>act.utils.convert_to_potential_temp &#8212; Atmospheric data Community Toolkit 0.post1+gba47487 documentation</title>
+    <title>act.utils.convert_to_potential_temp &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="act.utils.convert_units" href="act.utils.convert_units.html" />
-    <link rel="prev" title="act.utils.calculate_dqr_times" href="act.utils.calculate_dqr_times.html" /> 
+    <link rel="prev" title="act.utils.cleanup_files" href="act.utils.cleanup_files.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -99,7 +103,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -252,6 +256,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.download_neon_data.html">
+     act.discovery.download_neon_data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.discovery.download_noaa_psl_data.html">
      act.discovery.download_noaa_psl_data
     </a>
@@ -274,6 +283,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.discovery.get_asos.html">
      act.discovery.get_asos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_product_avail.html">
+     act.discovery.get_product_avail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_site_products.html">
+     act.discovery.get_site_products
     </a>
    </li>
   </ul>
@@ -308,6 +327,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.check_arm_standards.html">
      act.io.check_arm_standards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.check_if_tar_gz_file.html">
+     act.io.check_if_tar_gz_file
     </a>
    </li>
    <li class="toctree-l2">
@@ -361,6 +385,21 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_icartt.html">
+     act.io.read_icartt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_mmcr.html">
+     act.io.read_mmcr
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_neon_csv.html">
+     act.io.read_neon_csv
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_netcdf.html">
      act.io.read_netcdf
     </a>
@@ -368,6 +407,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_psl_parsivel.html">
      act.io.read_psl_parsivel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html">
+     act.io.read_psl_radar_fmcw_moment
     </a>
    </li>
    <li class="toctree-l2">
@@ -453,6 +497,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.ContourDisplay.group_by.html">
+       act.plotting.ContourDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.ContourDisplay.plot_station.html">
        act.plotting.ContourDisplay.plot_station
       </a>
@@ -495,6 +544,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.Display.group_by.html">
+       act.plotting.Display.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.Display.put_display_in_subplot.html">
        act.plotting.Display.put_display_in_subplot
       </a>
@@ -532,6 +586,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.GeographicPlotDisplay.group_by.html">
+       act.plotting.GeographicPlotDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.GeographicPlotDisplay.put_display_in_subplot.html">
        act.plotting.GeographicPlotDisplay.put_display_in_subplot
       </a>
@@ -561,6 +620,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.HistogramDisplay.assign_to_figure_axis.html">
        act.plotting.HistogramDisplay.assign_to_figure_axis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.HistogramDisplay.group_by.html">
+       act.plotting.HistogramDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -626,6 +690,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.SkewTDisplay.group_by.html">
+       act.plotting.SkewTDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.SkewTDisplay.plot_from_spd_and_dir.html">
        act.plotting.SkewTDisplay.plot_from_spd_and_dir
       </a>
@@ -685,6 +754,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.TimeSeriesDisplay.fill_between.html">
        act.plotting.TimeSeriesDisplay.fill_between
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.TimeSeriesDisplay.group_by.html">
+       act.plotting.TimeSeriesDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -760,6 +834,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.WindRoseDisplay.group_by.html">
+       act.plotting.WindRoseDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.WindRoseDisplay.plot.html">
        act.plotting.WindRoseDisplay.plot
       </a>
@@ -812,6 +891,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.XSectionDisplay.group_by.html">
+       act.plotting.XSectionDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.XSectionDisplay.plot_xsection.html">
        act.plotting.XSectionDisplay.plot_xsection
       </a>
@@ -856,385 +940,11 @@
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="act.qc.CleanDataset.html">
-     act.qc.CleanDataset
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.clean_arm_qc.html">
-       act.qc.CleanDataset.clean_arm_qc
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.clean_arm_state_variables.html">
-       act.qc.CleanDataset.clean_arm_state_variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.clean_cf_qc.html">
-       act.qc.CleanDataset.clean_cf_qc
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.cleanup.html">
-       act.qc.CleanDataset.cleanup
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.correct_valid_minmax.html">
-       act.qc.CleanDataset.correct_valid_minmax
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.get_attr_info.html">
-       act.qc.CleanDataset.get_attr_info
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.handle_missing_values.html">
-       act.qc.CleanDataset.handle_missing_values
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.link_variables.html">
-       act.qc.CleanDataset.link_variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.normalize_assessment.html">
-       act.qc.CleanDataset.normalize_assessment
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.matched_qc_variables.html">
-       act.qc.CleanDataset.matched_qc_variables
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="act.qc.Path.html">
-     act.qc.Path
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.absolute.html">
-       act.qc.Path.absolute
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.as_posix.html">
-       act.qc.Path.as_posix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.as_uri.html">
-       act.qc.Path.as_uri
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.chmod.html">
-       act.qc.Path.chmod
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.cwd.html">
-       act.qc.Path.cwd
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.exists.html">
-       act.qc.Path.exists
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.expanduser.html">
-       act.qc.Path.expanduser
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.glob.html">
-       act.qc.Path.glob
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.group.html">
-       act.qc.Path.group
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.hardlink_to.html">
-       act.qc.Path.hardlink_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.home.html">
-       act.qc.Path.home
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_absolute.html">
-       act.qc.Path.is_absolute
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_block_device.html">
-       act.qc.Path.is_block_device
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_char_device.html">
-       act.qc.Path.is_char_device
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_dir.html">
-       act.qc.Path.is_dir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_fifo.html">
-       act.qc.Path.is_fifo
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_file.html">
-       act.qc.Path.is_file
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_mount.html">
-       act.qc.Path.is_mount
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_relative_to.html">
-       act.qc.Path.is_relative_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_reserved.html">
-       act.qc.Path.is_reserved
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_socket.html">
-       act.qc.Path.is_socket
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_symlink.html">
-       act.qc.Path.is_symlink
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.iterdir.html">
-       act.qc.Path.iterdir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.joinpath.html">
-       act.qc.Path.joinpath
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.lchmod.html">
-       act.qc.Path.lchmod
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.link_to.html">
-       act.qc.Path.link_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.lstat.html">
-       act.qc.Path.lstat
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.match.html">
-       act.qc.Path.match
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.mkdir.html">
-       act.qc.Path.mkdir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.open.html">
-       act.qc.Path.open
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.owner.html">
-       act.qc.Path.owner
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.read_bytes.html">
-       act.qc.Path.read_bytes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.read_text.html">
-       act.qc.Path.read_text
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.readlink.html">
-       act.qc.Path.readlink
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.relative_to.html">
-       act.qc.Path.relative_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.rename.html">
-       act.qc.Path.rename
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.replace.html">
-       act.qc.Path.replace
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.resolve.html">
-       act.qc.Path.resolve
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.rglob.html">
-       act.qc.Path.rglob
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.rmdir.html">
-       act.qc.Path.rmdir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.samefile.html">
-       act.qc.Path.samefile
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.stat.html">
-       act.qc.Path.stat
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.symlink_to.html">
-       act.qc.Path.symlink_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.touch.html">
-       act.qc.Path.touch
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.unlink.html">
-       act.qc.Path.unlink
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.with_name.html">
-       act.qc.Path.with_name
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.with_stem.html">
-       act.qc.Path.with_stem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.with_suffix.html">
-       act.qc.Path.with_suffix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.write_bytes.html">
-       act.qc.Path.write_bytes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.write_text.html">
-       act.qc.Path.write_text
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.anchor.html">
-       act.qc.Path.anchor
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.drive.html">
-       act.qc.Path.drive
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.name.html">
-       act.qc.Path.name
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.parent.html">
-       act.qc.Path.parent
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.parents.html">
-       act.qc.Path.parents
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.parts.html">
-       act.qc.Path.parts
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.root.html">
-       act.qc.Path.root
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.stem.html">
-       act.qc.Path.stem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.suffix.html">
-       act.qc.Path.suffix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.suffixes.html">
-       act.qc.Path.suffixes
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.qc.QCFilter.html">
      act.qc.QCFilter
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-    <label for="toctree-checkbox-17">
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1390,8 +1100,8 @@
     <a class="reference internal" href="act.qc.QCTests.html">
      act.qc.QCTests
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1414,21 +1124,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.apply_supplemental_qc.html">
-     act.qc.apply_supplemental_qc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.convert_units.html">
-     act.qc.convert_units
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.determine_time_delta.html">
-     act.qc.determine_time_delta
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="act.qc.fft_shading_test.html">
      act.qc.fft_shading_test
     </a>
@@ -1439,28 +1134,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.get_missing_value.html">
-     act.qc.get_missing_value
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.get_solar_azimuth_elevation.html">
-     act.qc.get_solar_azimuth_elevation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.get_sunrise_sunset_noon.html">
-     act.qc.get_sunrise_sunset_noon
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="act.qc.get_waveform_statistics.html">
      act.qc.get_waveform_statistics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.is_sun_visible.html">
-     act.qc.is_sun_visible
     </a>
    </li>
    <li class="toctree-l2">
@@ -1471,16 +1146,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.qc.read_yaml_supplemental_qc.html">
      act.qc.read_yaml_supplemental_qc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.rfft.html">
-     act.qc.rfft
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.rfftfreq.html">
-     act.qc.rfftfreq
     </a>
    </li>
    <li class="toctree-l2">
@@ -1499,8 +1164,8 @@
   <a class="reference internal" href="act.retrievals.html">
    act.retrievals
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1581,8 +1246,8 @@
   <a class="reference internal" href="act.utils.html">
    act.utils
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1591,8 +1256,8 @@
     <a class="reference internal" href="act.utils.ChangeUnits.html">
      act.utils.ChangeUnits
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-    <label for="toctree-checkbox-21">
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1620,6 +1285,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.adjust_timestamp.html">
+     act.utils.adjust_timestamp
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.assign_coordinates.html">
      act.utils.assign_coordinates
     </a>
@@ -1632,6 +1302,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.utils.calculate_dqr_times.html">
      act.utils.calculate_dqr_times
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.cleanup_files.html">
+     act.utils.cleanup_files
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -1685,6 +1360,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.get_solar_azimuth_elevation.html">
+     act.utils.get_solar_azimuth_elevation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.get_sunrise_sunset_noon.html">
+     act.utils.get_sunrise_sunset_noon
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.height_adjusted_pressure.html">
      act.utils.height_adjusted_pressure
     </a>
@@ -1695,13 +1380,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.is_gunzip_file.html">
+     act.utils.is_gunzip_file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.is_sun_visible.html">
+     act.utils.is_sun_visible
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.numpy_to_arm_date.html">
      act.utils.numpy_to_arm_date
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.pack_gzip.html">
+     act.utils.pack_gzip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.pack_tar.html">
+     act.utils.pack_tar
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.planck_converter.html">
      act.utils.planck_converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.proc_scog.html">
+     act.utils.proc_scog
     </a>
    </li>
    <li class="toctree-l2">
@@ -1712,6 +1422,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.utils.ts_weighted_average.html">
      act.utils.ts_weighted_average
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.unpack_gzip.html">
+     act.utils.unpack_gzip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.unpack_tar.html">
+     act.utils.unpack_tar
     </a>
    </li>
   </ul>
@@ -1733,9 +1453,23 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#act.utils.convert_to_potential_temp">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     convert_to_potential_temp()
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -1755,13 +1489,13 @@
               
               <div>
                  <section id="act-utils-convert-to-potential-temp">
-<h1>act.utils.convert_to_potential_temp<a class="headerlink" href="#act-utils-convert-to-potential-temp" title="Permalink to this headline">#</a></h1>
+<h1>act.utils.convert_to_potential_temp<a class="headerlink" href="#act-utils-convert-to-potential-temp" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="act.utils.convert_to_potential_temp">
-<span class="sig-prename descclassname"><span class="pre">act.utils.</span></span><span class="sig-name descname"><span class="pre">convert_to_potential_temp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp_var_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press_var_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/utils/data_utils.html#convert_to_potential_temp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.utils.convert_to_potential_temp" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">act.utils.</span></span><span class="sig-name descname"><span class="pre">convert_to_potential_temp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp_var_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press_var_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/utils/data_utils.html#convert_to_potential_temp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.utils.convert_to_potential_temp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts temperature to potential temperature.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> (<em>xarray DataSet</em>) – ACT Xarray Object</p></li>
 <li><p><strong>temp_var_name</strong> (<em>str</em>) – Temperature variable name in the ACT Object containing temperature data
@@ -1778,7 +1512,7 @@ use the units attribute under pressure variable in object. If using
 the pressure keyword this must be set.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>potential_temperature</strong> (<em>None, int, float, numpy array</em>) – The converted temperature to potential temperature or None if something
 goes wrong.</p>
 </dd>
@@ -1801,11 +1535,11 @@ doi:10.5065/D6WW7G29.</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="act.utils.calculate_dqr_times.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="act.utils.cleanup_files.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">act.utils.calculate_dqr_times</p>
+            <p class="prev-next-title">act.utils.cleanup_files</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="act.utils.convert_units.html" title="next page">
@@ -1823,9 +1557,8 @@ doi:10.5065/D6WW7G29.</p>
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1836,7 +1569,7 @@ doi:10.5065/D6WW7G29.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     

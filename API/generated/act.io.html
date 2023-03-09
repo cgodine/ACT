@@ -1,59 +1,63 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>act.io &#8212; Atmospheric data Community Toolkit 0.post1+gba47487 documentation</title>
+    <title>act.io &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="act.io.WriteDataset" href="act.io.WriteDataset.html" />
-    <link rel="prev" title="act.discovery.get_asos" href="act.discovery.get_asos.html" /> 
+    <link rel="prev" title="act.discovery.get_site_products" href="act.discovery.get_site_products.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -99,7 +103,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -252,6 +256,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.download_neon_data.html">
+     act.discovery.download_neon_data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.discovery.download_noaa_psl_data.html">
      act.discovery.download_noaa_psl_data
     </a>
@@ -274,6 +283,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.discovery.get_asos.html">
      act.discovery.get_asos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_product_avail.html">
+     act.discovery.get_product_avail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_site_products.html">
+     act.discovery.get_site_products
     </a>
    </li>
   </ul>
@@ -308,6 +327,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.check_arm_standards.html">
      act.io.check_arm_standards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.check_if_tar_gz_file.html">
+     act.io.check_if_tar_gz_file
     </a>
    </li>
    <li class="toctree-l2">
@@ -361,6 +385,21 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_icartt.html">
+     act.io.read_icartt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_mmcr.html">
+     act.io.read_mmcr
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_neon_csv.html">
+     act.io.read_neon_csv
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_netcdf.html">
      act.io.read_netcdf
     </a>
@@ -368,6 +407,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_psl_parsivel.html">
      act.io.read_psl_parsivel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html">
+     act.io.read_psl_radar_fmcw_moment
     </a>
    </li>
    <li class="toctree-l2">
@@ -453,6 +497,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.ContourDisplay.group_by.html">
+       act.plotting.ContourDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.ContourDisplay.plot_station.html">
        act.plotting.ContourDisplay.plot_station
       </a>
@@ -495,6 +544,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.Display.group_by.html">
+       act.plotting.Display.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.Display.put_display_in_subplot.html">
        act.plotting.Display.put_display_in_subplot
       </a>
@@ -532,6 +586,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.GeographicPlotDisplay.group_by.html">
+       act.plotting.GeographicPlotDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.GeographicPlotDisplay.put_display_in_subplot.html">
        act.plotting.GeographicPlotDisplay.put_display_in_subplot
       </a>
@@ -561,6 +620,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.HistogramDisplay.assign_to_figure_axis.html">
        act.plotting.HistogramDisplay.assign_to_figure_axis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.HistogramDisplay.group_by.html">
+       act.plotting.HistogramDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -626,6 +690,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.SkewTDisplay.group_by.html">
+       act.plotting.SkewTDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.SkewTDisplay.plot_from_spd_and_dir.html">
        act.plotting.SkewTDisplay.plot_from_spd_and_dir
       </a>
@@ -685,6 +754,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.TimeSeriesDisplay.fill_between.html">
        act.plotting.TimeSeriesDisplay.fill_between
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.TimeSeriesDisplay.group_by.html">
+       act.plotting.TimeSeriesDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -760,6 +834,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.WindRoseDisplay.group_by.html">
+       act.plotting.WindRoseDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.WindRoseDisplay.plot.html">
        act.plotting.WindRoseDisplay.plot
       </a>
@@ -812,6 +891,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.XSectionDisplay.group_by.html">
+       act.plotting.XSectionDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.XSectionDisplay.plot_xsection.html">
        act.plotting.XSectionDisplay.plot_xsection
       </a>
@@ -856,385 +940,11 @@
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="act.qc.CleanDataset.html">
-     act.qc.CleanDataset
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.clean_arm_qc.html">
-       act.qc.CleanDataset.clean_arm_qc
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.clean_arm_state_variables.html">
-       act.qc.CleanDataset.clean_arm_state_variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.clean_cf_qc.html">
-       act.qc.CleanDataset.clean_cf_qc
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.cleanup.html">
-       act.qc.CleanDataset.cleanup
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.correct_valid_minmax.html">
-       act.qc.CleanDataset.correct_valid_minmax
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.get_attr_info.html">
-       act.qc.CleanDataset.get_attr_info
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.handle_missing_values.html">
-       act.qc.CleanDataset.handle_missing_values
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.link_variables.html">
-       act.qc.CleanDataset.link_variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.normalize_assessment.html">
-       act.qc.CleanDataset.normalize_assessment
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.CleanDataset.matched_qc_variables.html">
-       act.qc.CleanDataset.matched_qc_variables
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="act.qc.Path.html">
-     act.qc.Path
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.absolute.html">
-       act.qc.Path.absolute
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.as_posix.html">
-       act.qc.Path.as_posix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.as_uri.html">
-       act.qc.Path.as_uri
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.chmod.html">
-       act.qc.Path.chmod
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.cwd.html">
-       act.qc.Path.cwd
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.exists.html">
-       act.qc.Path.exists
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.expanduser.html">
-       act.qc.Path.expanduser
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.glob.html">
-       act.qc.Path.glob
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.group.html">
-       act.qc.Path.group
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.hardlink_to.html">
-       act.qc.Path.hardlink_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.home.html">
-       act.qc.Path.home
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_absolute.html">
-       act.qc.Path.is_absolute
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_block_device.html">
-       act.qc.Path.is_block_device
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_char_device.html">
-       act.qc.Path.is_char_device
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_dir.html">
-       act.qc.Path.is_dir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_fifo.html">
-       act.qc.Path.is_fifo
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_file.html">
-       act.qc.Path.is_file
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_mount.html">
-       act.qc.Path.is_mount
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_relative_to.html">
-       act.qc.Path.is_relative_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_reserved.html">
-       act.qc.Path.is_reserved
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_socket.html">
-       act.qc.Path.is_socket
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.is_symlink.html">
-       act.qc.Path.is_symlink
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.iterdir.html">
-       act.qc.Path.iterdir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.joinpath.html">
-       act.qc.Path.joinpath
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.lchmod.html">
-       act.qc.Path.lchmod
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.link_to.html">
-       act.qc.Path.link_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.lstat.html">
-       act.qc.Path.lstat
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.match.html">
-       act.qc.Path.match
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.mkdir.html">
-       act.qc.Path.mkdir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.open.html">
-       act.qc.Path.open
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.owner.html">
-       act.qc.Path.owner
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.read_bytes.html">
-       act.qc.Path.read_bytes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.read_text.html">
-       act.qc.Path.read_text
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.readlink.html">
-       act.qc.Path.readlink
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.relative_to.html">
-       act.qc.Path.relative_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.rename.html">
-       act.qc.Path.rename
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.replace.html">
-       act.qc.Path.replace
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.resolve.html">
-       act.qc.Path.resolve
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.rglob.html">
-       act.qc.Path.rglob
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.rmdir.html">
-       act.qc.Path.rmdir
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.samefile.html">
-       act.qc.Path.samefile
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.stat.html">
-       act.qc.Path.stat
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.symlink_to.html">
-       act.qc.Path.symlink_to
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.touch.html">
-       act.qc.Path.touch
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.unlink.html">
-       act.qc.Path.unlink
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.with_name.html">
-       act.qc.Path.with_name
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.with_stem.html">
-       act.qc.Path.with_stem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.with_suffix.html">
-       act.qc.Path.with_suffix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.write_bytes.html">
-       act.qc.Path.write_bytes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.write_text.html">
-       act.qc.Path.write_text
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.anchor.html">
-       act.qc.Path.anchor
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.drive.html">
-       act.qc.Path.drive
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.name.html">
-       act.qc.Path.name
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.parent.html">
-       act.qc.Path.parent
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.parents.html">
-       act.qc.Path.parents
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.parts.html">
-       act.qc.Path.parts
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.root.html">
-       act.qc.Path.root
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.stem.html">
-       act.qc.Path.stem
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.suffix.html">
-       act.qc.Path.suffix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.qc.Path.suffixes.html">
-       act.qc.Path.suffixes
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.qc.QCFilter.html">
      act.qc.QCFilter
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-    <label for="toctree-checkbox-17">
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1390,8 +1100,8 @@
     <a class="reference internal" href="act.qc.QCTests.html">
      act.qc.QCTests
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1414,21 +1124,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.apply_supplemental_qc.html">
-     act.qc.apply_supplemental_qc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.convert_units.html">
-     act.qc.convert_units
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.determine_time_delta.html">
-     act.qc.determine_time_delta
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="act.qc.fft_shading_test.html">
      act.qc.fft_shading_test
     </a>
@@ -1439,28 +1134,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.get_missing_value.html">
-     act.qc.get_missing_value
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.get_solar_azimuth_elevation.html">
-     act.qc.get_solar_azimuth_elevation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.get_sunrise_sunset_noon.html">
-     act.qc.get_sunrise_sunset_noon
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="act.qc.get_waveform_statistics.html">
      act.qc.get_waveform_statistics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.is_sun_visible.html">
-     act.qc.is_sun_visible
     </a>
    </li>
    <li class="toctree-l2">
@@ -1471,16 +1146,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.qc.read_yaml_supplemental_qc.html">
      act.qc.read_yaml_supplemental_qc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.rfft.html">
-     act.qc.rfft
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.qc.rfftfreq.html">
-     act.qc.rfftfreq
     </a>
    </li>
    <li class="toctree-l2">
@@ -1499,8 +1164,8 @@
   <a class="reference internal" href="act.retrievals.html">
    act.retrievals
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1581,8 +1246,8 @@
   <a class="reference internal" href="act.utils.html">
    act.utils
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1591,8 +1256,8 @@
     <a class="reference internal" href="act.utils.ChangeUnits.html">
      act.utils.ChangeUnits
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-    <label for="toctree-checkbox-21">
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1620,6 +1285,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.adjust_timestamp.html">
+     act.utils.adjust_timestamp
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.assign_coordinates.html">
      act.utils.assign_coordinates
     </a>
@@ -1632,6 +1302,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.utils.calculate_dqr_times.html">
      act.utils.calculate_dqr_times
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.cleanup_files.html">
+     act.utils.cleanup_files
     </a>
    </li>
    <li class="toctree-l2">
@@ -1685,6 +1360,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.get_solar_azimuth_elevation.html">
+     act.utils.get_solar_azimuth_elevation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.get_sunrise_sunset_noon.html">
+     act.utils.get_sunrise_sunset_noon
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.height_adjusted_pressure.html">
      act.utils.height_adjusted_pressure
     </a>
@@ -1695,13 +1380,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.is_gunzip_file.html">
+     act.utils.is_gunzip_file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.is_sun_visible.html">
+     act.utils.is_sun_visible
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.numpy_to_arm_date.html">
      act.utils.numpy_to_arm_date
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.pack_gzip.html">
+     act.utils.pack_gzip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.pack_tar.html">
+     act.utils.pack_tar
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.planck_converter.html">
      act.utils.planck_converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.proc_scog.html">
+     act.utils.proc_scog
     </a>
    </li>
    <li class="toctree-l2">
@@ -1712,6 +1422,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.utils.ts_weighted_average.html">
      act.utils.ts_weighted_average
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.unpack_gzip.html">
+     act.utils.unpack_gzip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.unpack_tar.html">
+     act.utils.unpack_tar
     </a>
    </li>
   </ul>
@@ -1755,15 +1475,11 @@
               
               <div>
                  <section id="act-io">
-<h1>act.io<a class="headerlink" href="#act-io" title="Permalink to this headline">#</a></h1>
+<h1>act.io<a class="headerlink" href="#act-io" title="Permalink to this heading">¶</a></h1>
 <p class="rubric">Description</p>
 <span class="target" id="module-act.io"></span><p>This module contains procedures for reading and writing various ARM datasets.</p>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.io.WriteDataset.html#act.io.WriteDataset" title="act.io.WriteDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WriteDataset</span></code></a>(xarray_obj)</p></td>
 <td><p>Class for cleaning up Dataset before writing to file.</p></td>
@@ -1772,43 +1488,51 @@
 </table>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.io.check_arm_standards.html#act.io.check_arm_standards" title="act.io.check_arm_standards"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_arm_standards</span></code></a>(ds)</p></td>
 <td><p>Checks to see if an xarray dataset conforms to ARM standards.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.create_obj_from_arm_dod.html#act.io.create_obj_from_arm_dod" title="act.io.create_obj_from_arm_dod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_obj_from_arm_dod</span></code></a>(proc, set_dims[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.check_if_tar_gz_file.html#act.io.check_if_tar_gz_file" title="act.io.check_if_tar_gz_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_if_tar_gz_file</span></code></a>(filenames)</p></td>
+<td><p>Unpacks gunzip and/or TAR file contents and returns Xarray Dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.create_obj_from_arm_dod.html#act.io.create_obj_from_arm_dod" title="act.io.create_obj_from_arm_dod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_obj_from_arm_dod</span></code></a>(proc, set_dims[, ...])</p></td>
 <td><p>Queries the ARM DOD api and builds an object based on the ARM DOD and the dimension sizes that are passed in.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.proc_sigma_mplv5_read.html#act.io.proc_sigma_mplv5_read" title="act.io.proc_sigma_mplv5_read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">proc_sigma_mplv5_read</span></code></a>(f[, save_nc, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.proc_sigma_mplv5_read.html#act.io.proc_sigma_mplv5_read" title="act.io.proc_sigma_mplv5_read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">proc_sigma_mplv5_read</span></code></a>(f[, save_nc, ...])</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined SIGMA MPL V5 files.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_csv.html#act.io.read_csv" title="act.io.read_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_csv</span></code></a>(filename[, sep, engine, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_csv.html#act.io.read_csv" title="act.io.read_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_csv</span></code></a>(filename[, sep, engine, ...])</p></td>
 <td><p>Returns an <cite>xarray.Dataset</cite> with stored data and metadata from user-defined query of CSV files.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml.html#act.io.read_gml" title="act.io.read_gml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml</span></code></a>(filename[, datatype, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml.html#act.io.read_gml" title="act.io.read_gml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml</span></code></a>(filename[, datatype, ...])</p></td>
 <td><p>Function to call or guess what reading NOAA GML daga routine to use.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_co2.html#act.io.read_gml_co2" title="act.io.read_gml_co2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_co2</span></code></a>([filename, convert_missing])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml_co2.html#act.io.read_gml_co2" title="act.io.read_gml_co2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_co2</span></code></a>([filename, convert_missing])</p></td>
 <td><p>Function to read carbon dioxide data from NOAA GML.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml_halo.html#act.io.read_gml_halo" title="act.io.read_gml_halo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_halo</span></code></a>(filename, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_halo.html#act.io.read_gml_halo" title="act.io.read_gml_halo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_halo</span></code></a>(filename, **kwargs)</p></td>
 <td><p>Function to read Halocarbon data from NOAA GML.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_met.html#act.io.read_gml_met" title="act.io.read_gml_met"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_met</span></code></a>([filename, convert_missing])</p></td>
-<td><p>Function to read meteorlogical data from NOAA GML.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml_met.html#act.io.read_gml_met" title="act.io.read_gml_met"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_met</span></code></a>([filename, convert_missing])</p></td>
+<td><p>Function to read meteorological data from NOAA GML.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml_ozone.html#act.io.read_gml_ozone" title="act.io.read_gml_ozone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_ozone</span></code></a>([filename])</p></td>
-<td><p>Function to read carbon dioxide data from NOAA GML.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_ozone.html#act.io.read_gml_ozone" title="act.io.read_gml_ozone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_ozone</span></code></a>([filename])</p></td>
+<td><p>Function to read ozone data from NOAA GML.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_radiation.html#act.io.read_gml_radiation" title="act.io.read_gml_radiation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_radiation</span></code></a>([filename, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml_radiation.html#act.io.read_gml_radiation" title="act.io.read_gml_radiation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_radiation</span></code></a>([filename, ...])</p></td>
 <td><p>Function to read radiation data from NOAA GML.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_hk_file.html#act.io.read_hk_file" title="act.io.read_hk_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_hk_file</span></code></a>(file_name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_hk_file.html#act.io.read_hk_file" title="act.io.read_hk_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_hk_file</span></code></a>(file_name)</p></td>
 <td><p>This procedure will read in an SP2 housekeeping file and then store the timeseries data into a pandas DataFrame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_icartt.html#act.io.read_icartt" title="act.io.read_icartt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_icartt</span></code></a>(filename[, format, return_None])</p></td>
+<td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined query of ICARTT from a single datastream.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_mmcr.html#act.io.read_mmcr" title="act.io.read_mmcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_mmcr</span></code></a>(filenames)</p></td>
+<td><p>Reads in ARM MMCR files and splits up the variables into specific mode variables based on what's in the files.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_neon_csv.html#act.io.read_neon_csv" title="act.io.read_neon_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_neon_csv</span></code></a>(files[, variable_files, ...])</p></td>
+<td><p>Reads in the NEON formatted csv files from local paths or urls and returns an xarray dataset.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="act.io.read_netcdf.html#act.io.read_netcdf" title="act.io.read_netcdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_netcdf</span></code></a>(filenames[, concat_dim, ...])</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined query of ARM-standard netCDF files from a single datastream.</p></td>
@@ -1816,19 +1540,22 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_psl_parsivel.html#act.io.read_psl_parsivel" title="act.io.read_psl_parsivel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_parsivel</span></code></a>(files)</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined NOAA PSL parsivel</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_psl_wind_profiler.html#act.io.read_psl_wind_profiler" title="act.io.read_psl_wind_profiler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_wind_profiler</span></code></a>(filename[, transpose])</p></td>
-<td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined NOAA PSL wind profiler file.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html#act.io.read_psl_radar_fmcw_moment" title="act.io.read_psl_radar_fmcw_moment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_radar_fmcw_moment</span></code></a>(files)</p></td>
+<td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from NOAA PSL FMCW Radar files.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_psl_wind_profiler_temperature.html#act.io.read_psl_wind_profiler_temperature" title="act.io.read_psl_wind_profiler_temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_wind_profiler_temperature</span></code></a>(filepath)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_psl_wind_profiler.html#act.io.read_psl_wind_profiler" title="act.io.read_psl_wind_profiler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_wind_profiler</span></code></a>(filepath[, transpose])</p></td>
+<td><p>Returns two <cite>xarray.Datasets</cite> with stored data and metadata from a user-defined NOAA PSL wind profiler file each containing a different mode.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_psl_wind_profiler_temperature.html#act.io.read_psl_wind_profiler_temperature" title="act.io.read_psl_wind_profiler_temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_wind_profiler_temperature</span></code></a>(filepath)</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined NOAA PSL wind profiler temperature file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_sigma_mplv5.html#act.io.read_sigma_mplv5" title="act.io.read_sigma_mplv5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_sigma_mplv5</span></code></a>(filename[, save_nc, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_sigma_mplv5.html#act.io.read_sigma_mplv5" title="act.io.read_sigma_mplv5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_sigma_mplv5</span></code></a>(filename[, save_nc, ...])</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined SIGMA MPL V5 files.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_sp2.html#act.io.read_sp2" title="act.io.read_sp2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_sp2</span></code></a>(file_name[, debug, arm_convention])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_sp2.html#act.io.read_sp2" title="act.io.read_sp2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_sp2</span></code></a>(file_name[, debug, arm_convention])</p></td>
 <td><p>Loads a binary SP2 raw data file and returns all of the wave forms into an xarray Dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_sp2_dat.html#act.io.read_sp2_dat" title="act.io.read_sp2_dat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_sp2_dat</span></code></a>(file_name, type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_sp2_dat.html#act.io.read_sp2_dat" title="act.io.read_sp2_dat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_sp2_dat</span></code></a>(file_name, type)</p></td>
 <td><p>This reads the .dat files that generate the intermediate parameters used by the Igor processing.</p></td>
 </tr>
 </tbody>
@@ -1844,11 +1571,11 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="act.discovery.get_asos.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="act.discovery.get_site_products.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">act.discovery.get_asos</p>
+            <p class="prev-next-title">act.discovery.get_site_products</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="act.io.WriteDataset.html" title="next page">
@@ -1866,9 +1593,8 @@
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1879,7 +1605,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     

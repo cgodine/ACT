@@ -1,56 +1,60 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.io.noaagml &#8212; Atmospheric data Community Toolkit 0.post1+gba47487 documentation</title>
+    <title>act.io.noaagml &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -96,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -229,10 +233,10 @@
 
 
 <div class="viewcode-block" id="read_gml"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml.html#act.io.read_gml">[docs]</a><span class="k">def</span> <span class="nf">read_gml</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">datatype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove_time_vars</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Function to call or guess what reading NOAA GML daga routine to use. It tries to</span>
-<span class="sd">    guess the correct reading function to call based on filename. It mostly</span>
-<span class="sd">    works, but you may want to specify for best results.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to call or guess what reading NOAA GML daga routine to use. It</span>
+<span class="sd">    tries to guess the correct reading function to call based on filename.</span>
+<span class="sd">    It mostly works, but you may want to specify for best results.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -262,7 +266,8 @@
 
     <span class="k">if</span> <span class="n">datatype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">datatype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;MET&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">read_gml_met</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">read_gml_met</span><span class="p">(</span>
+                <span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">datatype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;RADIATION&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">read_gml_radiation</span><span class="p">(</span>
                 <span class="n">filename</span><span class="p">,</span>
@@ -273,7 +278,8 @@
         <span class="k">elif</span> <span class="n">datatype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;OZONE&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">read_gml_ozone</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">datatype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;CO2&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">read_gml_co2</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">read_gml_co2</span><span class="p">(</span>
+                <span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">datatype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;HALO&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">read_gml_halo</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -287,10 +293,12 @@
         <span class="n">test_filename</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">test_filename</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">test_filename</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;met_&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">test_filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.txt&#39;</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">read_gml_met</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">read_gml_met</span><span class="p">(</span>
+                <span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">test_filename</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;co2_&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">test_filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.txt&#39;</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">read_gml_co2</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">read_gml_co2</span><span class="p">(</span>
+                <span class="n">filename</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;([a-z]</span><span class="si">{3}</span><span class="s1">)([\d]</span><span class="si">{5}</span><span class="s1">).dat&#39;</span><span class="p">,</span> <span class="n">test_filename</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -328,7 +336,7 @@
 
 
 <div class="viewcode-block" id="read_gml_halo"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml_halo.html#act.io.read_gml_halo">[docs]</a><span class="k">def</span> <span class="nf">read_gml_halo</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function to read Halocarbon data from NOAA GML.</span>
 
 <span class="sd">    Parameters</span>
@@ -345,7 +353,6 @@
 <span class="sd">        Keywords to pass through to ACT read_csv() routine.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="n">ds</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">ds</span>
@@ -454,8 +461,8 @@
             <span class="n">header</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
-        <span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Nan&#39;</span><span class="p">,</span> <span class="s1">&#39;NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">,</span> <span class="s1">&#39;NAN&#39;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
-    <span class="p">)</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+        <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Nan&#39;</span><span class="p">,</span> <span class="s1">&#39;NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">,</span> <span class="s1">&#39;NAN&#39;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="n">var_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">data_vars</span><span class="p">)</span>
     <span class="n">year_name</span><span class="p">,</span> <span class="n">month_name</span><span class="p">,</span> <span class="n">day_name</span><span class="p">,</span> <span class="n">hour_name</span><span class="p">,</span> <span class="n">min_name</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
     <span class="k">for</span> <span class="n">var_name</span> <span class="ow">in</span> <span class="n">var_names</span><span class="p">:</span>
@@ -494,7 +501,8 @@
                 <span class="n">ds</span><span class="p">[</span><span class="n">day_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">ts</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">year_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">ds</span><span class="p">[</span><span class="n">month_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">ts</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span>
+                <span class="n">ds</span><span class="p">[</span><span class="n">year_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">ds</span><span class="p">[</span><span class="n">month_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
 
         <span class="n">timestamp</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
 
@@ -526,7 +534,7 @@
 
 
 <div class="viewcode-block" id="read_gml_co2"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml_co2.html#act.io.read_gml_co2">[docs]</a><span class="k">def</span> <span class="nf">read_gml_co2</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function to read carbon dioxide data from NOAA GML.</span>
 
 <span class="sd">    Parameters</span>
@@ -629,7 +637,8 @@
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">test_filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">fc</span><span class="p">:</span>
         <span class="n">skiprows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fc</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>
 
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="n">timestamp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64[s]&#39;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)):</span>
@@ -712,8 +721,8 @@
 
 
 <div class="viewcode-block" id="read_gml_ozone"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml_ozone.html#act.io.read_gml_ozone">[docs]</a><span class="k">def</span> <span class="nf">read_gml_ozone</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Function to read carbon dioxide data from NOAA GML.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to read ozone data from NOAA GML.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -727,8 +736,8 @@
 <span class="sd">    dataset : Xarray.dataset</span>
 <span class="sd">        Standard ARM Xarray dataset with the data cleaned up to have units,</span>
 <span class="sd">        long_name, correct type and some other stuff.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
 
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">ds</span>
@@ -748,7 +757,8 @@
                 <span class="k">pass</span>
             <span class="n">skiprows</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;station&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;STN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
     <span class="n">timestamp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;YEAR&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64[s]&#39;</span><span class="p">)</span>
@@ -778,8 +788,9 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="read_gml_radiation"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml_radiation.html#act.io.read_gml_radiation">[docs]</a><span class="k">def</span> <span class="nf">read_gml_radiation</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">remove_time_vars</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="read_gml_radiation"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml_radiation.html#act.io.read_gml_radiation">[docs]</a><span class="k">def</span> <span class="nf">read_gml_radiation</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                       <span class="n">remove_time_vars</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function to read radiation data from NOAA GML.</span>
 
 <span class="sd">    Parameters</span>
@@ -947,7 +958,8 @@
     <span class="p">}</span>
 
     <span class="c1"># Add additinal column names for NOAA SPASH campaign</span>
-    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;cbc&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;ckp&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;cbc&#39;</span><span class="p">)</span> <span class="ow">or</span> \
+            <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;ckp&#39;</span><span class="p">):</span>
         <span class="n">column_names</span><span class="p">[</span><span class="s1">&#39;SPN1_total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;W/m^2&#39;</span><span class="p">,</span>
             <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;SPN1 total average&#39;</span><span class="p">,</span>
@@ -1099,8 +1111,8 @@
 
 
 <div class="viewcode-block" id="read_gml_met"><a class="viewcode-back" href="../../../API/generated/act.io.read_gml_met.html#act.io.read_gml_met">[docs]</a><span class="k">def</span> <span class="nf">read_gml_met</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">convert_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Function to read meteorlogical data from NOAA GML.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to read meteorological data from NOAA GML.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1201,10 +1213,11 @@
         <span class="n">minutes</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">del</span> <span class="n">column_names</span><span class="p">[</span><span class="s1">&#39;minute&#39;</span><span class="p">]</span>
 
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">column_names</span><span class="o">=</span><span class="n">column_names</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">csvfiles</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">column_names</span><span class="o">=</span><span class="n">column_names</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">ds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
         <span class="n">timestamp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64[s]&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)):</span>
             <span class="k">if</span> <span class="n">minutes</span><span class="p">:</span>
@@ -1271,9 +1284,8 @@
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1284,7 +1296,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     

@@ -26,6 +26,8 @@
     
     check_arm_standards
     
+    check_if_tar_gz_file
+    
     create_obj_from_arm_dod
     
     proc_sigma_mplv5_read
@@ -46,9 +48,17 @@
     
     read_hk_file
     
+    read_icartt
+    
+    read_mmcr
+    
+    read_neon_csv
+    
     read_netcdf
     
     read_psl_parsivel
+    
+    read_psl_radar_fmcw_moment
     
     read_psl_wind_profiler
     

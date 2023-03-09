@@ -1,56 +1,60 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.utils.data_utils &#8212; Atmospheric data Community Toolkit 0.post1+gba47487 documentation</title>
+    <title>act.utils.data_utils &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -96,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -222,6 +226,7 @@
 <span class="kn">import</span> <span class="nn">importlib</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
+<span class="kn">import</span> <span class="nn">metpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pint</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
@@ -233,26 +238,10 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="n">PYART_AVAILABLE</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">metpy</span>
-    <span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">DistributionNotFound</span>
 
-    <span class="n">METPY_AVAILABLE</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="n">METPY_AVAILABLE</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="k">except</span> <span class="p">(</span><span class="ne">ModuleNotFoundError</span><span class="p">,</span> <span class="n">DistributionNotFound</span><span class="p">):</span>
-    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-        <span class="s1">&#39;MetPy is installed but could not be imported. &#39;</span>
-        <span class="o">+</span> <span class="s1">&#39;Please check your MetPy installation. Some features &#39;</span>
-        <span class="o">+</span> <span class="s1">&#39;will be disabled.&#39;</span><span class="p">,</span>
-        <span class="ne">ImportWarning</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="n">METPY_AVAILABLE</span> <span class="o">=</span> <span class="kc">False</span>
-
-
-<div class="viewcode-block" id="ChangeUnits"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.html#act.qc.ChangeUnits">[docs]</a><span class="nd">@xr</span><span class="o">.</span><span class="n">register_dataset_accessor</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="ChangeUnits"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.html#act.utils.ChangeUnits">[docs]</a><span class="nd">@xr</span><span class="o">.</span><span class="n">register_dataset_accessor</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">ChangeUnits</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class for updating units in the object. Data values and units attribute</span>
 <span class="sd">    are updated in place. Coordinate variables can not be updated in place. Must</span>
 <span class="sd">    use new returned dataset when updating coordinage varibles.</span>
@@ -261,10 +250,10 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xarray_obj</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="n">xarray_obj</span>
 
-<div class="viewcode-block" id="ChangeUnits.change_units"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.change_units.html#act.qc.ChangeUnits.change_units">[docs]</a>    <span class="k">def</span> <span class="nf">change_units</span><span class="p">(</span>
+<div class="viewcode-block" id="ChangeUnits.change_units"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.change_units.html#act.utils.ChangeUnits.change_units">[docs]</a>    <span class="k">def</span> <span class="nf">change_units</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">desired_unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skip_variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skip_standard</span><span class="o">=</span><span class="kc">True</span>
     <span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        variables : None, str or list of str</span>
@@ -334,8 +323,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span></div></div>
 
 
-<div class="viewcode-block" id="assign_coordinates"><a class="viewcode-back" href="../../../API/generated/act.utils.assign_coordinates.html#act.qc.assign_coordinates">[docs]</a><span class="k">def</span> <span class="nf">assign_coordinates</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">coord_list</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="assign_coordinates"><a class="viewcode-back" href="../../../API/generated/act.utils.assign_coordinates.html#act.utils.assign_coordinates">[docs]</a><span class="k">def</span> <span class="nf">assign_coordinates</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">coord_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This procedure will create a new ACT dataset whose coordinates are</span>
 <span class="sd">    designated to be the variables in a given list. This helps make data</span>
 <span class="sd">    slicing via xarray and visualization easier.</span>
@@ -384,8 +373,8 @@
     <span class="k">return</span> <span class="n">new_ds</span></div>
 
 
-<div class="viewcode-block" id="add_in_nan"><a class="viewcode-back" href="../../../API/generated/act.utils.add_in_nan.html#act.qc.add_in_nan">[docs]</a><span class="k">def</span> <span class="nf">add_in_nan</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="add_in_nan"><a class="viewcode-back" href="../../../API/generated/act.utils.add_in_nan.html#act.utils.add_in_nan">[docs]</a><span class="k">def</span> <span class="nf">add_in_nan</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This procedure adds in NaNs when there is a larger than expected time step.</span>
 <span class="sd">    This is useful for timeseries where there is a gap in data and need a</span>
 <span class="sd">    NaN value to stop plotting from connecting data over the large data gap.</span>
@@ -407,14 +396,19 @@
 <span class="sd">        The array containing the NaN-indserted data.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Return if time dimension is only size one since we can&#39;t do differences.</span>
+
     <span class="n">time_is_DataArray</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">data_is_DataArray</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">dataarray</span><span class="o">.</span><span class="n">DataArray</span><span class="p">):</span>
         <span class="n">time_is_DataArray</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">time_attributes</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">attrs</span>
+        <span class="n">time_dims</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">dims</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">dataarray</span><span class="o">.</span><span class="n">DataArray</span><span class="p">):</span>
         <span class="n">data_is_DataArray</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">data_attributes</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">attrs</span>
+        <span class="n">data_dims</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dims</span>
 
+    <span class="c1"># Return if time dimension is only size one since we can&#39;t do differences.</span>
     <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
@@ -427,21 +421,22 @@
 
         <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-            <span class="n">time_added</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
-            <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">time_added</span><span class="p">)</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">corr_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">offset</span>
+            <span class="n">time_added</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">time_added</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
             <span class="n">offset</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="k">if</span> <span class="n">time_is_DataArray</span><span class="p">:</span>
-            <span class="n">time</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">time_attributes</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">time_dims</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">data_is_DataArray</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">data_attributes</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">data_dims</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">time</span><span class="p">,</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="get_missing_value"><a class="viewcode-back" href="../../../API/generated/act.utils.get_missing_value.html#act.qc.get_missing_value">[docs]</a><span class="k">def</span> <span class="nf">get_missing_value</span><span class="p">(</span>
+<div class="viewcode-block" id="get_missing_value"><a class="viewcode-back" href="../../../API/generated/act.utils.get_missing_value.html#act.utils.get_missing_value">[docs]</a><span class="k">def</span> <span class="nf">get_missing_value</span><span class="p">(</span>
     <span class="n">data_object</span><span class="p">,</span>
     <span class="n">variable</span><span class="p">,</span>
     <span class="n">default</span><span class="o">=-</span><span class="mi">9999</span><span class="p">,</span>
@@ -449,7 +444,7 @@
     <span class="n">use_FillValue</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">nodefault</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function to get missing value from missing_value or _FillValue attribute.</span>
 <span class="sd">    Works well with catching errors and allows for a default value when a</span>
 <span class="sd">    missing value is not listed in the object. You may get strange results</span>
@@ -539,8 +534,8 @@
     <span class="k">return</span> <span class="n">missing</span></div>
 
 
-<div class="viewcode-block" id="convert_units"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_units.html#act.qc.convert_units">[docs]</a><span class="k">def</span> <span class="nf">convert_units</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">in_units</span><span class="p">,</span> <span class="n">out_units</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="convert_units"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_units.html#act.utils.convert_units">[docs]</a><span class="k">def</span> <span class="nf">convert_units</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">in_units</span><span class="p">,</span> <span class="n">out_units</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Wrapper function around library to convert data using unit strings.</span>
 <span class="sd">    Currently using pint units library. Will attempt to preserve numpy</span>
 <span class="sd">    data type, but will upconvert to numpy float64 if need to change</span>
@@ -619,8 +614,8 @@
     <span class="k">return</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="ts_weighted_average"><a class="viewcode-back" href="../../../API/generated/act.utils.ts_weighted_average.html#act.qc.ts_weighted_average">[docs]</a><span class="k">def</span> <span class="nf">ts_weighted_average</span><span class="p">(</span><span class="n">ts_dict</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ts_weighted_average"><a class="viewcode-back" href="../../../API/generated/act.utils.ts_weighted_average.html#act.utils.ts_weighted_average">[docs]</a><span class="k">def</span> <span class="nf">ts_weighted_average</span><span class="p">(</span><span class="n">ts_dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Program to take in multiple difference time-series and average them</span>
 <span class="sd">    using the weights provided. This assumes that the variables passed in</span>
 <span class="sd">    all have the same units. Please see example gallery for an example.</span>
@@ -695,8 +690,8 @@
     <span class="k">return</span> <span class="n">da_xr</span></div>
 
 
-<div class="viewcode-block" id="accumulate_precip"><a class="viewcode-back" href="../../../API/generated/act.utils.accumulate_precip.html#act.qc.accumulate_precip">[docs]</a><span class="k">def</span> <span class="nf">accumulate_precip</span><span class="p">(</span><span class="n">act_obj</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="accumulate_precip"><a class="viewcode-back" href="../../../API/generated/act.utils.accumulate_precip.html#act.utils.accumulate_precip">[docs]</a><span class="k">def</span> <span class="nf">accumulate_precip</span><span class="p">(</span><span class="n">act_obj</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Program to accumulate rain rates from an act object and insert variable back</span>
 <span class="sd">    into act object with &quot;_accumulated&quot; appended to the variable name. Please</span>
 <span class="sd">    verify that your units are accurately described in the data.</span>
@@ -746,7 +741,7 @@
     <span class="k">return</span> <span class="n">act_obj</span></div>
 
 
-<div class="viewcode-block" id="create_pyart_obj"><a class="viewcode-back" href="../../../API/generated/act.utils.create_pyart_obj.html#act.qc.create_pyart_obj">[docs]</a><span class="k">def</span> <span class="nf">create_pyart_obj</span><span class="p">(</span>
+<div class="viewcode-block" id="create_pyart_obj"><a class="viewcode-back" href="../../../API/generated/act.utils.create_pyart_obj.html#act.utils.create_pyart_obj">[docs]</a><span class="k">def</span> <span class="nf">create_pyart_obj</span><span class="p">(</span>
     <span class="n">obj</span><span class="p">,</span>
     <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">sweep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -762,7 +757,7 @@
     <span class="n">sweep_az_thresh</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span>
     <span class="n">sweep_el_thresh</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Produces a Py-ART radar object based on data in the ACT object.</span>
 
 <span class="sd">    Parameters</span>
@@ -949,7 +944,7 @@
     <span class="k">return</span> <span class="n">radar</span></div>
 
 
-<div class="viewcode-block" id="convert_to_potential_temp"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_to_potential_temp.html#act.qc.convert_to_potential_temp">[docs]</a><span class="k">def</span> <span class="nf">convert_to_potential_temp</span><span class="p">(</span>
+<div class="viewcode-block" id="convert_to_potential_temp"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_to_potential_temp.html#act.utils.convert_to_potential_temp">[docs]</a><span class="k">def</span> <span class="nf">convert_to_potential_temp</span><span class="p">(</span>
     <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">temp_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">press_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -959,7 +954,7 @@
     <span class="n">press_var_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts temperature to potential temperature.</span>
 
 <span class="sd">    Parameters</span>
@@ -998,12 +993,6 @@
 <span class="sd">    doi:10.5065/D6WW7G29.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">METPY_AVAILABLE</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
-            <span class="s1">&#39;MetPy needs to be installed on your system to &#39;</span> <span class="s1">&#39;convert to potential temperature&#39;</span>
-        <span class="p">)</span>
-
     <span class="n">potential_temp</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">temp_var_units</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">temp_var_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">temp_var_units</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">temp_var_name</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span>
@@ -1037,7 +1026,7 @@
     <span class="k">return</span> <span class="n">potential_temp</span></div>
 
 
-<div class="viewcode-block" id="height_adjusted_temperature"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_temperature.html#act.qc.height_adjusted_temperature">[docs]</a><span class="k">def</span> <span class="nf">height_adjusted_temperature</span><span class="p">(</span>
+<div class="viewcode-block" id="height_adjusted_temperature"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_temperature.html#act.utils.height_adjusted_temperature">[docs]</a><span class="k">def</span> <span class="nf">height_adjusted_temperature</span><span class="p">(</span>
     <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">temp_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">height_difference</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -1048,7 +1037,7 @@
     <span class="n">pressure</span><span class="o">=</span><span class="mf">101.325</span><span class="p">,</span>
     <span class="n">press_var_units</span><span class="o">=</span><span class="s1">&#39;kPa&#39;</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts temperature for change in height.</span>
 
 <span class="sd">    Parameters</span>
@@ -1097,12 +1086,6 @@
 <span class="sd">    doi:10.5065/D6WW7G29.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">METPY_AVAILABLE</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
-            <span class="s1">&#39;MetPy needs to be installed on your system to &#39;</span> <span class="s1">&#39;convert temperature for height.&#39;</span>
-        <span class="p">)</span>
-
     <span class="n">adjusted_temperature</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">temp_var_units</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">temperature</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">temp_var_units</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">temp_var_name</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span>
@@ -1137,7 +1120,7 @@
     <span class="k">return</span> <span class="n">adjusted_temperature</span></div>
 
 
-<div class="viewcode-block" id="height_adjusted_pressure"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_pressure.html#act.qc.height_adjusted_pressure">[docs]</a><span class="k">def</span> <span class="nf">height_adjusted_pressure</span><span class="p">(</span>
+<div class="viewcode-block" id="height_adjusted_pressure"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_pressure.html#act.utils.height_adjusted_pressure">[docs]</a><span class="k">def</span> <span class="nf">height_adjusted_pressure</span><span class="p">(</span>
     <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">press_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">height_difference</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -1145,8 +1128,7 @@
     <span class="n">pressure</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">press_var_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts pressure for change in height.</span>
 
 <span class="sd">    Parameters</span>
@@ -1183,13 +1165,6 @@
 <span class="sd">    doi:10.5065/D6WW7G29.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">METPY_AVAILABLE</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
-            <span class="s1">&#39;MetPy needs to be installed on your system to &#39;</span>
-            <span class="s1">&#39;convert to convert pressure for change in height.&#39;</span>
-        <span class="p">)</span>
-
     <span class="n">adjusted_pressure</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">press_var_units</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">pressure</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">press_var_units</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">press_var_name</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span>
@@ -1230,9 +1205,8 @@
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1243,7 +1217,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     

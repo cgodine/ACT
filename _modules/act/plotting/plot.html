@@ -1,56 +1,60 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.plotting.plot &#8212; Atmospheric data Community Toolkit 0.post1+gba47487 documentation</title>
+    <title>act.plotting.plot &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -96,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -225,10 +229,11 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
 
 
 <div class="viewcode-block" id="Display"><a class="viewcode-back" href="../../../API/generated/act.plotting.Display.html#act.plotting.Display">[docs]</a><span class="k">class</span> <span class="nc">Display</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class is the base class for all of the other Display object</span>
 <span class="sd">    types in ACT. This contains the common attributes and routines</span>
 <span class="sd">    between the differing *Display* classes. We recommend that you</span>
@@ -337,7 +342,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">add_subplots</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">,</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="n">subplot_kw</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Display.add_subplots"><a class="viewcode-back" href="../../../API/generated/act.plotting.Display.add_subplots.html#act.plotting.Display.add_subplots">[docs]</a>    <span class="k">def</span> <span class="nf">add_subplots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subplot_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds subplots to the Display object. The current</span>
 <span class="sd">        figure in the object will be deleted and overwritten.</span>
 
@@ -378,7 +383,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="n">ax</span></div>
 
 <div class="viewcode-block" id="Display.put_display_in_subplot"><a class="viewcode-back" href="../../../API/generated/act.plotting.Display.put_display_in_subplot.html#act.plotting.Display.put_display_in_subplot">[docs]</a>    <span class="k">def</span> <span class="nf">put_display_in_subplot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">display</span><span class="p">,</span> <span class="n">subplot_index</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will place a Display object into a specific subplot.</span>
 <span class="sd">        The display object must only have one subplot.</span>
 
@@ -424,7 +429,7 @@
         <span class="k">return</span> <span class="n">display</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="Display.assign_to_figure_axis"><a class="viewcode-back" href="../../../API/generated/act.plotting.Display.assign_to_figure_axis.html#act.plotting.Display.assign_to_figure_axis">[docs]</a>    <span class="k">def</span> <span class="nf">assign_to_figure_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This assigns the Display to a specific figure and axis.</span>
 <span class="sd">        This will remove the figure and axes that are currently</span>
 <span class="sd">        stored in the object. The display object will then only</span>
@@ -448,7 +453,7 @@
 
 <div class="viewcode-block" id="Display.add_colorbar"><a class="viewcode-back" href="../../../API/generated/act.plotting.Display.add_colorbar.html#act.plotting.Display.add_colorbar">[docs]</a>    <span class="k">def</span> <span class="nf">add_colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mappable</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,),</span> <span class="n">pad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                      <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds a colorbar to the plot.</span>
 
 <span class="sd">        Parameters</span>
@@ -493,7 +498,148 @@
         <span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cbs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cbar</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">cbar</span></div></div>
+        <span class="k">return</span> <span class="n">cbar</span></div>
+
+<div class="viewcode-block" id="Display.group_by"><a class="viewcode-back" href="../../../API/generated/act.plotting.Display.group_by.html#act.plotting.Display.group_by">[docs]</a>    <span class="k">def</span> <span class="nf">group_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Group the Display by specific units of time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        units: str</span>
+<span class="sd">            One of: &#39;year&#39;, &#39;month&#39;, &#39;day&#39;, &#39;hour&#39;, &#39;minute&#39;, &#39;second&#39;.</span>
+<span class="sd">            Group the plot by this unit of time (year, month, etc.)</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        groupby: act.plotting.DisplayGroupby</span>
+<span class="sd">            The DisplayGroupby object to be retuned.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">DisplayGroupby</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">DisplayGroupby</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">display</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        display: Display</span>
+<span class="sd">            The Display object to group by time.</span>
+<span class="sd">        units: str</span>
+<span class="sd">            The time units to group by. Can be one of:</span>
+<span class="sd">            &#39;year&#39;, &#39;month&#39;, &#39;day&#39;, &#39;hour&#39;, &#39;minute&#39;, &#39;second&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">display</span> <span class="o">=</span> <span class="n">display</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_groupby</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="n">units</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isTimeSeriesDisplay</span> <span class="o">=</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="p">,</span> <span class="s1">&#39;time_height_scatter&#39;</span><span class="p">)</span>
+        <span class="n">num_groups</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">datastreams</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">datastreams</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_groupby</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">units</span><span class="p">)</span>
+            <span class="n">num_groups</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">num_groups</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_groupby</span><span class="p">[</span><span class="n">key</span><span class="p">])])</span>
+
+    <span class="k">def</span> <span class="nf">plot_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">dsname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plots each group created in :func:`act.plotting.Display.group_by` into each subplot of the display.</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        func_name: str</span>
+<span class="sd">            The name of the plotting function in the Display that you are grouping.</span>
+<span class="sd">        dsname: str or None</span>
+<span class="sd">            The name of the datastream to plot</span>
+
+<span class="sd">        Additional keyword objects are passed into *func_name*.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        axis: Array of matplotlib axes handles</span>
+<span class="sd">            The array of matplotlib axes handles that correspond to each subplot.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">dsname</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dsname</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="p">,</span> <span class="n">func_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;The specified string is not a function of &quot;</span>
+                               <span class="s2">&quot;the Display object.&quot;</span><span class="p">)</span>
+        <span class="n">subplot_shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">wrap_around</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">old_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_groupby</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">dsname</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">ds</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_groupby</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+                    <span class="n">num_years</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">):</span>
+                        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+                        <span class="n">wrap_around</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                        <span class="n">subplot_index</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">i</span> <span class="o">%</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">subplot_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],)</span>
+                    <span class="n">args</span><span class="p">,</span> <span class="n">varargs</span><span class="p">,</span> <span class="n">varkw</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getfullargspec</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="s2">&quot;subplot_index&quot;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+                        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;subplot_index&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">subplot_index</span>
+                    <span class="k">if</span> <span class="s2">&quot;time_rng&quot;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+                        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;time_rng&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+                    <span class="k">if</span> <span class="n">num_years</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">isTimeSeriesDisplay</span><span class="p">:</span>
+                        <span class="n">first_year</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="k">for</span> <span class="n">yr</span><span class="p">,</span> <span class="n">ds1</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">):</span>
+                            <span class="k">if</span> <span class="n">ds1</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                                <span class="n">days_in_year</span> <span class="o">=</span> <span class="mi">366</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="n">days_in_year</span> <span class="o">=</span> <span class="mi">365</span>
+                            <span class="n">year_diff</span> <span class="o">=</span> <span class="n">ds1</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">first_year</span>
+                            <span class="n">time_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                                <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">days_in_year</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">year_diff</span><span class="o">.</span><span class="n">values</span><span class="p">])</span>
+                            <span class="n">ds1</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds1</span><span class="o">.</span><span class="n">time</span> <span class="o">-</span> <span class="n">time_diff</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">yr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ds1</span>
+                            <span class="n">func</span><span class="p">(</span><span class="n">dsname</span><span class="o">=</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">yr</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">yr</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">yr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">subplot_index</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">yr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds1</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ds1</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+                        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">k</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">func</span><span class="p">(</span><span class="n">dsname</span><span class="o">=</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">k</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">subplot_index</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isTimeSeriesDisplay</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span><span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+                    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">wrap_around</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">):</span>
+            <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">subplot_index</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">i</span> <span class="o">%</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">subplot_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">subplot_index</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subplot_shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">subplot_index</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">i</span> <span class="o">%</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">subplot_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">subplot_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">subplot_index</span><span class="p">]</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isTimeSeriesDisplay</span><span class="p">:</span>
+            <span class="n">key_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">key_list</span><span class="p">:</span>
+                <span class="n">time_min</span><span class="p">,</span> <span class="n">time_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="n">subplot_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_xrng</span><span class="p">([</span><span class="n">time_min</span><span class="p">,</span> <span class="n">time_max</span><span class="p">],</span> <span class="n">subplot_index</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">_obj</span> <span class="o">=</span> <span class="n">old_obj</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">axes</span>
 </pre></div>
 <div class="section">
    
@@ -512,9 +658,8 @@
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -525,7 +670,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     

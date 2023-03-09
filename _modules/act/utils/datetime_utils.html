@@ -1,56 +1,60 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.utils.datetime_utils &#8212; Atmospheric data Community Toolkit 0.post1+gba47487 documentation</title>
+    <title>act.utils.datetime_utils &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -96,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,8 +231,8 @@
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 
 
-<div class="viewcode-block" id="dates_between"><a class="viewcode-back" href="../../../API/generated/act.utils.dates_between.html#act.qc.dates_between">[docs]</a><span class="k">def</span> <span class="nf">dates_between</span><span class="p">(</span><span class="n">sdate</span><span class="p">,</span> <span class="n">edate</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="dates_between"><a class="viewcode-back" href="../../../API/generated/act.utils.dates_between.html#act.utils.dates_between">[docs]</a><span class="k">def</span> <span class="nf">dates_between</span><span class="p">(</span><span class="n">sdate</span><span class="p">,</span> <span class="n">edate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Ths procedure returns all of the dates between *sdate* and *edate*.</span>
 
 <span class="sd">    Parameters</span>
@@ -253,8 +257,8 @@
     <span class="k">return</span> <span class="n">all_dates</span></div>
 
 
-<div class="viewcode-block" id="numpy_to_arm_date"><a class="viewcode-back" href="../../../API/generated/act.utils.numpy_to_arm_date.html#act.qc.numpy_to_arm_date">[docs]</a><span class="k">def</span> <span class="nf">numpy_to_arm_date</span><span class="p">(</span><span class="n">_date</span><span class="p">,</span> <span class="n">returnTime</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="numpy_to_arm_date"><a class="viewcode-back" href="../../../API/generated/act.utils.numpy_to_arm_date.html#act.utils.numpy_to_arm_date">[docs]</a><span class="k">def</span> <span class="nf">numpy_to_arm_date</span><span class="p">(</span><span class="n">_date</span><span class="p">,</span> <span class="n">returnTime</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a numpy datetime64, return an ARM standard date (yyyymmdd).</span>
 
 <span class="sd">    Parameters</span>
@@ -266,21 +270,25 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    arm_date : string</span>
+<span class="sd">    arm_date : string or None</span>
 <span class="sd">        Returns an arm date.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">_date</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">returnTime</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-        <span class="n">date</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">date</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H%M%S&#39;</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">dateutil.parser._parser</span> <span class="kn">import</span> <span class="n">ParserError</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">_date</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">returnTime</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">date</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">date</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H%M%S&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">ParserError</span><span class="p">:</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">return</span> <span class="n">date</span></div>
 
 
-<div class="viewcode-block" id="reduce_time_ranges"><a class="viewcode-back" href="../../../API/generated/act.utils.reduce_time_ranges.html#act.qc.reduce_time_ranges">[docs]</a><span class="k">def</span> <span class="nf">reduce_time_ranges</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">broken_barh</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="reduce_time_ranges"><a class="viewcode-back" href="../../../API/generated/act.utils.reduce_time_ranges.html#act.utils.reduce_time_ranges">[docs]</a><span class="k">def</span> <span class="nf">reduce_time_ranges</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">broken_barh</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a time series, this function will return a list of tuples of time</span>
 <span class="sd">    ranges representing the contineous times where no data is detected missing.</span>
 
@@ -323,8 +331,8 @@
         <span class="k">return</span> <span class="p">[(</span><span class="n">time</span><span class="p">[</span><span class="n">dd</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">time</span><span class="p">[</span><span class="n">dd</span><span class="p">[</span><span class="n">ii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]])</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dd</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span></div>
 
 
-<div class="viewcode-block" id="determine_time_delta"><a class="viewcode-back" href="../../../API/generated/act.utils.determine_time_delta.html#act.qc.determine_time_delta">[docs]</a><span class="k">def</span> <span class="nf">determine_time_delta</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">60</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="determine_time_delta"><a class="viewcode-back" href="../../../API/generated/act.utils.determine_time_delta.html#act.utils.determine_time_delta">[docs]</a><span class="k">def</span> <span class="nf">determine_time_delta</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">60</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the most likely time step in seconds by analyzing the difference</span>
 <span class="sd">    in time steps.</span>
 
@@ -354,8 +362,8 @@
     <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">time_delta</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="datetime64_to_datetime"><a class="viewcode-back" href="../../../API/generated/act.utils.datetime64_to_datetime.html#act.qc.datetime64_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">datetime64_to_datetime</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="datetime64_to_datetime"><a class="viewcode-back" href="../../../API/generated/act.utils.datetime64_to_datetime.html#act.utils.datetime64_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">datetime64_to_datetime</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a numpy datetime64 array time series, return datetime</span>
 <span class="sd">    (y, m, d, h, m, s)</span>
 
@@ -384,8 +392,8 @@
     <span class="k">return</span> <span class="n">datetime_array</span></div>
 
 
-<div class="viewcode-block" id="date_parser"><a class="viewcode-back" href="../../../API/generated/act.utils.date_parser.html#act.qc.date_parser">[docs]</a><span class="k">def</span> <span class="nf">date_parser</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="n">output_format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">return_datetime</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts one datetime string to another or to</span>
+<div class="viewcode-block" id="date_parser"><a class="viewcode-back" href="../../../API/generated/act.utils.date_parser.html#act.utils.date_parser">[docs]</a><span class="k">def</span> <span class="nf">date_parser</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="n">output_format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">return_datetime</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts one datetime string to another or to</span>
 <span class="sd">    a datetime object.</span>
 
 <span class="sd">    Parameters</span>
@@ -430,6 +438,59 @@
             <span class="k">pass</span>
     <span class="n">fmt_strings</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">date_fmts</span><span class="p">)</span>
     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid Date format, please use one of these formats &#39;</span> <span class="o">+</span> <span class="n">fmt_strings</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="adjust_timestamp"><a class="viewcode-back" href="../../../API/generated/act.utils.adjust_timestamp.html#act.utils.adjust_timestamp">[docs]</a><span class="k">def</span> <span class="nf">adjust_timestamp</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">time_bounds</span><span class="o">=</span><span class="s1">&#39;time_bounds&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Will adjust the timestamp based on the time_bounds or other information</span>
+<span class="sd">    so that the timestamp aligns with user preference.</span>
+
+<span class="sd">    Will work to adjust the times based on the time_bounds variable</span>
+<span class="sd">    but if it&#39;s not available will rely on the user supplied input</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ds : Xarray Dataset</span>
+<span class="sd">        Dataset to adjust</span>
+<span class="sd">    time_bounds : str</span>
+<span class="sd">        Name of the time_bounds variable</span>
+<span class="sd">    align : str</span>
+<span class="sd">        Alignment of the time when using time_bounds.</span>
+<span class="sd">            left: Sets timestamp to start of  sample interval</span>
+<span class="sd">            right: Sets timestamp to end of sample interval</span>
+<span class="sd">            center: Sets timestamp to middle of sample interval</span>
+<span class="sd">    offset : int</span>
+<span class="sd">        Time in seconds to offset the timestamp.  This overrides</span>
+<span class="sd">        the time_bounds variable and can be positive or negative.</span>
+<span class="sd">        Required to be in seconds</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ds : Xarray DataSet</span>
+<span class="sd">        Adjusted DataSet</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">time_bounds</span> <span class="ow">in</span> <span class="n">ds</span> <span class="ow">and</span> <span class="n">offset</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">time_bounds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">time_bounds</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="k">if</span> <span class="n">align</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+            <span class="n">time_start</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">time_bounds</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">align</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="n">time_start</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">time_bounds</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">align</span> <span class="o">==</span> <span class="s1">&#39;center&#39;</span><span class="p">:</span>
+            <span class="n">time_start</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">/</span> <span class="mf">2.</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">time_bounds</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Align should be set to one of [left, right, middle]&#39;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">time_start</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">time</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;time_bounds variable is not available&#39;</span><span class="p">)</span>
+
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="n">time_start</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">ds</span></div>
 </pre></div>
 <div class="section">
    
@@ -448,9 +509,8 @@
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -461,7 +521,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     
