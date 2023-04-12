@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Forcing line plots with 2D data and QC &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
+    <title>Forcing line plots with 2D data and QC &#8212; Atmospheric data Community Toolkit 0.post1+g1ca86cd documentation</title>
     
     <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,7 +55,8 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Plotting Baseline Surface Radiation Network (BSRN) QC Flags" href="plot_qc_bsrn.html" />
-    <link rel="prev" title="Query the ARM DQR webservice" href="plot_dqr_qc.html" /> 
+    <link rel="prev" title="Query the ARM DQR webservice" href="plot_dqr_qc.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -69,38 +70,16 @@
                     gtag('js', new Date());
                     gtag('config', 'G-8YN80YZDD8');
                 </script>
- 
+
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="ACT Blog"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -267,6 +246,11 @@
      Plot ICARTT Formatted Files
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../io/plot_create_arm_ds.html">
+     Create a dataset to mimic ARM file formats
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -279,6 +263,21 @@
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_enhanced_skewt.html">
+     Enhanced plot of a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_sonde.html">
+     Plot a timeseries of sounding data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_hist_kwargs.html">
+     Plot a histogram of Met data.
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
      Plot winds and relative humidity from sounding data
@@ -307,11 +306,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_skewt.html">
      Skew-T plot of a sounding
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_sonde.html">
-     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,6 +346,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_data_rose.html">
      Data rose plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_presentweathercode.html">
+     Plot Present Weather Code
     </a>
    </li>
    <li class="toctree-l2">
@@ -411,6 +410,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../retrievals/plot_get_stability_indices_example.html">
      Retrieve stability indicies from a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../retrievals/plot_cbh_sobel.html">
+     Cloud Base Height Retrievals
     </a>
    </li>
   </ul>
@@ -502,7 +506,8 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="sphx-glr-download-link-note admonition note">
+                
+<div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="#sphx-glr-download-source-auto-examples-qc-plot-force-line-qc-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code</p>
@@ -516,14 +521,7 @@ example uses the force_line_plot keyword which will force multiple
 1 dimentional plots for each element along the second dimention of
 the non-time dimention.</p>
 <p>Author: Ken Kehoe</p>
-<img src="../../../_images/sphx_glr_plot_force_line_qc_001.png" srcset="../../../_images/sphx_glr_plot_force_line_qc_001.png" alt="nsasurfspecalb1mlawerC1.c1 surface_albedo_mfr_narrowband_10m on 20160609" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/ACT/ACT/act/utils/datetime_utils.py:136: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
-  mode = stats.mode(np.diff(time))
-</pre></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<img src="../../../_images/sphx_glr_plot_force_line_qc_001.png" srcset="../../../_images/sphx_glr_plot_force_line_qc_001.png" alt="nsasurfspecalb1mlawerC1.c1 surface_albedo_mfr_narrowband_10m on 20160609" class = "sphx-glr-single-img"/><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="kn">from</span> <span class="nn">act.io.armfiles</span> <span class="kn">import</span> <span class="n">read_netcdf</span>
 <span class="kn">from</span> <span class="nn">act.plotting</span> <span class="kn">import</span> <span class="n">TimeSeriesDisplay</span>
@@ -557,7 +555,7 @@ the non-time dimention.</p>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.271 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.426 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-qc-plot-force-line-qc-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/9115ed18f772711d746eb822ff3557f6/plot_force_line_qc.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_force_line_qc.py</span></code></a></p>
@@ -569,8 +567,9 @@ the non-time dimention.</p>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </div>

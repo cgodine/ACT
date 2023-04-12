@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.discovery.get_asos &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
+    <title>act.discovery.get_asos &#8212; Atmospheric data Community Toolkit 0.post1+g1ca86cd documentation</title>
     
     <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@
     <script src="../../../_static/design-tabs.js"></script>
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -66,38 +67,16 @@
                     gtag('js', new Date());
                     gtag('config', 'G-8YN80YZDD8');
                 </script>
- 
+
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="ACT Blog"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -217,7 +196,8 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <h1>Source code for act.discovery.get_asos</h1><div class="highlight"><pre>
+                
+<h1>Source code for act.discovery.get_asos</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Script for downloading ASOS data from the Iowa Mesonet API</span>
 
@@ -258,7 +238,7 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    asos_ds: dict of xarray datasets</span>
+<span class="sd">    asos_ds: dict of xarray.Datasets</span>
 <span class="sd">        A dictionary of ACT datasets whose keys are the ASOS station IDs.</span>
 
 <span class="sd">    Examples</span>
@@ -270,7 +250,6 @@
 <span class="sd">        $ station = &quot;KORD&quot;</span>
 <span class="sd">        $ my_asoses = act.discovery.get_asos(time_window, station=&quot;ORD&quot;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="c1"># First query the database for all of the JSON info for every station</span>
     <span class="c1"># Only add stations whose lat/lon are within the Grid&#39;s boundaries</span>
     <span class="n">regions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;AF AL_ AI_ AQ_ AG_ AR_ AK AL AM_</span>
@@ -365,7 +344,7 @@
 
     <span class="n">service</span> <span class="o">+=</span> <span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;year1=%Y&amp;month1=%m&amp;day1=</span><span class="si">%d</span><span class="s1">&amp;hour1=%H&amp;minute1=%M&amp;&#39;</span><span class="p">)</span>
     <span class="n">service</span> <span class="o">+=</span> <span class="n">end_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;year2=%Y&amp;month2=%m&amp;day2=</span><span class="si">%d</span><span class="s1">&amp;hour2=%H&amp;minute2=%M&#39;</span><span class="p">)</span>
-    <span class="n">station_obs</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">asos_ds</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">stations</span> <span class="ow">in</span> <span class="n">site_list</span><span class="p">:</span>
         <span class="n">uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">service</span><span class="si">}</span><span class="s1">&amp;station=</span><span class="si">{</span><span class="n">stations</span><span class="si">}</span><span class="s1">&#39;</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Downloading: </span><span class="si">{</span><span class="n">stations</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -485,8 +464,8 @@
             <span class="n">my_df</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;_datastream&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stations</span>
             <span class="n">buf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-            <span class="n">station_obs</span><span class="p">[</span><span class="n">stations</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_df</span>
-    <span class="k">return</span> <span class="n">station_obs</span></div>
+            <span class="n">asos_ds</span><span class="p">[</span><span class="n">stations</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_df</span>
+    <span class="k">return</span> <span class="n">asos_ds</span></div>
 
 
 <span class="k">def</span> <span class="nf">_download_data</span><span class="p">(</span><span class="n">uri</span><span class="p">):</span>
@@ -504,8 +483,9 @@
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exhausted attempts to download, returning empty data&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </div>

@@ -47,11 +47,11 @@ Author: Maxwell Grover
     import act
 
     files = act.tests.sample_files.EXAMPLE_MET_WILDCARD
-    met = act.io.armfiles.read_netcdf(files)
+    met_ds = act.io.armfiles.read_netcdf(files)
 
 
     # Plot data
-    display = act.plotting.TimeSeriesDisplay(met)
+    display = act.plotting.TimeSeriesDisplay(met_ds)
     display.add_subplots((3, 2), figsize=(15, 10))
     display.plot('temp_mean', color='tab:red', subplot_index=(0, 0))
     display.plot('rh_mean', color='tab:green', subplot_index=(1, 0))
@@ -64,7 +64,7 @@ Author: Maxwell Grover
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.155 seconds)
+   **Total running time of the script:** ( 0 minutes  1.792 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_multiple_column.py:

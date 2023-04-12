@@ -36,19 +36,8 @@ Author: Adam Theisen
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/act/utils/datetime_utils.py:136: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
-      mode = stats.mode(np.diff(time))
 
 
-
-
-
-
-|
 
 .. code-block:: default
 
@@ -60,17 +49,17 @@ Author: Adam Theisen
 
     # Read in sample MET data
     files = act.tests.sample_files.EXAMPLE_MET1
-    obj = act.io.armfiles.read_netcdf(files)
+    ds = act.io.armfiles.read_netcdf(files)
 
     # In order to utilize all the ACT QC modules and plot the QC,
-    # we need to clean up the object to follow CF standards
-    obj.clean.cleanup()
+    # we need to clean up the dataset to follow CF standards
+    ds.clean.cleanup()
 
 
     # Plot data
     # Creat Plot Display
     variable = 'temp_mean'
-    display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+    display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
     # Plot temperature data in top plot
     display.plot(variable, subplot_index=(0,))
@@ -82,7 +71,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.674 seconds)
+   **Total running time of the script:** ( 0 minutes  1.003 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_qc.py:

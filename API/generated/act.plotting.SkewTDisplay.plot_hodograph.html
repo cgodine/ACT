@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>act.io.create_obj_from_arm_dod &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
+    <title>act.plotting.SkewTDisplay.plot_hodograph &#8212; Atmospheric data Community Toolkit 0.post1+g1ca86cd documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,9 @@
     <script src="../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="act.io.proc_sigma_mplv5_read" href="act.io.proc_sigma_mplv5_read.html" />
-    <link rel="prev" title="act.io.check_if_tar_gz_file" href="act.io.check_if_tar_gz_file.html" /> 
+    <link rel="next" title="act.plotting.SkewTDisplay.put_display_in_subplot" href="act.plotting.SkewTDisplay.put_display_in_subplot.html" />
+    <link rel="prev" title="act.plotting.SkewTDisplay.plot_from_u_and_v" href="act.plotting.SkewTDisplay.plot_from_u_and_v.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -69,38 +70,16 @@
                     gtag('js', new Date());
                     gtag('config', 'G-8YN80YZDD8');
                 </script>
- 
+
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../blog/atom.xml"
   title="ACT Blog"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -281,6 +260,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_arm_doi.html">
+     act.discovery.get_arm_doi
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.discovery.get_asos.html">
      act.discovery.get_asos
     </a>
@@ -297,16 +281,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="act.io.html">
    act.io
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.io.WriteDataset.html">
      act.io.WriteDataset
@@ -334,9 +318,9 @@
      act.io.check_if_tar_gz_file
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     act.io.create_obj_from_arm_dod
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.create_ds_from_arm_dod.html">
+     act.io.create_ds_from_arm_dod
     </a>
    </li>
    <li class="toctree-l2">
@@ -441,16 +425,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="act.plotting.html">
    act.plotting
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.plotting.ContourDisplay.html">
      act.plotting.ContourDisplay
@@ -664,19 +648,24 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="act.plotting.SkewTDisplay.html">
      act.plotting.SkewTDisplay
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
     <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
+    <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.SkewTDisplay.add_colorbar.html">
        act.plotting.SkewTDisplay.add_colorbar
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.SkewTDisplay.add_stability_info.html">
+       act.plotting.SkewTDisplay.add_stability_info
       </a>
      </li>
      <li class="toctree-l3">
@@ -695,6 +684,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.SkewTDisplay.plot_enhanced_skewt.html">
+       act.plotting.SkewTDisplay.plot_enhanced_skewt
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.SkewTDisplay.plot_from_spd_and_dir.html">
        act.plotting.SkewTDisplay.plot_from_spd_and_dir
       </a>
@@ -702,6 +696,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.SkewTDisplay.plot_from_u_and_v.html">
        act.plotting.SkewTDisplay.plot_from_u_and_v
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       act.plotting.SkewTDisplay.plot_hodograph
       </a>
      </li>
      <li class="toctree-l3">
@@ -1460,10 +1459,10 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#act.io.create_obj_from_arm_dod">
+  <a class="reference internal nav-link" href="#act.plotting.SkewTDisplay.plot_hodograph">
    <code class="docutils literal notranslate">
     <span class="pre">
-     create_obj_from_arm_dod()
+     SkewTDisplay.plot_hodograph()
     </span>
    </code>
   </a>
@@ -1488,51 +1487,40 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section id="act-io-create-obj-from-arm-dod">
-<h1>act.io.create_obj_from_arm_dod<a class="headerlink" href="#act-io-create-obj-from-arm-dod" title="Permalink to this heading">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="act.io.create_obj_from_arm_dod">
-<span class="sig-prename descclassname"><span class="pre">act.io.</span></span><span class="sig-name descname"><span class="pre">create_obj_from_arm_dod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-9999.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalar_fill_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/io/armfiles.html#create_obj_from_arm_dod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.io.create_obj_from_arm_dod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries the ARM DOD api and builds an object based on the ARM DOD and
-the dimension sizes that are passed in.</p>
+                
+<section id="act-plotting-skewtdisplay-plot-hodograph">
+<h1>act.plotting.SkewTDisplay.plot_hodograph<a class="headerlink" href="#act-plotting-skewtdisplay-plot-hodograph" title="Permalink to this heading">¶</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="act.plotting.SkewTDisplay.plot_hodograph">
+<span class="sig-prename descclassname"><span class="pre">SkewTDisplay.</span></span><span class="sig-name descname"><span class="pre">plot_hodograph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spd_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_fig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">component_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/skewtdisplay.html#SkewTDisplay.plot_hodograph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.SkewTDisplay.plot_hodograph" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will plot a hodograph from the radiosonde wind data using
+MetPy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>proc</strong> (<em>string</em>) – Process to create the object off of. This is normally in the
-format of inst.level. i.e. vdis.b1 or kazrge.a1. If local file
-is true, this points to the path of the .dod file.</p></li>
-<li><p><strong>set_dims</strong> (<em>dict</em>) – Dictionary of dims from the DOD and the corresponding sizes.
-Time is required. Code will try and pull from DOD, unless set
-through this variable
-Note: names need to match exactly what is in the dod
-i.e. {‘drop_diameter’: 50, ‘time’: 1440}</p></li>
-<li><p><strong>version</strong> (<em>string</em>) – Version number of the ingest to use. If not set, defaults to
-latest version</p></li>
-<li><p><strong>fill_value</strong> (<em>float</em>) – Fill value for non-dimension variables. Dimensions cannot have
-duplicate values and are incrementally set (0, 1, 2)</p></li>
-<li><p><strong>scalar_fill_dim</strong> (<em>str</em>) – Depending on how the object is set up, sometimes the scalar values
-are dimensioned to the main dimension. i.e. a lat/lon is set to have
-a dimension of time. This is a way to set it up similarly.</p></li>
-<li><p><strong>local_file</strong> (<em>bool</em>) – If true, the DOD will be loaded from a file whose name is proc.
-If false, the DOD will be pulled from PCM.</p></li>
+<li><p><strong>spd_field</strong> (<em>str</em>) – The name of the field corresponding to the wind speed.</p></li>
+<li><p><strong>dir_field</strong> (<em>str</em>) – The name of the field corresponding to the wind direction
+in degrees from North.</p></li>
+<li><p><strong>color_field</strong> (<em>str, optional</em>) – The name of the field if wanting to shade by another variable</p></li>
+<li><p><strong>set_fig</strong> (<em>matplotlib figure, optional</em>) – The figure to plot on</p></li>
+<li><p><strong>set_axes</strong> (<em>matplotlib axes, optional</em>) – The specific axes to plot on</p></li>
+<li><p><strong>component_range</strong> (<em>int</em>) – Range of the hodograph.  Default is 80</p></li>
+<li><p><strong>dsname</strong> (<em>str</em>) – Name of the datastream to plot if multiple in the plot object</p></li>
+<li><p><strong>uv_flag</strong> (<em>boolean</em>) – If set to True, spd_field and dir_field will be treated as the
+U and V wind variable names</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>obj</strong> (<em>xarray Dataset</em>) – ACT object populated with all variables and attributes.</p>
+<dd class="field-even"><p><strong>self.axes</strong> (<em>matplotlib axes</em>)</p>
 </dd>
 </dl>
-<p class="rubric">Examples</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dims</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">1440</span><span class="p">,</span> <span class="s1">&#39;drop_diameter&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
-<span class="n">obj</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">create_obj_from_arm_dod</span><span class="p">(</span>
-    <span class="s1">&#39;vdis.b1&#39;</span><span class="p">,</span> <span class="n">dims</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.2&#39;</span><span class="p">,</span> <span class="n">scalar_fill_dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </div>
@@ -1540,17 +1528,17 @@ If false, the DOD will be pulled from PCM.</p></li>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="act.io.check_if_tar_gz_file.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="act.plotting.SkewTDisplay.plot_from_u_and_v.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">act.io.check_if_tar_gz_file</p>
+            <p class="prev-next-title">act.plotting.SkewTDisplay.plot_from_u_and_v</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="act.io.proc_sigma_mplv5_read.html" title="next page">
+    <a class='right-next' id="next-link" href="act.plotting.SkewTDisplay.put_display_in_subplot.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">act.io.proc_sigma_mplv5_read</p>
+        <p class="prev-next-title">act.plotting.SkewTDisplay.put_display_in_subplot</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

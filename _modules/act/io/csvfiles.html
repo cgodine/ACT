@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.io.csvfiles &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
+    <title>act.io.csvfiles &#8212; Atmospheric data Community Toolkit 0.post1+g1ca86cd documentation</title>
     
     <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@
     <script src="../../../_static/design-tabs.js"></script>
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -66,38 +67,16 @@
                     gtag('js', new Date());
                     gtag('config', 'G-8YN80YZDD8');
                 </script>
- 
+
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="ACT Blog"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -217,7 +196,8 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <h1>Source code for act.io.csvfiles</h1><div class="highlight"><pre>
+                
+<h1>Source code for act.io.csvfiles</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This module contains I/O operations for loading csv files.</span>
 
@@ -249,7 +229,7 @@
 <span class="sd">    ignore_index : bool</span>
 <span class="sd">         Keyword for pandas concat function.  If True, do not use the index</span>
 <span class="sd">         values along the concatenation axis. The resulting axis will be labeled</span>
-<span class="sd">         0, …, n - 1. This is useful if you are concatenating objects where the</span>
+<span class="sd">         0, …, n - 1. This is useful if you are concatenating datasets where the</span>
 <span class="sd">         concatenation axis does not have meaningful indexing information. Note</span>
 <span class="sd">         the index values on the other axes are still respected in the join.</span>
 
@@ -257,8 +237,8 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    act_obj : Object</span>
-<span class="sd">        ACT dataset. Will be None if the file is not found.</span>
+<span class="sd">    ds : xarray.Dataset</span>
+<span class="sd">        ACT Xarray dataset. Will be None if the file is not found.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -268,7 +248,7 @@
 
 <span class="sd">        import act</span>
 
-<span class="sd">        the_ds, the_flag = act.io.csvfiles.read(act.tests.sample_files.EXAMPLE_CSV_WILDCARD)</span>
+<span class="sd">        ds = act.io.csvfiles.read(act.tests.sample_files.EXAMPLE_CSV_WILDCARD)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -324,8 +304,9 @@
 
     <span class="k">return</span> <span class="n">ds</span></div>
 </pre></div>
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </div>
