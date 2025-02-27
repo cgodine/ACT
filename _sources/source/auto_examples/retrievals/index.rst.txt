@@ -15,6 +15,7 @@ Examples showing different ways to retrieve fields from data.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -35,7 +36,7 @@ Examples showing different ways to retrieve fields from data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to calculate the cloud base heights using the sobel edge detection metho...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to calculate the cloud base heights using the sobel edge detection method.  This can be used for vertical radar and lidar data.">
 
 .. only:: html
 
@@ -49,6 +50,8 @@ Examples showing different ways to retrieve fields from data.
       <div class="sphx-glr-thumbnail-title">Cloud Base Height Retrievals</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

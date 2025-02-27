@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_qc_plot_force_line_qc.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -30,7 +30,7 @@ the non-time dimention.
 
 Author: Ken Kehoe
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-48
+.. GENERATED FROM PYTHON SOURCE LINES 15-49
 
 
 
@@ -43,27 +43,28 @@ Author: Ken Kehoe
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
+    from arm_test_data import DATASETS
     import matplotlib.pyplot as plt
 
-    from act.io.armfiles import read_netcdf
+    from act.io.arm import read_arm_netcdf
     from act.plotting import TimeSeriesDisplay
-    from act.tests import EXAMPLE_SURFSPECALB1MLAWER
 
     # Read a data file that has a 2D DataArray of multiple 1D data.
     # The corresponding quality control DataArray is also read in and
     # will be used to make a summary plot of quality control infomation
     # of each assessment category.
-    obj = read_netcdf(EXAMPLE_SURFSPECALB1MLAWER)
+    filename_surf = DATASETS.fetch('nsasurfspecalb1mlawerC1.c1.20160609.080000.nc')
+    ds = read_arm_netcdf(filename_surf)
 
     # The name of the data variable we wish to plot
     var_name = 'surface_albedo_mfr_narrowband_10m'
 
     # Create the ACT display object used for plotting. This will have two
     # vertical plots of 800 by 400 pixels.
-    display = TimeSeriesDisplay(obj, subplot_shape=(2,), figsize=(8, 2 * 4))
+    display = TimeSeriesDisplay(ds, subplot_shape=(2,), figsize=(8, 2 * 4))
 
     # Create the top plot of data using the force_line_plot option.
     # This will force the plotting to not assume the data are 2D data that
@@ -82,7 +83,7 @@ Author: Ken Kehoe
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.327 seconds)
+   **Total running time of the script:** (0 minutes 0.193 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_qc_plot_force_line_qc.py:
@@ -91,16 +92,17 @@ Author: Ken Kehoe
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_force_line_qc.ipynb <plot_force_line_qc.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_force_line_qc.py <plot_force_line_qc.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_force_line_qc.ipynb <plot_force_line_qc.ipynb>`
+      :download:`Download zipped: plot_force_line_qc.zip <plot_force_line_qc.zip>`
 
 
 .. only:: html

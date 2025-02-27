@@ -1,232 +1,445 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.io.noaapsl &#8212; Atmospheric data Community Toolkit 0.post1+gb53dab5 documentation</title>
-    
+    <title>act.io.noaapsl &#8212; ACT Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css?v=e2ee527d" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script src="../../../_static/doc_shared.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8YN80YZDD8');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/act/io/noaapsl';</script>
+    <script src="../../../_static/doc_shared.js?v=4c9803b4"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-8YN80YZDD8');
-                </script>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.0" /> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="ACT Blog"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
-
+  
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-  <nav class="navbar navbar-dark navbar-expand-lg bg-arm fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
-
-  <div id="navbar-start">
-    
-    
-<a class="navbar-brand" href="../../../index.html">
-<p class="title">Atmospheric data Community Toolkit</p>
-</a>
-
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../userguide/index.html">
-  User Guide
- </a>
-</li>
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../API/index.html">
-  API Reference Manual
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../source/auto_examples/index.html">
-  ACT Example Gallery
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../blog.html">
-  Blog
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference external nav-link" href="https://github.com/ARM-DOE/ACT/issues">
-  GitHub Issue Tracker
- </a>
-</li>
-
+  
+  <dialog id="pst-search-dialog">
     
-</ul>
-      </div>
-      
-    </div>
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
 
-    <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ARM-DOE/ACT" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
-  </div>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-  </nav>
 
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
 
-    <div class="container-fluid" id="banner"></div>
+  
+    
+  
 
-
-    <div class="container-xl">
-      <div class="row">
-          
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ACT Documentation</p>
+  
+</a></div>
     
   </div>
-</nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/GUIDE_V2.html">
+    ACT Version 2 Release Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../API/index.html">
+    API Reference Manual
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../source/auto_examples/index.html">
+    ACT Example Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../blog.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://github.com/ARM-DOE/ACT/issues">
+    GitHub Issue Tracker
+  </a>
+</li>
+
+                </ul>
+            </li>
             
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
 
-          
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-          </div>
-          
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
 
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
           
           
-            
           
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          
+          
+          
+          
+          
+          <a href="https://github.com/ARM-DOE/ACT" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/GUIDE_V2.html">
+    ACT Version 2 Release Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../API/index.html">
+    API Reference Manual
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../source/auto_examples/index.html">
+    ACT Example Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../blog.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/ARM-DOE/ACT/issues">
+    GitHub Issue Tracker
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ARM-DOE/ACT" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
               
-              <div>
-                 <h1>Source code for act.io.noaapsl</h1><div class="highlight"><pre>
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">act.io.noaapsl</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <h1>Source code for act.io.noaapsl</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Modules for reading in NOAA PSL data.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">ospath</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span>
-<span class="kn">import</span> <span class="nn">fsspec</span>
-<span class="kn">import</span> <span class="nn">yaml</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">groupby</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">ospath</span>
 
-<span class="kn">from</span> <span class="nn">act.io.csvfiles</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fsspec</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_csv</span>
 
 
-<div class="viewcode-block" id="read_psl_wind_profiler"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_wind_profiler.html#act.io.read_psl_wind_profiler">[docs]</a><span class="k">def</span> <span class="nf">read_psl_wind_profiler</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="read_psl_wind_profiler"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_wind_profiler.html#act.io.read_psl_wind_profiler">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">read_psl_wind_profiler</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns two `xarray.Datasets` with stored data and metadata from a</span>
 <span class="sd">    user-defined NOAA PSL wind profiler file each containing</span>
@@ -262,24 +475,21 @@
     <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">sections_of_file</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">section</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;$&#39;</span><span class="p">:</span>
             <span class="n">list_of_datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="n">_parse_psl_wind_lines</span><span class="p">(</span>
-                    <span class="n">filepath</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="n">start_line</span><span class="p">)</span>
+                <span class="n">_parse_psl_wind_lines</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="n">start_line</span><span class="p">)</span>
             <span class="p">)</span>
         <span class="n">start_line</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
 
     <span class="c1"># Return two datasets for each mode and the merge of datasets of the</span>
     <span class="c1"># same mode.</span>
-    <span class="n">mode_one_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
-        <span class="n">list_of_datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-    <span class="n">mode_two_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
-        <span class="n">list_of_datasets</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">mode_one_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">mode_two_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_datasets</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">transpose</span><span class="p">:</span>
         <span class="n">mode_one_ds</span> <span class="o">=</span> <span class="n">mode_one_ds</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;HT&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
         <span class="n">mode_two_ds</span> <span class="o">=</span> <span class="n">mode_two_ds</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;HT&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">mode_one_ds</span><span class="p">,</span> <span class="n">mode_two_ds</span></div>
 
 
-<div class="viewcode-block" id="read_psl_wind_profiler_temperature"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_wind_profiler_temperature.html#act.io.read_psl_wind_profiler_temperature">[docs]</a><span class="k">def</span> <span class="nf">read_psl_wind_profiler_temperature</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="read_psl_wind_profiler_temperature"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_wind_profiler_temperature.html#act.io.read_psl_wind_profiler_temperature">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">read_psl_wind_profiler_temperature</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from a user-defined</span>
 <span class="sd">    NOAA PSL wind profiler temperature file.</span>
@@ -311,8 +521,7 @@
     <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">sections_of_file</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">section</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;$&#39;</span><span class="p">:</span>
             <span class="n">list_of_datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="n">_parse_psl_temperature_lines</span><span class="p">(</span>
-                    <span class="n">filepath</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="n">start_line</span><span class="p">)</span>
+                <span class="n">_parse_psl_temperature_lines</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="n">start_line</span><span class="p">)</span>
             <span class="p">)</span>
         <span class="n">start_line</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
 
@@ -323,7 +532,7 @@
         <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_datasets</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">_parse_psl_wind_lines</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_psl_wind_lines</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Reads lines related to wind in a psl file.</span>
 
@@ -349,8 +558,7 @@
     <span class="n">datatype</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
 
     <span class="c1"># 3 - station lat, lon, elevation</span>
-    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">elevation</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span>
-        <span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">elevation</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
     <span class="c1"># 4 - year, month, day, hour, minute, second, utc</span>
     <span class="n">time</span> <span class="o">=</span> <span class="n">parse_date_line</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
@@ -364,37 +572,45 @@
     <span class="c1"># pulse width, inner pulse period&#39;</span>
     <span class="c1"># Values duplicate as oblique and vertical values</span>
     <span class="p">(</span>
-        <span class="n">number_coherent_integrations_obl</span><span class="p">,</span> <span class="n">number_coherent_integrations_vert</span><span class="p">,</span>
-        <span class="n">number_spectral_averages_obl</span><span class="p">,</span> <span class="n">number_spectral_averages_vert</span><span class="p">,</span>
-        <span class="n">pulse_width_obl</span><span class="p">,</span> <span class="n">pulse_width_vert</span><span class="p">,</span> <span class="n">inner_pulse_period_obl</span><span class="p">,</span>
-        <span class="n">inner_pulse_period_vert</span>
+        <span class="n">number_coherent_integrations_obl</span><span class="p">,</span>
+        <span class="n">number_coherent_integrations_vert</span><span class="p">,</span>
+        <span class="n">number_spectral_averages_obl</span><span class="p">,</span>
+        <span class="n">number_spectral_averages_vert</span><span class="p">,</span>
+        <span class="n">pulse_width_obl</span><span class="p">,</span>
+        <span class="n">pulse_width_vert</span><span class="p">,</span>
+        <span class="n">inner_pulse_period_obl</span><span class="p">,</span>
+        <span class="n">inner_pulse_period_vert</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
     <span class="c1"># 8 - full-scale doppler value, delay to first gate, number of gates,</span>
     <span class="c1"># spacing of gates. Values duplicate as oblique and vertical values.</span>
     <span class="p">(</span>
-        <span class="n">full_scale_doppler_obl</span><span class="p">,</span> <span class="n">full_scale_doppler_vert</span><span class="p">,</span>
+        <span class="n">full_scale_doppler_obl</span><span class="p">,</span>
+        <span class="n">full_scale_doppler_vert</span><span class="p">,</span>
         <span class="n">beam_vertical_correction</span><span class="p">,</span>
-        <span class="n">delay_first_gate_obl</span><span class="p">,</span> <span class="n">delay_first_gate_vert</span><span class="p">,</span>
-        <span class="n">number_of_gates_obl</span><span class="p">,</span> <span class="n">number_of_gates_vert</span><span class="p">,</span>
-        <span class="n">spacing_of_gates_obl</span><span class="p">,</span> <span class="n">spacing_of_gates_vert</span>
+        <span class="n">delay_first_gate_obl</span><span class="p">,</span>
+        <span class="n">delay_first_gate_vert</span><span class="p">,</span>
+        <span class="n">number_of_gates_obl</span><span class="p">,</span>
+        <span class="n">number_of_gates_vert</span><span class="p">,</span>
+        <span class="n">spacing_of_gates_obl</span><span class="p">,</span>
+        <span class="n">spacing_of_gates_vert</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
     <span class="c1"># 9 - beam azimuth (degrees clockwise from north)</span>
     <span class="p">(</span>
-        <span class="n">beam_azimuth1</span><span class="p">,</span> <span class="n">beam_elevation1</span><span class="p">,</span>
-        <span class="n">beam_azimuth2</span><span class="p">,</span> <span class="n">beam_elevation2</span><span class="p">,</span>
-        <span class="n">beam_azimuth3</span><span class="p">,</span> <span class="n">beam_elevation3</span>
+        <span class="n">beam_azimuth1</span><span class="p">,</span>
+        <span class="n">beam_elevation1</span><span class="p">,</span>
+        <span class="n">beam_azimuth2</span><span class="p">,</span>
+        <span class="n">beam_elevation2</span><span class="p">,</span>
+        <span class="n">beam_azimuth3</span><span class="p">,</span>
+        <span class="n">beam_elevation3</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
-    <span class="n">beam_azimuth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">beam_azimuth1</span><span class="p">,</span> <span class="n">beam_azimuth2</span><span class="p">,</span> <span class="n">beam_azimuth3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
-    <span class="n">beam_elevation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">beam_elevation1</span><span class="p">,</span> <span class="n">beam_elevation2</span><span class="p">,</span> <span class="n">beam_elevation3</span><span class="p">],</span>
-        <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+    <span class="n">beam_azimuth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">beam_azimuth1</span><span class="p">,</span> <span class="n">beam_azimuth2</span><span class="p">,</span> <span class="n">beam_azimuth3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+    <span class="n">beam_elevation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">beam_elevation1</span><span class="p">,</span> <span class="n">beam_elevation2</span><span class="p">,</span> <span class="n">beam_elevation3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
 
     <span class="c1"># Read in the data table section using pandas</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">line_offset</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">line_offset</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">)</span>
 
     <span class="c1"># Only read in the number of rows for a given set of gates</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_of_range_gates</span><span class="p">)]</span>
@@ -455,26 +671,21 @@
         <span class="s1">&#39;data_description&#39;</span>
     <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;https://psl.noaa.gov/data/obs/data/view_data_type_info.php?SiteID=ctd&amp;DataOperationalID=5855&amp;OperationalID=2371&#39;</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;consensus_average_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">consensus_average_time</span>
-    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;oblique-beam_vertical_correction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
-        <span class="n">beam_vertical_correction</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;oblique-beam_vertical_correction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">beam_vertical_correction</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_of_beams&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_of_beams</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_of_range_gates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_of_range_gates</span><span class="p">)</span>
 
     <span class="c1"># Handle oblique and vertical attributes.</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_of_gates_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_of_gates_obl</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_of_gates_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_of_gates_vert</span><span class="p">)</span>
-    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_spectral_averages_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
-        <span class="n">number_spectral_averages_obl</span><span class="p">)</span>
-    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_spectral_averages_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
-        <span class="n">number_spectral_averages_vert</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_spectral_averages_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_spectral_averages_obl</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;number_spectral_averages_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_spectral_averages_vert</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;pulse_width_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pulse_width_obl</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;pulse_width_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pulse_width_vert</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;inner_pulse_period_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">inner_pulse_period_obl</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;inner_pulse_period_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">inner_pulse_period_vert</span><span class="p">)</span>
-    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;full_scale_doppler_value_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
-        <span class="n">full_scale_doppler_obl</span><span class="p">)</span>
-    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;full_scale_doppler_value_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
-        <span class="n">full_scale_doppler_vert</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;full_scale_doppler_value_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">full_scale_doppler_obl</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;full_scale_doppler_value_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">full_scale_doppler_vert</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;delay_to_first_gate_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">delay_first_gate_obl</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;delay_to_first_gate_vertical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">delay_first_gate_vert</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;spacing_of_gates_oblique&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">spacing_of_gates_obl</span><span class="p">)</span>
@@ -482,7 +693,7 @@
     <span class="k">return</span> <span class="n">ds</span>
 
 
-<span class="k">def</span> <span class="nf">_parse_psl_temperature_lines</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_psl_temperature_lines</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">line_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Reads lines related to temperature in a psl file.</span>
 
@@ -508,8 +719,7 @@
     <span class="n">datatype</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
 
     <span class="c1"># 3 - station lat, lon, elevation</span>
-    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">elevation</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span>
-        <span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">elevation</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
     <span class="c1"># 4 - year, month, day, hour, minute, second, utc</span>
     <span class="n">time</span> <span class="o">=</span> <span class="n">parse_date_line</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
@@ -535,11 +745,10 @@
     <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
     <span class="c1"># 9 - beam azimuth (degrees clockwise from north)</span>
-    <span class="n">beam_azimuth</span><span class="p">,</span> <span class="n">beam_elevation</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span>
-        <span class="n">lines</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">beam_azimuth</span><span class="p">,</span> <span class="n">beam_elevation</span> <span class="o">=</span> <span class="n">filter_list</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
     <span class="c1"># Read in the data table section using pandas</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">line_offset</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">line_offset</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">)</span>
 
     <span class="c1"># Only read in the number of rows for a given set of gates</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_of_gates</span><span class="p">)]</span>
@@ -617,14 +826,14 @@
     <span class="k">return</span> <span class="n">ds</span>
 
 
-<span class="k">def</span> <span class="nf">filter_list</span><span class="p">(</span><span class="n">list_of_strings</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">filter_list</span><span class="p">(</span><span class="n">list_of_strings</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Parses a list of strings, remove empty strings, and return a numpy array</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">list_of_strings</span><span class="p">)))</span>
 
 
-<span class="k">def</span> <span class="nf">parse_date_line</span><span class="p">(</span><span class="n">list_of_strings</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_date_line</span><span class="p">(</span><span class="n">list_of_strings</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Parses the date line in PSL files</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -635,7 +844,7 @@
     <span class="k">return</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">read_psl_surface_met</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">conf_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="read_psl_surface_met"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_surface_met.html#act.io.read_psl_surface_met">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">read_psl_surface_met</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">conf_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from a user-defined</span>
 <span class="sd">    NOAA PSL SurfaceMet file.</span>
@@ -670,7 +879,7 @@
         <span class="n">conf_file</span> <span class="o">=</span> <span class="n">ospath</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ospath</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;conf&#39;</span><span class="p">,</span> <span class="s1">&#39;noaapsl_SurfaceMet.yaml&#39;</span><span class="p">)</span>
 
     <span class="c1"># Read configuration YAML file</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">conf_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">conf_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
@@ -680,18 +889,20 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">site</span><span class="p">]</span>
     <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Configuration for site &#39;</span><span class="si">{</span><span class="n">site</span><span class="si">}</span><span class="s2">&#39; currently not available. &quot;</span>
-                           <span class="s2">&quot;You can manually add the site configuration to a copy of &quot;</span>
-                           <span class="s2">&quot;noaapsl_SurfaceMet.yaml and set conf_file= name of copied file &quot;</span>
-                           <span class="s2">&quot;until the site is added.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Configuration for site &#39;</span><span class="si">{</span><span class="n">site</span><span class="si">}</span><span class="s2">&#39; currently not available. &quot;</span>
+            <span class="s1">&#39;You can manually add the site configuration to a copy of &#39;</span>
+            <span class="s1">&#39;noaapsl_SurfaceMet.yaml and set conf_file= name of copied file &#39;</span>
+            <span class="s1">&#39;until the site is added.&#39;</span>
+        <span class="p">)</span>
 
     <span class="c1"># Extract date and time from filename to use in extracting format from YAML file.</span>
-    <span class="n">search_result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z]</span><span class="si">{3}</span><span class="s2">(\d</span><span class="si">{2}</span><span class="s2">)(\d</span><span class="si">{3}</span><span class="s2">)\.(\d</span><span class="si">{2}</span><span class="s2">)m&quot;</span><span class="p">,</span> <span class="n">ospath</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filenames</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">search_result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[a-z]</span><span class="si">{3}</span><span class="s1">(\d</span><span class="si">{2}</span><span class="s1">)(\d</span><span class="si">{3}</span><span class="s1">)\.(\d</span><span class="si">{2}</span><span class="s1">)m&#39;</span><span class="p">,</span> <span class="n">ospath</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filenames</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
     <span class="n">yy</span><span class="p">,</span> <span class="n">doy</span><span class="p">,</span> <span class="n">hh</span> <span class="o">=</span> <span class="n">search_result</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">yy</span> <span class="o">&gt;</span> <span class="s1">&#39;70&#39;</span><span class="p">:</span>
-        <span class="n">yy</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;19</span><span class="si">{</span><span class="n">yy</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">yy</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;19</span><span class="si">{</span><span class="n">yy</span><span class="si">}</span><span class="s1">&#39;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">yy</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;20</span><span class="si">{</span><span class="n">yy</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">yy</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;20</span><span class="si">{</span><span class="n">yy</span><span class="si">}</span><span class="s1">&#39;</span>
 
     <span class="c1"># Extract location information from configuration file.</span>
     <span class="k">try</span><span class="p">:</span>
@@ -700,12 +911,18 @@
         <span class="n">location_info</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># Loop through each date range for the site to extract the correct file format from conf file.</span>
-    <span class="n">file_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">yy</span><span class="si">}</span><span class="s1">-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">doy</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">hh</span><span class="p">))</span>
+    <span class="n">file_datetime</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">yy</span><span class="si">}</span><span class="s1">-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">doy</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">hh</span><span class="p">))</span>
+    <span class="p">)</span>
     <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">ii</span> <span class="o">==</span> <span class="s1">&#39;info&#39;</span><span class="p">:</span>
             <span class="k">continue</span>
 
-        <span class="n">date_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="s1">&#39;_date_range&#39;</span><span class="p">]]</span>
+        <span class="n">date_range</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="s1">&#39;_date_range&#39;</span><span class="p">]</span>
+        <span class="p">]</span>
         <span class="k">if</span> <span class="n">file_datetime</span> <span class="o">&gt;=</span> <span class="n">date_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">file_datetime</span> <span class="o">&lt;=</span> <span class="n">date_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
             <span class="k">del</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;_date_range&#39;</span><span class="p">]</span>
@@ -716,14 +933,14 @@
 
     <span class="c1"># Calculate numpy datetime64 values from first 4 columns of the data file.</span>
     <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="mi">1970</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64[Y]&#39;</span><span class="p">)</span>
-    <span class="n">day</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;J_day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;timedelta64[D]&#39;</span><span class="p">))</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;J_day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;timedelta64[D]&#39;</span><span class="p">))</span>
     <span class="n">hourmin</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;HoursMinutes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="mi">10000</span>
     <span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ii</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">hourmin</span><span class="p">]</span>
     <span class="n">hour</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;timedelta64[h]&#39;</span><span class="p">)</span>
     <span class="n">minute</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ii</span><span class="p">)[</span><span class="mi">3</span><span class="p">:])</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">hourmin</span><span class="p">]</span>
     <span class="n">minute</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">minute</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;timedelta64[m]&#39;</span><span class="p">)</span>
     <span class="n">time</span> <span class="o">=</span> <span class="n">time</span> <span class="o">+</span> <span class="n">day</span> <span class="o">+</span> <span class="n">hour</span> <span class="o">+</span> <span class="n">minute</span>
-
+    <span class="n">time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ns]&#39;</span><span class="p">)</span>
     <span class="c1"># Update Dataset to use &quot;time&quot; coordinate and assigned calculated times</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
@@ -757,10 +974,10 @@
             <span class="k">del</span> <span class="n">location_info</span><span class="p">[</span><span class="n">var_name</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
             <span class="n">ds</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">location_info</span><span class="p">[</span><span class="n">var_name</span><span class="p">])</span>
 
-    <span class="k">return</span> <span class="n">ds</span>
+    <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="read_psl_parsivel"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_parsivel.html#act.io.read_psl_parsivel">[docs]</a><span class="k">def</span> <span class="nf">read_psl_parsivel</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+<div class="viewcode-block" id="read_psl_parsivel"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_parsivel.html#act.io.read_psl_parsivel">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">read_psl_parsivel</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from a user-defined</span>
 <span class="sd">    NOAA PSL parsivel</span>
@@ -778,23 +995,136 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># Define the names for the variables</span>
-    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">,</span> <span class="s1">&#39;B8&#39;</span><span class="p">,</span> <span class="s1">&#39;B9&#39;</span><span class="p">,</span> <span class="s1">&#39;B10&#39;</span><span class="p">,</span> <span class="s1">&#39;B11&#39;</span><span class="p">,</span> <span class="s1">&#39;B12&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;B13&#39;</span><span class="p">,</span> <span class="s1">&#39;B14&#39;</span><span class="p">,</span> <span class="s1">&#39;B15&#39;</span><span class="p">,</span> <span class="s1">&#39;B16&#39;</span><span class="p">,</span> <span class="s1">&#39;B17&#39;</span><span class="p">,</span> <span class="s1">&#39;B18&#39;</span><span class="p">,</span> <span class="s1">&#39;B19&#39;</span><span class="p">,</span> <span class="s1">&#39;B20&#39;</span><span class="p">,</span> <span class="s1">&#39;B21&#39;</span><span class="p">,</span> <span class="s1">&#39;B22&#39;</span><span class="p">,</span> <span class="s1">&#39;B23&#39;</span><span class="p">,</span> <span class="s1">&#39;B24&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;B25&#39;</span><span class="p">,</span> <span class="s1">&#39;B26&#39;</span><span class="p">,</span> <span class="s1">&#39;B27&#39;</span><span class="p">,</span> <span class="s1">&#39;B28&#39;</span><span class="p">,</span> <span class="s1">&#39;B29&#39;</span><span class="p">,</span> <span class="s1">&#39;B30&#39;</span><span class="p">,</span> <span class="s1">&#39;B31&#39;</span><span class="p">,</span> <span class="s1">&#39;B32&#39;</span><span class="p">,</span> <span class="s1">&#39;blackout&#39;</span><span class="p">,</span> <span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="s1">&#39;bad&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;number_detected_particles&#39;</span><span class="p">,</span> <span class="s1">&#39;precip_rate&#39;</span><span class="p">,</span> <span class="s1">&#39;precip_amount&#39;</span><span class="p">,</span> <span class="s1">&#39;precip_accumulation&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;equivalent_radar_reflectivity&#39;</span><span class="p">,</span> <span class="s1">&#39;number_in_error&#39;</span><span class="p">,</span> <span class="s1">&#39;dirty&#39;</span><span class="p">,</span> <span class="s1">&#39;very_dirty&#39;</span><span class="p">,</span> <span class="s1">&#39;damaged&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;laserband_amplitude&#39;</span><span class="p">,</span> <span class="s1">&#39;laserband_amplitude_stdev&#39;</span><span class="p">,</span> <span class="s1">&#39;sensor_temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;sensor_temperature_stdev&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;sensor_voltage&#39;</span><span class="p">,</span> <span class="s1">&#39;sensor_voltage_stdev&#39;</span><span class="p">,</span> <span class="s1">&#39;heating_current&#39;</span><span class="p">,</span> <span class="s1">&#39;heating_current_stdev&#39;</span><span class="p">,</span> <span class="s1">&#39;number_rain_particles&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;number_non_rain_particles&#39;</span><span class="p">,</span> <span class="s1">&#39;number_ambiguous_particles&#39;</span><span class="p">,</span> <span class="s1">&#39;precip_type&#39;</span><span class="p">]</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B1&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B4&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B5&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B6&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B7&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B8&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B9&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B10&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B11&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B12&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B13&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B14&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B15&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B16&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B17&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B18&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B19&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B20&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B21&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B22&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B23&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B24&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B25&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B26&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B27&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B28&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B29&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B30&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B31&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B32&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;blackout&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;good&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;bad&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;number_detected_particles&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;precip_rate&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;precip_amount&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;precip_accumulation&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;equivalent_radar_reflectivity&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;number_in_error&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;dirty&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;very_dirty&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;damaged&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;laserband_amplitude&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;laserband_amplitude_stdev&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sensor_temperature&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sensor_temperature_stdev&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sensor_voltage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sensor_voltage_stdev&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;heating_current&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;heating_current_stdev&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;number_rain_particles&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;number_non_rain_particles&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;number_ambiguous_particles&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;precip_type&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
 
     <span class="c1"># Define the particle sizes and class width sizes based on</span>
     <span class="c1"># https://psl.noaa.gov/data/obs/data/view_data_type_info.php?SiteID=ctd&amp;DataOperationalID=5890</span>
-    <span class="n">vol_equiv_diam</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.062</span><span class="p">,</span> <span class="mf">0.187</span><span class="p">,</span> <span class="mf">0.312</span><span class="p">,</span> <span class="mf">0.437</span><span class="p">,</span> <span class="mf">0.562</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.812</span><span class="p">,</span> <span class="mf">0.937</span><span class="p">,</span> <span class="mf">1.062</span><span class="p">,</span> <span class="mf">1.187</span><span class="p">,</span> <span class="mf">1.375</span><span class="p">,</span>
-                      <span class="mf">1.625</span><span class="p">,</span> <span class="mf">1.875</span><span class="p">,</span> <span class="mf">2.125</span><span class="p">,</span> <span class="mf">2.375</span><span class="p">,</span> <span class="mf">2.75</span><span class="p">,</span> <span class="mf">3.25</span><span class="p">,</span> <span class="mf">3.75</span><span class="p">,</span> <span class="mf">4.25</span><span class="p">,</span> <span class="mf">4.75</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span>
-                      <span class="mf">9.5</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">17.0</span><span class="p">,</span> <span class="mf">19.0</span><span class="p">,</span> <span class="mf">21.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">]</span>
-    <span class="n">class_size_width</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span>
-                        <span class="mf">0.250</span><span class="p">,</span> <span class="mf">0.250</span><span class="p">,</span> <span class="mf">0.250</span><span class="p">,</span> <span class="mf">0.250</span><span class="p">,</span> <span class="mf">0.250</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span>
-                        <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+    <span class="n">vol_equiv_diam</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="mf">0.062</span><span class="p">,</span>
+        <span class="mf">0.187</span><span class="p">,</span>
+        <span class="mf">0.312</span><span class="p">,</span>
+        <span class="mf">0.437</span><span class="p">,</span>
+        <span class="mf">0.562</span><span class="p">,</span>
+        <span class="mf">0.687</span><span class="p">,</span>
+        <span class="mf">0.812</span><span class="p">,</span>
+        <span class="mf">0.937</span><span class="p">,</span>
+        <span class="mf">1.062</span><span class="p">,</span>
+        <span class="mf">1.187</span><span class="p">,</span>
+        <span class="mf">1.375</span><span class="p">,</span>
+        <span class="mf">1.625</span><span class="p">,</span>
+        <span class="mf">1.875</span><span class="p">,</span>
+        <span class="mf">2.125</span><span class="p">,</span>
+        <span class="mf">2.375</span><span class="p">,</span>
+        <span class="mf">2.75</span><span class="p">,</span>
+        <span class="mf">3.25</span><span class="p">,</span>
+        <span class="mf">3.75</span><span class="p">,</span>
+        <span class="mf">4.25</span><span class="p">,</span>
+        <span class="mf">4.75</span><span class="p">,</span>
+        <span class="mf">5.5</span><span class="p">,</span>
+        <span class="mf">6.5</span><span class="p">,</span>
+        <span class="mf">7.5</span><span class="p">,</span>
+        <span class="mf">8.5</span><span class="p">,</span>
+        <span class="mf">9.5</span><span class="p">,</span>
+        <span class="mf">11.0</span><span class="p">,</span>
+        <span class="mf">13.0</span><span class="p">,</span>
+        <span class="mf">15.0</span><span class="p">,</span>
+        <span class="mf">17.0</span><span class="p">,</span>
+        <span class="mf">19.0</span><span class="p">,</span>
+        <span class="mf">21.5</span><span class="p">,</span>
+        <span class="mf">24.5</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">class_size_width</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.125</span><span class="p">,</span>
+        <span class="mf">0.250</span><span class="p">,</span>
+        <span class="mf">0.250</span><span class="p">,</span>
+        <span class="mf">0.250</span><span class="p">,</span>
+        <span class="mf">0.250</span><span class="p">,</span>
+        <span class="mf">0.250</span><span class="p">,</span>
+        <span class="mf">0.5</span><span class="p">,</span>
+        <span class="mf">0.5</span><span class="p">,</span>
+        <span class="mf">0.5</span><span class="p">,</span>
+        <span class="mf">0.5</span><span class="p">,</span>
+        <span class="mf">0.5</span><span class="p">,</span>
+        <span class="mf">1.0</span><span class="p">,</span>
+        <span class="mf">1.0</span><span class="p">,</span>
+        <span class="mf">1.0</span><span class="p">,</span>
+        <span class="mf">1.0</span><span class="p">,</span>
+        <span class="mf">1.0</span><span class="p">,</span>
+        <span class="mf">2.0</span><span class="p">,</span>
+        <span class="mf">2.0</span><span class="p">,</span>
+        <span class="mf">2.0</span><span class="p">,</span>
+        <span class="mf">2.0</span><span class="p">,</span>
+        <span class="mf">2.0</span><span class="p">,</span>
+        <span class="mf">3.0</span><span class="p">,</span>
+        <span class="mf">3.0</span><span class="p">,</span>
+    <span class="p">]</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
         <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">files</span><span class="p">]</span>
@@ -829,11 +1159,17 @@
     <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;time&#39;</span><span class="p">})</span>
     <span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;Drop Size Distribution&#39;</span>
     <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="n">long_name</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">dsd</span><span class="p">),</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;particle_size&#39;</span><span class="p">],</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">vol_equiv_diam</span><span class="p">])</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">dsd</span><span class="p">),</span>
+        <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;particle_size&#39;</span><span class="p">],</span>
+        <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">vol_equiv_diam</span><span class="p">],</span>
+    <span class="p">)</span>
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;number_density_drops&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
 
     <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Particle class size average&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm&#39;</span><span class="p">}</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">class_size_width</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;particle_size&#39;</span><span class="p">],</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">vol_equiv_diam</span><span class="p">],</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">)</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+        <span class="n">class_size_width</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;particle_size&#39;</span><span class="p">],</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">vol_equiv_diam</span><span class="p">],</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span>
+    <span class="p">)</span>
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;class_size_width&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
 
     <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Class size width&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm&#39;</span><span class="p">}</span>
@@ -845,31 +1181,75 @@
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;interval_end_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
 
     <span class="c1"># Define the attribuets and metadata and add into the DataSet</span>
-    <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;blackout&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples excluded during PC clock sync&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;good&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples that passed QC checks&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;bad&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples that failed QC checks&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;number_detected_particles&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Total number of detected particles&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;precip_rate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Precipitation rate&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm/hr&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;precip_amount&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Interval accumulation&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;precip_accumulation&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Event accumulation&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;equivalent_radar_reflectivity&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Radar Reflectivity&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;number_in_error&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples that were reported dirt, very dirty, or damaged&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;dirty&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Laser glass is dirty but measurement is still possible&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;very_dirty&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Laser glass is dirty, partially covered no further measurements are possible&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;damaged&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Laser damaged&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;laserband_amplitude&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Average signal amplitude of the laser strip&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;laserband_amplitude_stdev&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of the signal amplitude of the laser strip&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;sensor_temperature&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Average sensor temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degC&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;sensor_temperature_stdev&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of sensor temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degC&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;sensor_voltage&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Sensor power supply voltage&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;sensor_voltage_stdev&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of the sensor power supply voltage&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;heating_current&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Average heating system current&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;heating_current_stdev&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of heating system current&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;number_rain_particles&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of particles detected as rain&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;number_non_rain_particles&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of particles detected not as rain&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;number_ambiguous_particles&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of particles detected as ambiguous&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;precip_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Precipitation type (1=rain; 2=mixed; 3=snow)&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
-             <span class="s1">&#39;number_density_drops&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Drop Size Distribution&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}}</span>
+    <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;blackout&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples excluded during PC clock sync&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;good&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples that passed QC checks&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;bad&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples that failed QC checks&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;number_detected_particles&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Total number of detected particles&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;precip_rate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Precipitation rate&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm/hr&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;precip_amount&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Interval accumulation&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;precip_accumulation&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Event accumulation&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;mm&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;equivalent_radar_reflectivity&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Radar Reflectivity&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;number_in_error&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of samples that were reported dirt, very dirty, or damaged&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;dirty&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Laser glass is dirty but measurement is still possible&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;very_dirty&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Laser glass is dirty, partially covered no further measurements are possible&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;damaged&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Laser damaged&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;laserband_amplitude&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Average signal amplitude of the laser strip&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;laserband_amplitude_stdev&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of the signal amplitude of the laser strip&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;sensor_temperature&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Average sensor temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degC&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;sensor_temperature_stdev&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of sensor temperature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degC&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;sensor_voltage&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Sensor power supply voltage&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;sensor_voltage_stdev&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of the sensor power supply voltage&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;heating_current&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Average heating system current&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;heating_current_stdev&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Standard deviation of heating system current&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;number_rain_particles&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of particles detected as rain&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;number_non_rain_particles&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of particles detected not as rain&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;number_ambiguous_particles&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of particles detected as ambiguous&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;precip_type&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Precipitation type (1=rain; 2=mixed; 3=snow)&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;unitless&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;number_density_drops&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Drop Size Distribution&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
 
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">attrs</span><span class="p">:</span>
@@ -878,7 +1258,7 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="read_psl_radar_fmcw_moment"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_radar_fmcw_moment.html#act.io.read_psl_radar_fmcw_moment">[docs]</a><span class="k">def</span> <span class="nf">read_psl_radar_fmcw_moment</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+<div class="viewcode-block" id="read_psl_radar_fmcw_moment"><a class="viewcode-back" href="../../../API/generated/act.io.read_psl_radar_fmcw_moment.html#act.io.read_psl_radar_fmcw_moment">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">read_psl_radar_fmcw_moment</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from</span>
 <span class="sd">    NOAA PSL FMCW Radar files. See References section for details.</span>
@@ -906,7 +1286,7 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<span class="k">def</span> <span class="nf">read_psl_radar_sband_moment</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">read_psl_radar_sband_moment</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from</span>
 <span class="sd">    NOAA PSL S-band Radar files.</span>
@@ -929,7 +1309,7 @@
     <span class="k">return</span> <span class="n">ds</span>
 
 
-<span class="k">def</span> <span class="nf">_parse_psl_radar_moments</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_psl_radar_moments</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from</span>
 <span class="sd">    NOAA PSL FMCW and S-Band Radar files.</span>
@@ -949,47 +1329,169 @@
     <span class="c1"># Set the initial dictionary to convert to xarray dataset</span>
     <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;site&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;NOAA site code&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;North Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degree_N&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;East Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degree_E&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;alt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Altitude above mean sea level&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Operating Frequency; Ignore for FMCW&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;Hz&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;azimuth&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Azimuth angle&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;deg&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;elevation&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Elevation angle&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;deg&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;beam_direction_code&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Beam direction code&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
+        <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;North Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degree_N&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;East Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;degree_E&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;alt&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Altitude above mean sea level&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Operating Frequency; Ignore for FMCW&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;Hz&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;azimuth&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Azimuth angle&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;deg&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;elevation&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Elevation angle&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;deg&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;beam_direction_code&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Beam direction code&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
         <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;2-digit year&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;day_of_year&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Day of the year&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;hour&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Hour of the day&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
+        <span class="s1">&#39;day_of_year&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Day of the year&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;hour&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Hour of the day&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
         <span class="s1">&#39;minute&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Minutes&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
         <span class="s1">&#39;second&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Seconds&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;interpulse_period&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Interpulse Period&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;ms&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;pulse_width&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Pulse width&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;ns&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;first_range_gate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Range to first range gate&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;range_between_gates&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Distance between range gates&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;n_gates&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of range gates&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;n_coherent_integration&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of cohrent integration&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;n_averaged_spectra&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of average spectra&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;n_points_spectrum&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of points in spectra&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;n_code_bits&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of code bits&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;radial_velocity&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Radial velocity&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m/s&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;snr&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Signal-to-noise ratio - not range corrected&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;signal_power&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Signal Power - not range corrected&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;spectral_width&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Spectral width&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m/s&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;noise_amplitude&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;noise_amplitude&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;qc_variable&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;QC Value - not used&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
+        <span class="s1">&#39;interpulse_period&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Interpulse Period&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;ms&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;pulse_width&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Pulse width&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;ns&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;first_range_gate&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Range to first range gate&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;range_between_gates&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Distance between range gates&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;n_gates&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of range gates&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;n_coherent_integration&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of cohrent integration&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;n_averaged_spectra&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of average spectra&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;n_points_spectrum&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of points in spectra&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;n_code_bits&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of code bits&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;radial_velocity&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Radial velocity&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m/s&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;snr&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Signal-to-noise ratio - not range corrected&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;signal_power&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Signal Power - not range corrected&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;spectral_width&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Spectral width&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m/s&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;noise_amplitude&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;noise_amplitude&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;qc_variable&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;QC Value - not used&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
         <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}},</span>
         <span class="s1">&#39;range&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">}},</span>
-        <span class="s1">&#39;reflectivity_uncalibrated&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">}},</span>
+        <span class="s1">&#39;reflectivity_uncalibrated&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;dims&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Range&#39;</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;dB&#39;</span><span class="p">},</span>
+        <span class="p">},</span>
     <span class="p">}</span>
 
     <span class="c1"># Separate out the names as they will be accessed in different parts of the code</span>
     <span class="n">h1_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;alt&#39;</span><span class="p">,</span> <span class="s1">&#39;freq&#39;</span><span class="p">]</span>
-    <span class="n">h2_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;azimuth&#39;</span><span class="p">,</span> <span class="s1">&#39;elevation&#39;</span><span class="p">,</span> <span class="s1">&#39;beam_direction_code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;day_of_year&#39;</span><span class="p">,</span> <span class="s1">&#39;hour&#39;</span><span class="p">,</span> <span class="s1">&#39;minute&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;second&#39;</span><span class="p">]</span>
-    <span class="n">h3_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;interpulse_period&#39;</span><span class="p">,</span> <span class="s1">&#39;pulse_width&#39;</span><span class="p">,</span> <span class="s1">&#39;first_range_gate&#39;</span><span class="p">,</span> <span class="s1">&#39;range_between_gates&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;n_gates&#39;</span><span class="p">,</span> <span class="s1">&#39;n_coherent_integration&#39;</span><span class="p">,</span> <span class="s1">&#39;n_averaged_spectra&#39;</span><span class="p">,</span> <span class="s1">&#39;n_points_spectrum&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;n_code_bits&#39;</span><span class="p">]</span>
-    <span class="n">names</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;radial_velocity&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;snr&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;signal_power&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;spectral_width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-             <span class="s1">&#39;noise_amplitude&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;qc_variable&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+    <span class="n">h2_names</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;azimuth&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;elevation&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;beam_direction_code&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;year&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;day_of_year&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;hour&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;minute&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;second&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">h3_names</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;interpulse_period&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;pulse_width&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;first_range_gate&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;range_between_gates&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;n_gates&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;n_coherent_integration&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;n_averaged_spectra&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;n_points_spectrum&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;n_code_bits&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;radial_velocity&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;snr&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;signal_power&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;spectral_width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s1">&#39;noise_amplitude&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;qc_variable&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="p">}</span>
 
     <span class="c1"># If file is a string, convert to list for handling.</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
@@ -1003,7 +1505,7 @@
         <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="s1">&#39;lat&#39;</span> <span class="ow">or</span> <span class="n">d</span> <span class="o">==</span> <span class="s1">&#39;lon&#39;</span><span class="p">:</span>
-                    <span class="n">data</span><span class="p">[</span><span class="n">h1_names</span><span class="p">[</span><span class="n">ctr</span><span class="p">]][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">h1_names</span><span class="p">[</span><span class="n">ctr</span><span class="p">]][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">data</span><span class="p">[</span><span class="n">h1_names</span><span class="p">[</span><span class="n">ctr</span><span class="p">]][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
                 <span class="n">ctr</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -1031,27 +1533,41 @@
                             <span class="n">data</span><span class="p">[</span><span class="n">h3_names</span><span class="p">[</span><span class="n">ctr</span><span class="p">]][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
                             <span class="n">ctr</span> <span class="o">+=</span> <span class="mi">1</span>
                     <span class="c1"># Read in the data based on number of gates</span>
-                    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">nrows</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                     <span class="n">names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+                    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+                        <span class="n">f</span><span class="p">,</span>
+                        <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                        <span class="n">nrows</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span>
+                        <span class="n">names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+                    <span class="p">)</span>
                     <span class="n">index2</span> <span class="o">=</span> <span class="mi">0</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="c1"># Set indices for parsing data, reading 2 headers and then the columns of data</span>
                     <span class="n">index1</span> <span class="o">=</span> <span class="n">ct</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
                     <span class="n">index2</span> <span class="o">=</span> <span class="n">index1</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">ct</span> <span class="o">+</span> <span class="mi">4</span>
-                    <span class="n">df</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">index2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)))</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+                    <span class="n">df</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+                        <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">index2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)))</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
                     <span class="n">ctr</span> <span class="o">=</span> <span class="mi">0</span>
                     <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
                         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                             <span class="n">data</span><span class="p">[</span><span class="n">h2_names</span><span class="p">[</span><span class="n">ctr</span><span class="p">]][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
                             <span class="n">ctr</span> <span class="o">+=</span> <span class="mi">1</span>
-                    <span class="n">df</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">index2</span><span class="p">)))</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+                    <span class="n">df</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+                        <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">index2</span><span class="p">)))</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
                     <span class="n">ctr</span> <span class="o">=</span> <span class="mi">0</span>
                     <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
                         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                             <span class="n">data</span><span class="p">[</span><span class="n">h3_names</span><span class="p">[</span><span class="n">ctr</span><span class="p">]][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
                             <span class="n">ctr</span> <span class="o">+=</span> <span class="mi">1</span>
-                    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">index2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">nrows</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                     <span class="n">names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+                    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+                        <span class="n">f</span><span class="p">,</span>
+                        <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">index2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span>
+                        <span class="n">nrows</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span>
+                        <span class="n">names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+                    <span class="p">)</span>
 
                 <span class="c1"># Add data from the columns to the dictionary</span>
                 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
@@ -1059,19 +1575,24 @@
 
                 <span class="c1"># Calculate the range based on number of gates, range to first gate and range between gates</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;range&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="n">ranges</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;first_range_gate&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> \
-                        <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;range_between_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="n">ranges</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;first_range_gate&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                        <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;n_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="p">)</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;range_between_gates&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
                     <span class="n">data</span><span class="p">[</span><span class="s1">&#39;range&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ranges</span>
 
                 <span class="c1"># Calculate a time</span>
                 <span class="n">time</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
-                    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;20&#39;</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;hour&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
-                    <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;minute&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;second&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> \
-                    <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;day_of_year&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;20&#39;</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+                    <span class="mi">1</span><span class="p">,</span>
+                    <span class="mi">1</span><span class="p">,</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;hour&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;minute&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;second&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+                <span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;day_of_year&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
                 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
 
                 <span class="c1"># Range correct the snr which converts it essentially to an uncalibrated reflectivity</span>
-                <span class="n">snr_rc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;snr&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mf">20.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">ranges</span> <span class="o">/</span> <span class="mf">1000.</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="n">snr_rc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;snr&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mf">20.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="n">ranges</span> <span class="o">/</span> <span class="mf">1000.0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
                 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;reflectivity_uncalibrated&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">snr_rc</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="c1"># Handle errors, if end of file then continue on, if something else</span>
@@ -1089,41 +1610,79 @@
 
     <span class="k">return</span> <span class="n">ds</span>
 </pre></div>
-<div class="section">
+<div class="section ablog__blog_comments">
    
 </div>
 
-              </div>
+                </article>
               
               
-              <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
 </div>
+                </footer>
               
-          </main>
-          
-
-      </div>
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
     
-    <div class="footer-item">
-      <p class="copyright">
-    &copy; Copyright 2018-2022, ACT Developers.<br>
-</p>
+      © Copyright 2018-2024, ACT Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
     </div>
-    
-  </div>
-</footer>
+  
+</div>
+
+  </footer>
   </body>
 </html>

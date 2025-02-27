@@ -1,0 +1,6 @@
+act.discovery.download\_arm\_data
+=================================
+
+.. currentmodule:: act.discovery
+
+.. autofunction:: download_arm_data

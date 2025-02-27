@@ -10,17 +10,18 @@ Author: Adam Theisen
 
 """
 
-import glob
+from arm_test_data import DATASETS
 from matplotlib import pyplot as plt
 import act
 import numpy as np
 
 # Read Ceilometer data for an example
-file = sorted(glob.glob(act.tests.sample_files.EXAMPLE_CEIL1))
-ds = act.io.armfiles.read_netcdf(file)
+filename_ceil = DATASETS.fetch('sgpceilC1.b1.20190101.000000.nc')
+ds = act.io.arm.read_arm_netcdf(filename_ceil)
 
-ds = act.retrievals.cbh.generic_sobel_cbh(ds, variable='backscatter', height_dim='range',
-                                          var_thresh=1000.0, fill_na=0.)
+ds = act.retrievals.cbh.generic_sobel_cbh(
+    ds, variable='backscatter', height_dim='range', var_thresh=1000.0, fill_na=0.0
+)
 
 # Plot the cloud base height data
 display = act.plotting.TimeSeriesDisplay(ds, subplot_shape=(1, 2), figsize=(16, 6))

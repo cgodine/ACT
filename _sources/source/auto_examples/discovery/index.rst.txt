@@ -15,6 +15,24 @@ Examples showing different ways to discover data.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to download data from NASA&#x27;s MicroPulsed Lidar Network">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/discovery/images/thumb/sphx_glr_download_mplnet_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_discovery_download_mplnet.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">NASA MPLNET</div>
+    </div>
+
 
 .. raw:: html
 
@@ -30,6 +48,23 @@ Examples showing different ways to discover data.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Query and plot ASOS data</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to get IMPROVE data for the system located at ARM&#x27;s Southern Great Plains site.">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/discovery/images/thumb/sphx_glr_plot_improve_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_discovery_plot_improve.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">IMPROVE Data</div>
     </div>
 
 
@@ -52,7 +87,7 @@ Examples showing different ways to discover data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to download data from NEON and ARM 2m surface meteorology stations on th...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to download data from NEON and ARM 2m surface meteorology stations on the North Slope and plot them">
 
 .. only:: html
 
@@ -69,7 +104,7 @@ Examples showing different ways to discover data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows the different ways to pull air quality information from EPA&#x27;s AirNow API for...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows the different ways to pull air quality information from EPA&#x27;s AirNow API for a station near to SGP">
 
 .. only:: html
 
@@ -84,6 +119,8 @@ Examples showing different ways to discover data.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -92,7 +129,9 @@ Examples showing different ways to discover data.
 .. toctree::
    :hidden:
 
+   /source/auto_examples/discovery/download_mplnet
    /source/auto_examples/discovery/plot_asos_temp
+   /source/auto_examples/discovery/plot_improve
    /source/auto_examples/discovery/plot_noaa_fmcw_moment
    /source/auto_examples/discovery/plot_neon
    /source/auto_examples/discovery/plot_airnow

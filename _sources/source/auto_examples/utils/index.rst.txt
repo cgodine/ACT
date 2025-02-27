@@ -15,6 +15,41 @@ Examples showing different helpful utilies in ACT.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example on how to plot a Pie Chart of the composition of aerosols in a volume of air by obtaining percentages of each aerosol from the dataset.">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/utils/images/thumb/sphx_glr_plot_calculated_percentages_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_utils_plot_calculated_percentages.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Calculate and plot aerosol percentages.</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to parse the datastream filename into its constituent parts.">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/utils/images/thumb/sphx_glr_plot_parse_filename_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_utils_plot_parse_filename.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Parse the ARM datastream filename</div>
+    </div>
+
 
 .. raw:: html
 
@@ -35,7 +70,7 @@ Examples showing different helpful utilies in ACT.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use the TAR and gunzip extensions for creating or extracting data ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use the TAR and gunzip extensions for creating or extracting data files. The functions for creation and extraction can be called independently to manage the data files directly or a TAR or gunzip file can be provided to the netCDF reader and the extraction will happen automatically to a temporary area.">
 
 .. only:: html
 
@@ -50,6 +85,8 @@ Examples showing different helpful utilies in ACT.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -58,6 +95,8 @@ Examples showing different helpful utilies in ACT.
 .. toctree::
    :hidden:
 
+   /source/auto_examples/utils/plot_calculated_percentages
+   /source/auto_examples/utils/plot_parse_filename
    /source/auto_examples/utils/plot_change_units
    /source/auto_examples/utils/plot_tar
 

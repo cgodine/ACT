@@ -15,10 +15,11 @@ Examples showing different meteorology corrections.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to calculate course and speed over ground of the ship and use it to corr...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to calculate course and speed over ground of the ship and use it to correct the wind speed and direction data.">
 
 .. only:: html
 
@@ -32,6 +33,8 @@ Examples showing different meteorology corrections.
       <div class="sphx-glr-thumbnail-title">Correct wind data for ship motion</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

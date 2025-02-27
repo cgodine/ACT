@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_plotting_plot_xsection.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -30,43 +30,32 @@ multi-dimensional dataset
 
 
 .. image-sg:: /source/auto_examples/plotting/images/sphx_glr_plot_xsection_001.png
-   :alt: plot xsection
+   :alt: Infrared temperature average, Infrared temperature average, Infrared temperature average, Infrared temperature average
    :srcset: /source/auto_examples/plotting/images/sphx_glr_plot_xsection_001.png
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/act/plotting/plot.py:81: UserWarning: Could not discern datastreamname and dict or tuple were not provided. Using defaultname of act_datastream!
-      warnings.warn(
 
 
 
+.. code-block:: Python
 
 
 
-|
-
-.. code-block:: default
-
-
-    from datetime import datetime
-
+    from arm_test_data import DATASETS
     import matplotlib.pyplot as plt
-    import xarray as xr
 
     import act
 
-    my_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_VISST)
+    filename_visst = DATASETS.fetch('twpvisstgridirtemp.c1.20050705.002500.nc')
+    my_ds = act.io.arm.read_arm_netcdf(filename_visst)
 
     # Cross section display requires that the variable being plotted be reduced to two
     # Dimensions whose coordinates can be specified by variables in the file
     display = act.plotting.XSectionDisplay(my_ds, figsize=(20, 8), subplot_shape=(2, 2))
     display.plot_xsection_map(
-        None,
         'ir_temperature',
+        None,
         x='longitude',
         y='latitude',
         cmap='Greys',
@@ -75,8 +64,8 @@ multi-dimensional dataset
         subplot_index=(0, 0),
     )
     display.plot_xsection_map(
-        None,
         'ir_temperature',
+        None,
         x='longitude',
         y='latitude',
         cmap='Greys',
@@ -85,8 +74,8 @@ multi-dimensional dataset
         subplot_index=(1, 0),
     )
     display.plot_xsection_map(
-        None,
         'ir_temperature',
+        None,
         x='longitude',
         y='latitude',
         cmap='Greys',
@@ -95,8 +84,8 @@ multi-dimensional dataset
         subplot_index=(0, 1),
     )
     display.plot_xsection_map(
-        None,
         'ir_temperature',
+        None,
         x='longitude',
         y='latitude',
         cmap='Greys',
@@ -111,7 +100,7 @@ multi-dimensional dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.575 seconds)
+   **Total running time of the script:** (0 minutes 1.438 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_xsection.py:
@@ -120,16 +109,17 @@ multi-dimensional dataset
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_xsection.ipynb <plot_xsection.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_xsection.py <plot_xsection.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_xsection.ipynb <plot_xsection.ipynb>`
+      :download:`Download zipped: plot_xsection.zip <plot_xsection.zip>`
 
 
 .. only:: html

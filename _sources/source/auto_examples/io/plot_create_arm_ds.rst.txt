@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_io_plot_create_arm_ds.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -35,27 +35,25 @@ Author: Adam Theisen
 
  .. code-block:: none
 
-    /home/runner/work/ACT/ACT/act/io/armfiles.py:458: UserWarning: Version:  not available or not specified. Using Version: 1.2
-      warnings.warn(
-    <xarray.Dataset>
+    <xarray.Dataset> Size: 3MB
     Dimensions:                            (time: 1440, drop_diameter: 50)
     Coordinates:
-      * time                               (time) int64 0 1 2 3 ... 1437 1438 1439
-      * drop_diameter                      (drop_diameter) int64 0 1 2 ... 47 48 49
+      * time                               (time) int64 12kB 0 1 2 ... 1438 1439
+      * drop_diameter                      (drop_diameter) int64 400B 0 1 ... 48 49
     Data variables: (12/36)
-        base_time                          (time) float64 -9.999e+03 ... -9.999e+03
-        time_offset                        (time) float64 -9.999e+03 ... -9.999e+03
-        num_drops                          (time, drop_diameter) float64 -9.999e+...
-        qc_num_drops                       (time, drop_diameter) float64 -9.999e+...
-        num_density                        (time, drop_diameter) float64 -9.999e+...
-        qc_num_density                     (time, drop_diameter) float64 -9.999e+...
+        base_time                          (time) float64 12kB -9.999e+03 ... -9....
+        time_offset                        (time) float64 12kB -9.999e+03 ... -9....
+        num_drops                          (time, drop_diameter) float64 576kB -9...
+        qc_num_drops                       (time, drop_diameter) float64 576kB -9...
+        num_density                        (time, drop_diameter) float64 576kB -9...
+        qc_num_density                     (time, drop_diameter) float64 576kB -9...
         ...                                 ...
-        moment5                            (time) float64 -9.999e+03 ... -9.999e+03
-        moment6                            (time) float64 -9.999e+03 ... -9.999e+03
-        radar_reflectivity                 (time) float64 -9.999e+03 ... -9.999e+03
-        lat                                (time) float64 -9.999e+03 ... -9.999e+03
-        lon                                (time) float64 -9.999e+03 ... -9.999e+03
-        alt                                (time) float64 -9.999e+03 ... -9.999e+03
+        moment5                            (time) float64 12kB -9.999e+03 ... -9....
+        moment6                            (time) float64 12kB -9.999e+03 ... -9....
+        radar_reflectivity                 (time) float64 12kB -9.999e+03 ... -9....
+        lat                                (time) float64 12kB -9.999e+03 ... -9....
+        lon                                (time) float64 12kB -9.999e+03 ... -9....
+        alt                                (time) float64 12kB -9.999e+03 ... -9....
     Attributes: (12/23)
         command_line:            
         process_version:         
@@ -84,13 +82,13 @@ Author: Adam Theisen
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import act
 
     # Create an empty dataset using an ARM DOD
-    ds = act.io.armfiles.create_ds_from_arm_dod('vdis.b1', {'time': 1440}, scalar_fill_dim='time')
+    ds = act.io.arm.create_ds_from_arm_dod('vdis.b1', {'time': 1440}, scalar_fill_dim='time')
 
     # Print out the xarray dataset to see that it's empty
     print(ds)
@@ -115,7 +113,7 @@ Author: Adam Theisen
         'command_line': 'python  plot_create_arm_ds.py',
         'process_version': '1.2.3',
         'history': 'Processed with Jupyter Workbench',
-        'random': '1234253sdgfadf'
+        'random': '1234253sdgfadf',
     }
     for a in atts:
         if a in ds.attrs:
@@ -135,7 +133,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.489 seconds)
+   **Total running time of the script:** (0 minutes 3.109 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_io_plot_create_arm_ds.py:
@@ -144,16 +142,17 @@ Author: Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_create_arm_ds.ipynb <plot_create_arm_ds.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_create_arm_ds.py <plot_create_arm_ds.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_create_arm_ds.ipynb <plot_create_arm_ds.ipynb>`
+      :download:`Download zipped: plot_create_arm_ds.zip <plot_create_arm_ds.zip>`
 
 
 .. only:: html

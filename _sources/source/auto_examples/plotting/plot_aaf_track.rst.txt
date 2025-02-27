@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_plotting_plot_aaf_track.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,7 +25,7 @@ Plot the ARM AAF flight path using the GeographicPlotDisplay
 
 Author: Joe O'Brien
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-29
+.. GENERATED FROM PYTHON SOURCE LINES 10-31
 
 
 
@@ -35,22 +35,12 @@ Author: Joe O'Brien
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/act/plotting/plot.py:81: UserWarning: Could not discern datastreamname and dict or tuple were not provided. Using defaultname of act_datastream!
-      warnings.warn(
 
 
 
+.. code-block:: Python
 
-
-
-|
-
-.. code-block:: default
-
+    from arm_test_data import DATASETS
     import matplotlib.pyplot as plt
 
     import act
@@ -59,14 +49,15 @@ Author: Joe O'Brien
     # Call the read_icartt function, which supports input
     # for ICARTT (v2.0) formatted files.
     # Example file is ARM Aerial Facility Navigation Data
-    ds = read_icartt(act.tests.EXAMPLE_AAF_ICARTT)
+    filename_icartt = DATASETS.fetch('AAFNAV_COR_20181104_R0.ict')
+    ds = read_icartt(filename_icartt)
 
     # Use GeographicPlotDisplay for referencing.
     # NOTE: Cartopy is needed!
-    display = act.plotting.GeographicPlotDisplay(ds)
+    display = act.plotting.GeographicPlotDisplay(ds, figsize=(12, 10))
 
     # Plot the ARM AAF flight track with respect to Pressure Altitude
-    display.geoplot('press_alt', lat_field='lat', lon_field='lon', gridlines=True)
+    display.geoplot('press_alt', lat_field='lat', lon_field='lon')
 
     # Display the plot
     plt.show()
@@ -74,7 +65,7 @@ Author: Joe O'Brien
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.388 seconds)
+   **Total running time of the script:** (0 minutes 0.697 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_aaf_track.py:
@@ -83,16 +74,17 @@ Author: Joe O'Brien
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_aaf_track.ipynb <plot_aaf_track.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_aaf_track.py <plot_aaf_track.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_aaf_track.ipynb <plot_aaf_track.ipynb>`
+      :download:`Download zipped: plot_aaf_track.zip <plot_aaf_track.zip>`
 
 
 .. only:: html

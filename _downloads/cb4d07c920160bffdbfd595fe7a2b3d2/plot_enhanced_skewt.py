@@ -9,16 +9,15 @@ Author: Adam Theisen
 
 """
 
-import glob
-import metpy
-import numpy as np
-import xarray as xr
+
+from arm_test_data import DATASETS
 from matplotlib import pyplot as plt
+
 import act
 
 # Read data
-file = sorted(glob.glob(act.tests.sample_files.EXAMPLE_SONDE1))
-ds = act.io.armfiles.read_netcdf(file)
+filename_sonde = DATASETS.fetch('sgpsondewnpnC1.b1.20190101.053200.cdf')
+ds = act.io.arm.read_arm_netcdf(filename_sonde)
 
 # Plot enhanced Skew-T plot
 display = act.plotting.SkewTDisplay(ds)

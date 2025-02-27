@@ -17,9 +17,9 @@
     
     Display
     
-    GeographicPlotDisplay
+    DistributionDisplay
     
-    HistogramDisplay
+    GeographicPlotDisplay
     
     SkewTDisplay
     

@@ -3,16 +3,17 @@ Working with and expanding embedded quality control variables
 -------------------------------------------------------------
 
 This is an example of how to use existing or create new quality
-control varibles and extend the quality control flagging. The
+control variables and extend the quality control flagging. The
 anicllary quality control variable can be expanded by integrating
 external Data Quality Reports, adding additional generic ACT tests,
-instrument specific ACT tests, or reading a configuraiton file of
+instrument specific ACT tests, or reading a configuration file of
 known failures to clean up the data variable.
 
 """
 
 import os
 
+from arm_test_data import DATASETS
 import matplotlib.pyplot as plt
 
 import act
@@ -24,9 +25,9 @@ token = os.getenv('ARM_PASSWORD')
 
 # We can use the ACT module for downloading data from the ARM web service
 if username is None or token is None or len(username) == 0 or len(token) == 0:
-    results = act.tests.sample_files.EXAMPLE_MFRSR
+    results = DATASETS.fetch('sgpmfrsr7nchE11.b1.20210329.070000.nc')
 else:
-    results = act.discovery.download_data(
+    results = act.discovery.download_arm_data(
         username, token, 'sgpmfrsr7nchE11.b1', '2021-03-29', '2021-03-29'
     )
 print(results)
@@ -43,11 +44,11 @@ qc_variable = 'qc_' + variable
 # the cleanup_qc keyword. This will convert the quality control variable from the ARM stanard
 # to Climate and Forecast standard used internally for all the quality control calls.
 keep_vars = [variable, qc_variable, 'lat', 'lon']
-obj = act.io.armfiles.read_netcdf(results, keep_variables=keep_vars, cleanup_qc=True)
-print(obj)
+ds = act.io.arm.read_arm_netcdf(results, keep_variables=keep_vars, cleanup_qc=True)
+print(ds)
 
 # Create a plotting display object with 2 plots
-display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
 # Plot up the diffuse variable in the first plot
 display.plot(variable, subplot_index=(0,), day_night_background=True)
@@ -62,10 +63,10 @@ plt.show()
 # By default the ancillary quality control variable is removed after appying the test
 # results, but we are going to use the del_qc_var to keep in Dataset so it
 # can be used with additional tests later.
-obj.qcfilter.datafilter(variable, rm_tests=[2, 3], del_qc_var=False)
+ds.qcfilter.datafilter(variable, rm_tests=[2, 3], del_qc_var=False)
 
 # Create a plotting display object with 2 plots
-display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
 # Plot up the diffuse variable in the first plot
 display.plot(variable, subplot_index=(0,), day_night_background=True)
@@ -84,10 +85,10 @@ plt.show()
 
 # Query the ARM DQR Webservice and update the ancillary quality control variable to
 # contain a new test using information from the DQR.
-obj = act.qc.arm.add_dqr_to_qc(obj, variable=variable)
+ds = act.qc.arm.add_dqr_to_qc(ds, variable=variable)
 
 # Create a plotting display object with 2 plots
-display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
 # Plot up the diffuse variable in the first plot
 display.plot(variable, subplot_index=(0,), day_night_background=True)
@@ -102,13 +103,13 @@ plt.show()
 # going to filter the data based on this new test and plot up the results.
 
 # Add a new maximum tests
-obj.qcfilter.add_greater_test(variable, 0.4, test_meaning='New maximum tests limit')
+ds.qcfilter.add_greater_test(variable, 0.4, test_meaning='New maximum tests limit')
 
 # Filter that test out
-obj.qcfilter.datafilter(variable, rm_tests=5, del_qc_var=False)
+ds.qcfilter.datafilter(variable, rm_tests=5, del_qc_var=False)
 
 # Create a plotting display object with 2 plots
-display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
 # Plot up the diffuse variable in the first plot
 display.plot(variable, subplot_index=(0,), day_night_background=True)
@@ -123,10 +124,10 @@ plt.show()
 # it is applied in a moving window style approach.
 
 # Apply test
-obj = act.qc.fft_shading_test(obj, variable=variable)
+ds = act.qc.fft_shading_test(ds, variable=variable)
 
 # Create a plotting display object with 2 plots
-display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
 # Plot up the diffuse variable in the first plot
 display.plot(variable, subplot_index=(0,), day_night_background=True)
@@ -144,18 +145,18 @@ plt.show()
 # to give to other users.
 # There is a file in the same directory called sgpmfrsr7nchE11.b1.yaml with times of
 # incorrect or suspect values that can be read and applied to the Dataset.
-from act.qc.add_supplemental_qc import apply_supplemental_qc
+from act.qc.add_supplemental_qc import apply_supplemental_qc  # noqa
 
-apply_supplemental_qc(obj, 'sgpmfrsr7nchE11.b1.yaml')
+apply_supplemental_qc(ds, 'sgpmfrsr7nchE11.b1.yaml')
 
 # We can apply or reapply the data filter on the variable in the Dataset to change
 # the data values failing tests to NaN by passing a list of test numbers we want
 # to use. In this case we are not going to apply the DQR test (number 4) so we leave
 # that number out of the list.
-obj.qcfilter.datafilter(variable, rm_tests=[2, 3, 5, 6, 7, 8], del_qc_var=False)
+ds.qcfilter.datafilter(variable, rm_tests=[2, 3, 5, 6, 7, 8], del_qc_var=False)
 
 # Create a plotting display object with 2 plots
-display = act.plotting.TimeSeriesDisplay(obj, figsize=(15, 10), subplot_shape=(2,))
+display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(2,))
 
 # Plot up the diffuse variable in the first plot
 display.plot(variable, subplot_index=(0,), day_night_background=True)

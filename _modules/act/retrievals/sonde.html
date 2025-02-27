@@ -1,231 +1,441 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.retrievals.sonde &#8212; Atmospheric data Community Toolkit 0.post1+gb53dab5 documentation</title>
-    
+    <title>act.retrievals.sonde &#8212; ACT Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css?v=e2ee527d" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script src="../../../_static/doc_shared.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8YN80YZDD8');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/act/retrievals/sonde';</script>
+    <script src="../../../_static/doc_shared.js?v=4c9803b4"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-8YN80YZDD8');
-                </script>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.0" /> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="ACT Blog"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
-
+  
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-  <nav class="navbar navbar-dark navbar-expand-lg bg-arm fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
-
-  <div id="navbar-start">
-    
-    
-<a class="navbar-brand" href="../../../index.html">
-<p class="title">Atmospheric data Community Toolkit</p>
-</a>
-
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../userguide/index.html">
-  User Guide
- </a>
-</li>
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../API/index.html">
-  API Reference Manual
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../source/auto_examples/index.html">
-  ACT Example Gallery
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../blog.html">
-  Blog
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference external nav-link" href="https://github.com/ARM-DOE/ACT/issues">
-  GitHub Issue Tracker
- </a>
-</li>
-
+  
+  <dialog id="pst-search-dialog">
     
-</ul>
-      </div>
-      
-    </div>
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
 
-    <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ARM-DOE/ACT" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
-  </div>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-  </nav>
 
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
 
-    <div class="container-fluid" id="banner"></div>
+  
+    
+  
 
-
-    <div class="container-xl">
-      <div class="row">
-          
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ACT Documentation</p>
+  
+</a></div>
     
   </div>
-</nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/GUIDE_V2.html">
+    ACT Version 2 Release Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../API/index.html">
+    API Reference Manual
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../source/auto_examples/index.html">
+    ACT Example Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../blog.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://github.com/ARM-DOE/ACT/issues">
+    GitHub Issue Tracker
+  </a>
+</li>
+
+                </ul>
+            </li>
             
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
 
-          
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-          </div>
-          
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
 
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
           
           
-            
           
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          
+          
+          
+          
+          
+          <a href="https://github.com/ARM-DOE/ACT" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/GUIDE_V2.html">
+    ACT Version 2 Release Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../userguide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../API/index.html">
+    API Reference Manual
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../source/auto_examples/index.html">
+    ACT Example Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../blog.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/ARM-DOE/ACT/issues">
+    GitHub Issue Tracker
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ARM-DOE/ACT" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
               
-              <div>
-                 <h1>Source code for act.retrievals.sonde</h1><div class="highlight"><pre>
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">act.retrievals.sonde</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <h1>Source code for act.retrievals.sonde</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Functions for radiosonde related calculations.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span>
-<span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
-<span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">itemgetter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">groupby</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">metpy.calc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpcalc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span>
 
-<span class="kn">from</span> <span class="nn">act.utils.data_utils</span> <span class="kn">import</span> <span class="n">convert_to_potential_temp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">act.utils.data_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_to_potential_temp</span>
 
 
-<div class="viewcode-block" id="calculate_precipitable_water"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_precipitable_water.html#act.retrievals.calculate_precipitable_water">[docs]</a><span class="k">def</span> <span class="nf">calculate_precipitable_water</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">temp_name</span><span class="o">=</span><span class="s1">&#39;tdry&#39;</span><span class="p">,</span> <span class="n">rh_name</span><span class="o">=</span><span class="s1">&#39;rh&#39;</span><span class="p">,</span> <span class="n">pres_name</span><span class="o">=</span><span class="s1">&#39;pres&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="calculate_precipitable_water"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_precipitable_water.html#act.retrievals.calculate_precipitable_water">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calculate_precipitable_water</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">temp_name</span><span class="o">=</span><span class="s1">&#39;tdry&#39;</span><span class="p">,</span> <span class="n">rh_name</span><span class="o">=</span><span class="s1">&#39;rh&#39;</span><span class="p">,</span> <span class="n">pres_name</span><span class="o">=</span><span class="s1">&#39;pres&#39;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Function to calculate precipitable water vapor from ARM sondewnpn b1 data.</span>
@@ -303,7 +513,7 @@
     <span class="k">return</span> <span class="n">pwv</span></div>
 
 
-<div class="viewcode-block" id="calculate_stability_indicies"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_stability_indicies.html#act.retrievals.calculate_stability_indicies">[docs]</a><span class="k">def</span> <span class="nf">calculate_stability_indicies</span><span class="p">(</span>
+<div class="viewcode-block" id="calculate_stability_indicies"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_stability_indicies.html#act.retrievals.calculate_stability_indicies">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calculate_stability_indicies</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">temp_name</span><span class="o">=</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span>
     <span class="n">td_name</span><span class="o">=</span><span class="s1">&#39;dewpoint_temperature&#39;</span><span class="p">,</span>
@@ -384,9 +594,7 @@
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;parcel_temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">t_profile</span><span class="o">.</span><span class="n">units</span>
 
     <span class="c1"># Calculate CAPE, CIN, LCL</span>
-    <span class="n">sbcape</span><span class="p">,</span> <span class="n">sbcin</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">surface_based_cape_cin</span><span class="p">(</span><span class="n">p_sorted</span><span class="p">,</span>
-                                                  <span class="n">t_sorted</span><span class="p">,</span>
-                                                  <span class="n">td_sorted</span><span class="p">)</span>
+    <span class="n">sbcape</span><span class="p">,</span> <span class="n">sbcin</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">surface_based_cape_cin</span><span class="p">(</span><span class="n">p_sorted</span><span class="p">,</span> <span class="n">t_sorted</span><span class="p">,</span> <span class="n">td_sorted</span><span class="p">)</span>
 
     <span class="n">lcl</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">lcl</span><span class="p">(</span><span class="n">p_sorted</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t_sorted</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">td_sorted</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="k">try</span><span class="p">:</span>
@@ -430,7 +638,7 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="calculate_pbl_liu_liang"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_pbl_liu_liang.html#act.retrievals.calculate_pbl_liu_liang">[docs]</a><span class="k">def</span> <span class="nf">calculate_pbl_liu_liang</span><span class="p">(</span>
+<div class="viewcode-block" id="calculate_pbl_liu_liang"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_pbl_liu_liang.html#act.retrievals.calculate_pbl_liu_liang">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calculate_pbl_liu_liang</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">temperature</span><span class="o">=</span><span class="s1">&#39;tdry&#39;</span><span class="p">,</span>
     <span class="n">pressure</span><span class="o">=</span><span class="s1">&#39;pres&#39;</span><span class="p">,</span>
@@ -487,8 +695,14 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># Preprocess the sonde data to ensure the same methods across all retrievals</span>
-    <span class="n">ds2</span> <span class="o">=</span> <span class="n">preprocess_sonde_data</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span> <span class="n">pressure</span><span class="o">=</span><span class="n">pressure</span><span class="p">,</span>
-                                <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">smooth_height</span><span class="o">=</span><span class="n">smooth_height</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mf">5.</span><span class="p">)</span>
+    <span class="n">ds2</span> <span class="o">=</span> <span class="n">preprocess_sonde_data</span><span class="p">(</span>
+        <span class="n">ds</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span>
+        <span class="n">pressure</span><span class="o">=</span><span class="n">pressure</span><span class="p">,</span>
+        <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
+        <span class="n">smooth_height</span><span class="o">=</span><span class="n">smooth_height</span><span class="p">,</span>
+        <span class="n">base</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span>
+    <span class="p">)</span>
 
     <span class="n">pres</span> <span class="o">=</span> <span class="n">ds2</span><span class="p">[</span><span class="n">pressure</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
     <span class="n">wspd</span> <span class="o">=</span> <span class="n">ds2</span><span class="p">[</span><span class="n">windspeed</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -621,13 +835,13 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<span class="k">def</span> <span class="nf">calculate_pbl_heffter</span><span class="p">(</span>
+<div class="viewcode-block" id="calculate_pbl_heffter"><a class="viewcode-back" href="../../../API/generated/act.retrievals.calculate_pbl_heffter.html#act.retrievals.calculate_pbl_heffter">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calculate_pbl_heffter</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">temperature</span><span class="o">=</span><span class="s1">&#39;tdry&#39;</span><span class="p">,</span>
     <span class="n">pressure</span><span class="o">=</span><span class="s1">&#39;pres&#39;</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="s1">&#39;alt&#39;</span><span class="p">,</span>
     <span class="n">smooth_height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">base</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span>
+    <span class="n">base</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function for calculating the PBL height from a radiosonde profile</span>
@@ -670,8 +884,14 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># Preprocess the sonde data to ensure the same methods across all retrievals</span>
-    <span class="n">ds2</span> <span class="o">=</span> <span class="n">preprocess_sonde_data</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span> <span class="n">pressure</span><span class="o">=</span><span class="n">pressure</span><span class="p">,</span>
-                                <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">smooth_height</span><span class="o">=</span><span class="n">smooth_height</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">)</span>
+    <span class="n">ds2</span> <span class="o">=</span> <span class="n">preprocess_sonde_data</span><span class="p">(</span>
+        <span class="n">ds</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span>
+        <span class="n">pressure</span><span class="o">=</span><span class="n">pressure</span><span class="p">,</span>
+        <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
+        <span class="n">smooth_height</span><span class="o">=</span><span class="n">smooth_height</span><span class="p">,</span>
+        <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">,</span>
+    <span class="p">)</span>
 
     <span class="c1"># Get data</span>
     <span class="n">pres</span> <span class="o">=</span> <span class="n">ds2</span><span class="p">[</span><span class="n">pressure</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -706,25 +926,25 @@
     <span class="c1"># For each layer, calculate the difference in theta from</span>
     <span class="c1"># top and bottom of the layer.  The lowest layer where the</span>
     <span class="c1"># difference is &gt; 2 K is set as the PBL.</span>
-    <span class="n">pbl</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="n">pbl</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="n">theta_diff_layer</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">bottom_inversion</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">top_inversion</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">agl</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="mf">4000.</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">agl</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="mf">4000.0</span><span class="p">:</span>
             <span class="k">continue</span>
         <span class="n">theta_diff</span> <span class="o">=</span> <span class="n">theta</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">-</span> <span class="n">theta</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
         <span class="n">theta_diff_layer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">theta_diff</span><span class="p">)</span>
         <span class="n">bottom_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
         <span class="n">top_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
-        <span class="k">if</span> <span class="n">pbl</span> <span class="o">==</span> <span class="mf">0.</span> <span class="ow">and</span> <span class="n">theta_diff</span> <span class="o">&gt;</span> <span class="mf">2.0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">pbl</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="n">theta_diff</span> <span class="o">&gt;</span> <span class="mf">2.0</span><span class="p">:</span>
             <span class="n">pbl</span> <span class="o">=</span> <span class="n">alt</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">theta_diff_layer</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">pbl</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9999.</span>
+        <span class="n">pbl</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9999.0</span>
 
     <span class="c1"># If PBL is not set, set it to the layer with the max theta diff</span>
-    <span class="k">if</span> <span class="n">pbl</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">pbl</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
         <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">theta_diff_layer</span><span class="p">)</span>
         <span class="n">pbl</span> <span class="o">=</span> <span class="n">bottom_inversion</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
 
@@ -746,23 +966,33 @@
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;alt_ss&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
 
     <span class="n">atts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bottom height of inversion layers&#39;</span><span class="p">}</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">bottom_inversion</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;layers&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bottom_inversion</span><span class="p">)))},</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">],</span> <span class="n">attrs</span><span class="o">=</span><span class="n">atts</span><span class="p">)</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+        <span class="n">bottom_inversion</span><span class="p">,</span>
+        <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;layers&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bottom_inversion</span><span class="p">)))},</span>
+        <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">],</span>
+        <span class="n">attrs</span><span class="o">=</span><span class="n">atts</span><span class="p">,</span>
+    <span class="p">)</span>
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;bottom_inversion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
 
     <span class="n">atts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Top height of inversion layers&#39;</span><span class="p">}</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">top_inversion</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;layers&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">top_inversion</span><span class="p">)))},</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">],</span> <span class="n">attrs</span><span class="o">=</span><span class="n">atts</span><span class="p">)</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+        <span class="n">top_inversion</span><span class="p">,</span>
+        <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;layers&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">top_inversion</span><span class="p">)))},</span>
+        <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">],</span>
+        <span class="n">attrs</span><span class="o">=</span><span class="n">atts</span><span class="p">,</span>
+    <span class="p">)</span>
     <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;top_inversion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
 
-    <span class="k">return</span> <span class="n">ds</span>
+    <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<span class="k">def</span> <span class="nf">preprocess_sonde_data</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_sonde_data</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">temperature</span><span class="o">=</span><span class="s1">&#39;tdry&#39;</span><span class="p">,</span>
     <span class="n">pressure</span><span class="o">=</span><span class="s1">&#39;pres&#39;</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="s1">&#39;alt&#39;</span><span class="p">,</span>
     <span class="n">smooth_height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">base</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span>
+    <span class="n">base</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function for processing the SONDE data for the PBL calculations.</span>
@@ -838,7 +1068,7 @@
     <span class="n">temp</span> <span class="o">=</span> <span class="n">ds2</span><span class="p">[</span><span class="n">temperature</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
     <span class="c1"># Perform Pre-processing checks</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No data in profile&#39;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">alt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1000.0</span><span class="p">:</span>
@@ -875,41 +1105,79 @@
 
     <span class="k">return</span> <span class="n">ds2</span>
 </pre></div>
-<div class="section">
+<div class="section ablog__blog_comments">
    
 </div>
 
-              </div>
+                </article>
               
               
-              <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
 </div>
+                </footer>
               
-          </main>
-          
-
-      </div>
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
     
-    <div class="footer-item">
-      <p class="copyright">
-    &copy; Copyright 2018-2022, ACT Developers.<br>
-</p>
+      © Copyright 2018-2024, ACT Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
     </div>
-    
-  </div>
-</footer>
+  
+</div>
+
+  </footer>
   </body>
 </html>

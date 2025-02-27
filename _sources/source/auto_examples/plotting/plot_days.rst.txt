@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_plotting_plot_days.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -26,7 +26,7 @@ of wind speed and temperature grouped by day.
 
 Author: Bobby Jackson
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-30
+.. GENERATED FROM PYTHON SOURCE LINES 10-48
 
 
 
@@ -36,61 +36,42 @@ Author: Bobby Jackson
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/xarray/core/accessor_dt.py:72: FutureWarning: Index.ravel returning ndarray is deprecated; in a future version this will return a view on self.
-      values_as_series = pd.Series(values.ravel(), copy=False)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
-      arr.append(np.nanmean(data[idx]))
 
 
 
+.. code-block:: Python
 
 
-
-|
-
-.. code-block:: default
-
-
+    from arm_test_data import DATASETS
     import matplotlib.pyplot as plt
-    import numpy as np
+
     import act
 
     # Read in the sample MET data
-    ds = act.io.armfiles.read_netcdf(act.tests.EXAMPLE_MET_WILDCARD)
+    met_wildcard_list = [
+        'sgpmetE13.b1.20190101.000000.cdf',
+        'sgpmetE13.b1.20190102.000000.cdf',
+        'sgpmetE13.b1.20190103.000000.cdf',
+        'sgpmetE13.b1.20190104.000000.cdf',
+        'sgpmetE13.b1.20190105.000000.cdf',
+        'sgpmetE13.b1.20190106.000000.cdf',
+        'sgpmetE13.b1.20190107.000000.cdf',
+    ]
+    met_filenames = [DATASETS.fetch(file) for file in met_wildcard_list]
+    ds = act.io.arm.read_arm_netcdf(met_filenames)
 
     # Create Plot Display
     display = act.plotting.WindRoseDisplay(ds, figsize=(15, 15), subplot_shape=(3, 3))
     groupby = display.group_by('day')
-    groupby.plot_group('plot_data', None, dir_field='wdir_vec_mean', spd_field='wspd_vec_mean',
-                       data_field='temp_mean', num_dirs=12, plot_type='line')
+    groupby.plot_group(
+        'plot_data',
+        None,
+        dir_field='wdir_vec_mean',
+        spd_field='wspd_vec_mean',
+        data_field='temp_mean',
+        num_dirs=12,
+        plot_type='line',
+    )
 
     # Set theta tick markers for each axis inside display to be inside the polar axes
     for i in range(3):
@@ -102,7 +83,7 @@ Author: Bobby Jackson
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.720 seconds)
+   **Total running time of the script:** (0 minutes 2.805 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_days.py:
@@ -111,16 +92,17 @@ Author: Bobby Jackson
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_days.ipynb <plot_days.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_days.py <plot_days.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_days.ipynb <plot_days.ipynb>`
+      :download:`Download zipped: plot_days.zip <plot_days.zip>`
 
 
 .. only:: html

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_plotting_plot_wind_rose.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -24,7 +24,7 @@ Windrose and windbarb timeseries plot
 This is an example of how to display wind rose and barb timeseries
 from multiple days worth of sounding data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-30
+.. GENERATED FROM PYTHON SOURCE LINES 9-59
 
 
 
@@ -37,15 +37,44 @@ from multiple days worth of sounding data.
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
+    from arm_test_data import DATASETS
     import numpy as np
     from matplotlib import pyplot as plt
 
     import act
 
-    sonde_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_TWP_SONDE_WILDCARD)
+    # Read in sonde files
+    twp_sonde_wildcard_list = [
+        'twpsondewnpnC3.b1.20060119.050300.custom.cdf',
+        'twpsondewnpnC3.b1.20060119.112000.custom.cdf',
+        'twpsondewnpnC3.b1.20060119.163300.custom.cdf',
+        'twpsondewnpnC3.b1.20060119.231600.custom.cdf',
+        'twpsondewnpnC3.b1.20060120.043800.custom.cdf',
+        'twpsondewnpnC3.b1.20060120.111900.custom.cdf',
+        'twpsondewnpnC3.b1.20060120.170800.custom.cdf',
+        'twpsondewnpnC3.b1.20060120.231500.custom.cdf',
+        'twpsondewnpnC3.b1.20060121.051500.custom.cdf',
+        'twpsondewnpnC3.b1.20060121.111600.custom.cdf',
+        'twpsondewnpnC3.b1.20060121.171600.custom.cdf',
+        'twpsondewnpnC3.b1.20060121.231600.custom.cdf',
+        'twpsondewnpnC3.b1.20060122.052600.custom.cdf',
+        'twpsondewnpnC3.b1.20060122.111500.custom.cdf',
+        'twpsondewnpnC3.b1.20060122.171800.custom.cdf',
+        'twpsondewnpnC3.b1.20060122.232600.custom.cdf',
+        'twpsondewnpnC3.b1.20060123.052500.custom.cdf',
+        'twpsondewnpnC3.b1.20060123.111700.custom.cdf',
+        'twpsondewnpnC3.b1.20060123.171600.custom.cdf',
+        'twpsondewnpnC3.b1.20060123.231500.custom.cdf',
+        'twpsondewnpnC3.b1.20060124.051500.custom.cdf',
+        'twpsondewnpnC3.b1.20060124.111800.custom.cdf',
+        'twpsondewnpnC3.b1.20060124.171700.custom.cdf',
+        'twpsondewnpnC3.b1.20060124.231500.custom.cdf',
+    ]
+    sonde_filenames = [DATASETS.fetch(file) for file in twp_sonde_wildcard_list]
+    sonde_ds = act.io.arm.read_arm_netcdf(sonde_filenames)
 
     WindDisplay = act.plotting.WindRoseDisplay(sonde_ds, figsize=(8, 10), subplot_shape=(2,))
     WindDisplay.plot(
@@ -64,7 +93,7 @@ from multiple days worth of sounding data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.568 seconds)
+   **Total running time of the script:** (0 minutes 1.569 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_wind_rose.py:
@@ -73,16 +102,17 @@ from multiple days worth of sounding data.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_wind_rose.ipynb <plot_wind_rose.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_wind_rose.py <plot_wind_rose.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_wind_rose.ipynb <plot_wind_rose.ipynb>`
+      :download:`Download zipped: plot_wind_rose.zip <plot_wind_rose.zip>`
 
 
 .. only:: html

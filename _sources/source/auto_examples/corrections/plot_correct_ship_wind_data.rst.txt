@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_corrections_plot_correct_ship_wind_data.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,7 +25,7 @@ This example shows how to calculate course and speed
 over ground of the ship and use it to correct the
 wind speed and direction data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-34
+.. GENERATED FROM PYTHON SOURCE LINES 9-37
 
 
 
@@ -33,21 +33,24 @@ wind speed and direction data.
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
+    from arm_test_data import DATASETS
     import xarray as xr
 
     import act
 
     # Read in the navigation data, mainly for the lat/lon
-    nav_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_NAV)
+    filename_nav = DATASETS.fetch('marnavM1.a1.20180201.000000.nc')
+    nav_ds = act.io.arm.read_arm_netcdf(filename_nav)
 
     # Calculate course and speed over ground from the NAV
     # lat and lon data
     nav_ds = act.utils.ship_utils.calc_cog_sog(nav_ds)
 
     # Read in the data containing the wind speed and direction
-    aosmet_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_AOSMET)
+    filename_aosmet = DATASETS.fetch('maraosmetM1.a1.20180201.000000.nc')
+    aosmet_ds = act.io.arm.read_arm_netcdf(filename_aosmet)
 
     # Merge the navigation and wind data together
     # This have been previously resampled to 1-minute data
@@ -64,7 +67,7 @@ wind speed and direction data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.837 seconds)
+   **Total running time of the script:** (0 minutes 4.211 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_corrections_plot_correct_ship_wind_data.py:
@@ -73,16 +76,17 @@ wind speed and direction data.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_correct_ship_wind_data.ipynb <plot_correct_ship_wind_data.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_correct_ship_wind_data.py <plot_correct_ship_wind_data.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_correct_ship_wind_data.ipynb <plot_correct_ship_wind_data.ipynb>`
+      :download:`Download zipped: plot_correct_ship_wind_data.zip <plot_correct_ship_wind_data.zip>`
 
 
 .. only:: html

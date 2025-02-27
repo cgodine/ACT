@@ -12,7 +12,7 @@ Author: Adam Theisen
 import act
 
 # Create an empty dataset using an ARM DOD
-ds = act.io.armfiles.create_ds_from_arm_dod('vdis.b1', {'time': 1440}, scalar_fill_dim='time')
+ds = act.io.arm.create_ds_from_arm_dod('vdis.b1', {'time': 1440}, scalar_fill_dim='time')
 
 # Print out the xarray dataset to see that it's empty
 print(ds)
@@ -37,7 +37,7 @@ atts = {
     'command_line': 'python  plot_create_arm_ds.py',
     'process_version': '1.2.3',
     'history': 'Processed with Jupyter Workbench',
-    'random': '1234253sdgfadf'
+    'random': '1234253sdgfadf',
 }
 for a in atts:
     if a in ds.attrs:

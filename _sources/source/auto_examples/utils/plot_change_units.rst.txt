@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_utils_plot_change_units.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -24,7 +24,7 @@ Changing units in dataset
 This is an example of how to change
 units in the xarray dataset.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-64
+.. GENERATED FROM PYTHON SOURCE LINES 9-66
 
 
 
@@ -46,19 +46,19 @@ units in the xarray dataset.
     Variables with both changed to km
     first_cbh: mean=0.6773227453231812 units=km
     second_cbh: mean=0.8723457455635071 units=km
-    alt: mean=0.318 units=km
+    alt: mean=0.31800001859664917 units=km
 
     Variables changed back to m by looping over all variables in dataset
     Orginal dataset is same as retured dataset: True
     first_cbh: mean=677.3226928710938 units=m
     second_cbh: mean=872.345703125 units=m
-    alt: mean=318.0 units=m
+    alt: mean=318.0000305175781 units=m
 
     Variables and coordinate variable values changed to km
     Orginal dataset is same as retured dataset: False
     first_cbh: mean=0.6773227453231812 units=km
     second_cbh: mean=0.8723457455635071 units=km
-    alt: mean=0.318 units=km
+    alt: mean=0.31800004839897156 units=km
     range: mean=3.7800002098083496 units=km
 
 
@@ -69,9 +69,10 @@ units in the xarray dataset.
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
+    from arm_test_data import DATASETS
     import numpy as np
 
     import act
@@ -89,7 +90,8 @@ units in the xarray dataset.
     variables = ['first_cbh', 'second_cbh', 'alt']
 
     # Read in some example data
-    ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_CEIL1)
+    filename_ceil = DATASETS.fetch('sgpceilC1.b1.20190101.000000.nc')
+    ds = act.io.arm.read_arm_netcdf(filename_ceil)
 
     # Print the variable name, mean of values and units
     print('Variables in read data')
@@ -130,7 +132,7 @@ units in the xarray dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.787 seconds)
+   **Total running time of the script:** (0 minutes 3.562 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_utils_plot_change_units.py:
@@ -139,16 +141,17 @@ units in the xarray dataset.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_change_units.ipynb <plot_change_units.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_change_units.py <plot_change_units.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_change_units.ipynb <plot_change_units.ipynb>`
+      :download:`Download zipped: plot_change_units.zip <plot_change_units.zip>`
 
 
 .. only:: html

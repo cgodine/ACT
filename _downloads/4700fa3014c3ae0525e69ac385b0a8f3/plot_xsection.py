@@ -7,21 +7,21 @@ plot up cross-sectional slices through the
 multi-dimensional dataset
 """
 
-from datetime import datetime
 
+from arm_test_data import DATASETS
 import matplotlib.pyplot as plt
-import xarray as xr
 
 import act
 
-my_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_VISST)
+filename_visst = DATASETS.fetch('twpvisstgridirtemp.c1.20050705.002500.nc')
+my_ds = act.io.arm.read_arm_netcdf(filename_visst)
 
 # Cross section display requires that the variable being plotted be reduced to two
 # Dimensions whose coordinates can be specified by variables in the file
 display = act.plotting.XSectionDisplay(my_ds, figsize=(20, 8), subplot_shape=(2, 2))
 display.plot_xsection_map(
-    None,
     'ir_temperature',
+    None,
     x='longitude',
     y='latitude',
     cmap='Greys',
@@ -30,8 +30,8 @@ display.plot_xsection_map(
     subplot_index=(0, 0),
 )
 display.plot_xsection_map(
-    None,
     'ir_temperature',
+    None,
     x='longitude',
     y='latitude',
     cmap='Greys',
@@ -40,8 +40,8 @@ display.plot_xsection_map(
     subplot_index=(1, 0),
 )
 display.plot_xsection_map(
-    None,
     'ir_temperature',
+    None,
     x='longitude',
     y='latitude',
     cmap='Greys',
@@ -50,8 +50,8 @@ display.plot_xsection_map(
     subplot_index=(0, 1),
 )
 display.plot_xsection_map(
-    None,
     'ir_temperature',
+    None,
     x='longitude',
     y='latitude',
     cmap='Greys',

@@ -13,7 +13,11 @@
 .. autosummary::
     :toctree: .
     
+    CleanDataset
+    
     QCFilter
+    
+    QCSummary
     
     QCTests
     

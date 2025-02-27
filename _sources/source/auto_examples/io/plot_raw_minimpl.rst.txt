@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_io_plot_raw_minimpl.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -51,8 +51,6 @@ Author: Adam Theisen
     ##
     ##     JJ Helmus and SM Collis, JORS 2016, doi: 10.5334/jors.119
 
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/pyart/graph/radardisplay.py:99: UserWarning: RadarDisplay does not correct for moving platforms
-      warnings.warn("RadarDisplay does not correct for moving platforms")
 
 
 
@@ -61,10 +59,10 @@ Author: Adam Theisen
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
-
+    from arm_test_data import DATASETS
     from matplotlib import pyplot as plt
 
     import act
@@ -77,8 +75,8 @@ Author: Adam Theisen
         PYART_AVAILABLE = False
 
     # Read in sample mini-MPL data
-    files = act.tests.sample_files.EXAMPLE_SIGMA_MPLV5
-    ds = act.io.mpl.read_sigma_mplv5(files)
+    filename_mpl = DATASETS.fetch('201509021500.bi')
+    ds = act.io.mpl.read_sigma_mplv5(filename_mpl)
 
     # Create a PyART Radar Object
     radar = act.utils.create_pyart_obj(
@@ -94,7 +92,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.761 seconds)
+   **Total running time of the script:** (0 minutes 0.937 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_io_plot_raw_minimpl.py:
@@ -103,16 +101,17 @@ Author: Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_raw_minimpl.ipynb <plot_raw_minimpl.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_raw_minimpl.py <plot_raw_minimpl.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_raw_minimpl.ipynb <plot_raw_minimpl.ipynb>`
+      :download:`Download zipped: plot_raw_minimpl.zip <plot_raw_minimpl.zip>`
 
 
 .. only:: html

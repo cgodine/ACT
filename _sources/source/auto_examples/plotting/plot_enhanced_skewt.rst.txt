@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_plotting_plot_enhanced_skewt.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -26,7 +26,7 @@ which includes a Skew-T plot, hodograph, and stability indicies.
 
 Author: Adam Theisen
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-29
+.. GENERATED FROM PYTHON SOURCE LINES 11-28
 
 
 
@@ -36,33 +36,21 @@ Author: Adam Theisen
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/act/retrievals/sonde.py:183: UserWarning: Interpolation point out of data bounds encountered
-      lfc = mpcalc.lfc(p_sorted[0], t_sorted[0], td_sorted[0])
 
 
 
+.. code-block:: Python
 
 
 
-|
-
-.. code-block:: default
-
-
-    import glob
-    import metpy
-    import numpy as np
-    import xarray as xr
+    from arm_test_data import DATASETS
     from matplotlib import pyplot as plt
+
     import act
 
     # Read data
-    file = sorted(glob.glob(act.tests.sample_files.EXAMPLE_SONDE1))
-    ds = act.io.armfiles.read_netcdf(file)
+    filename_sonde = DATASETS.fetch('sgpsondewnpnC1.b1.20190101.053200.cdf')
+    ds = act.io.arm.read_arm_netcdf(filename_sonde)
 
     # Plot enhanced Skew-T plot
     display = act.plotting.SkewTDisplay(ds)
@@ -74,7 +62,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.971 seconds)
+   **Total running time of the script:** (0 minutes 0.477 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_enhanced_skewt.py:
@@ -83,16 +71,17 @@ Author: Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_enhanced_skewt.ipynb <plot_enhanced_skewt.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_enhanced_skewt.py <plot_enhanced_skewt.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_enhanced_skewt.ipynb <plot_enhanced_skewt.ipynb>`
+      :download:`Download zipped: plot_enhanced_skewt.zip <plot_enhanced_skewt.zip>`
 
 
 .. only:: html

@@ -10,21 +10,23 @@ data using xarray and plot/write out the results.
 
 """
 
-import act
-import xarray as xr
+from arm_test_data import DATASETS
 import matplotlib.pyplot as plt
+import xarray as xr
+
+import act
 
 # Set data files
 # An alternative to this is to download data from the
 # ARM Data Webservice as shown in the discovery plot_neon.py example
-ebbr_file = act.tests.sample_files.EXAMPLE_EBBR3
-ecor_file = act.tests.sample_files.EXAMPLE_ECOR
-sebs_file = act.tests.sample_files.EXAMPLE_SEBS
+ebbr_file = DATASETS.fetch('sgp30ebbrE13.b1.20190601.000000.nc')
+ecor_file = DATASETS.fetch('sgp30ecorE14.b1.20190601.000000.cdf')
+sebs_file = DATASETS.fetch('sgpsebsE14.b1.20190601.000000.cdf')
 
 # Read data into datasets
-ds_ebbr = act.io.armfiles.read_netcdf(ebbr_file)
-ds_ecor = act.io.armfiles.read_netcdf(ecor_file)
-ds_sebs = act.io.armfiles.read_netcdf(sebs_file)
+ds_ebbr = act.io.arm.read_arm_netcdf(ebbr_file)
+ds_ecor = act.io.arm.read_arm_netcdf(ecor_file)
+ds_sebs = act.io.arm.read_arm_netcdf(sebs_file)
 
 # Check for ARM DQRs and add them to the QC variables
 ds_ebbr = act.qc.arm.add_dqr_to_qc(ds_ebbr)
@@ -34,7 +36,7 @@ ds_sebs = act.qc.arm.add_dqr_to_qc(ds_sebs)
 # The ECOR and EBBR have different definitions of latent heat
 # flux and what is positive vs negative.  Check out the ARM
 # Handbooks for more information
-ds_ecor['lv_e'].values = ds_ecor['lv_e'].values * -1.
+ds_ecor['lv_e'].values = ds_ecor['lv_e'].values * -1.0
 
 # For example purposes, let's rename the ecor latent heat flux
 ds_ecor = ds_ecor.rename({'lv_e': 'latent_heat_flux_ecor'})
@@ -56,7 +58,9 @@ ds_ebbr = act.utils.datetime_utils.adjust_timestamp(ds_ebbr, offset=-30 * 60)
 ds = xr.merge([ds_ecor, ds_ebbr, ds_sebs], compat='override')
 
 # Apply the QC information to set all flagged data to missing/NaN
-ds.qcfilter.datafilter(del_qc_var=False, rm_assessments=['Bad', 'Incorrect', 'Indeterminate', 'Suspect'])
+ds.qcfilter.datafilter(
+    del_qc_var=False, rm_assessments=['Bad', 'Incorrect', 'Indeterminate', 'Suspect']
+)
 
 # Plot up data from the merged dataset for each of the instruments
 display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10), subplot_shape=(3,))

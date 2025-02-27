@@ -28,16 +28,19 @@ act.qc.QCFilter
    ~QCFilter.add_not_equal_to_test
    ~QCFilter.add_outside_test
    ~QCFilter.add_persistence_test
+   ~QCFilter.add_step_change_test
    ~QCFilter.add_test
    ~QCFilter.available_bit
    ~QCFilter.bsrn_comparison_tests
    ~QCFilter.bsrn_limits_test
    ~QCFilter.check_for_ancillary_qc
    ~QCFilter.compare_time_series_trends
+   ~QCFilter.create_qc_summary
    ~QCFilter.create_qc_variable
    ~QCFilter.datafilter
    ~QCFilter.get_masked_data
    ~QCFilter.get_qc_test_mask
+   ~QCFilter.normalized_rradiance_test
    ~QCFilter.remove_test
    ~QCFilter.set_test
    ~QCFilter.unset_test

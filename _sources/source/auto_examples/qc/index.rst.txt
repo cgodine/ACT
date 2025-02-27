@@ -15,6 +15,7 @@ Examples showing different ways to apply quality control to your data.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -35,7 +36,7 @@ Examples showing different ways to apply quality control to your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use 2 dimentional DataArrays containing multiple 1 dimentional dat...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use 2 dimentional DataArrays containing multiple 1 dimentional data, including a summary quality control plot showing the tests for each 1 dimentional data slice. This example uses the force_line_plot keyword which will force multiple 1 dimentional plots for each element along the second dimention of the non-time dimention.">
 
 .. only:: html
 
@@ -52,7 +53,24 @@ Examples showing different ways to apply quality control to your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Simple example for applying BSRN QC and plotting the data and the corresponding QC flags using ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example for how to use the step change detection test. The test uses the cumulative sum control chart to detect when a sudden shift in values occurs. It has an option to insert NaN value when there is a data gap to not have those periods returned as a data shift. This example produces two plots, one with the data gap flagged and one without.">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/qc/images/thumb/sphx_glr_plot_qc_step_change_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_qc_plot_qc_step_change.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting flagged data gaps with a step change test</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Simple example for applying BSRN QC and plotting the data and the corresponding QC flags using colorblind friendly colors. https://bsrn.awi.de/data/quality-checks/">
 
 .. only:: html
 
@@ -69,7 +87,7 @@ Examples showing different ways to apply quality control to your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control varibles. All the tests...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control varibles. All the tests are located in act/qc/qctests.py file but called under the qcfilter method.">
 
 .. only:: html
 
@@ -86,7 +104,7 @@ Examples showing different ways to apply quality control to your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control varibles and extend the...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control variables and extend the quality control flagging. The anicllary quality control variable can be expanded by integrating external Data Quality Reports, adding additional generic ACT tests, instrument specific ACT tests, or reading a configuration file of known failures to clean up the data variable.">
 
 .. only:: html
 
@@ -101,6 +119,8 @@ Examples showing different ways to apply quality control to your data.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -111,6 +131,7 @@ Examples showing different ways to apply quality control to your data.
 
    /source/auto_examples/qc/plot_dqr_qc
    /source/auto_examples/qc/plot_force_line_qc
+   /source/auto_examples/qc/plot_qc_step_change
    /source/auto_examples/qc/plot_qc_bsrn
    /source/auto_examples/qc/plot_qc_example
    /source/auto_examples/qc/plot_arm_qc

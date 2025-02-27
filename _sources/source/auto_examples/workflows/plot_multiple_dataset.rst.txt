@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_source_auto_examples_workflows_plot_multiple_dataset.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -24,7 +24,7 @@ Plot multiple datasets
 This is an example of how to download and
 plot multiple datasets at a time.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-56
+.. GENERATED FROM PYTHON SOURCE LINES 9-63
 
 
 
@@ -49,11 +49,12 @@ plot multiple datasets at a time.
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import os
 
+    from arm_test_data import DATASETS
     import matplotlib.pyplot as plt
 
     import act
@@ -65,14 +66,20 @@ plot multiple datasets at a time.
     # Get data from the web service if username and token are available
     # if not, use test data
     if username is None or token is None or len(username) == 0 or len(token) == 0:
-        ceil_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_CEIL1)
-        met_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_MET1)
+        filename_ceil = DATASETS.fetch('sgpceilC1.b1.20190101.000000.nc')
+        ceil_ds = act.io.arm.read_arm_netcdf(filename_ceil)
+        filename_met = DATASETS.fetch('sgpmetE13.b1.20190101.000000.cdf')
+        met_ds = act.io.arm.read_arm_netcdf(filename_met)
     else:
         # Download and read data
-        results = act.discovery.download_data(username, token, 'sgpceilC1.b1', '2022-01-01', '2022-01-07')
-        ceil_ds = act.io.armfiles.read_netcdf(results)
-        results = act.discovery.download_data(username, token, 'sgpmetE13.b1', '2022-01-01', '2022-01-07')
-        met_ds = act.io.armfiles.read_netcdf(results)
+        results = act.discovery.download_arm_data(
+            username, token, 'sgpceilC1.b1', '2022-01-01', '2022-01-07'
+        )
+        ceil_ds = act.io.arm.read_arm_netcdf(results)
+        results = act.discovery.download_arm_data(
+            username, token, 'sgpmetE13.b1', '2022-01-01', '2022-01-07'
+        )
+        met_ds = act.io.arm.read_arm_netcdf(results)
 
     # Read in CEIL data and correct it
     ceil_ds = act.corrections.ceil.correct_ceil(ceil_ds, -9999.0)
@@ -102,7 +109,7 @@ plot multiple datasets at a time.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.655 seconds)
+   **Total running time of the script:** (0 minutes 5.104 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_workflows_plot_multiple_dataset.py:
@@ -111,16 +118,17 @@ plot multiple datasets at a time.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_multiple_dataset.ipynb <plot_multiple_dataset.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_multiple_dataset.py <plot_multiple_dataset.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_multiple_dataset.ipynb <plot_multiple_dataset.ipynb>`
+      :download:`Download zipped: plot_multiple_dataset.zip <plot_multiple_dataset.zip>`
 
 
 .. only:: html

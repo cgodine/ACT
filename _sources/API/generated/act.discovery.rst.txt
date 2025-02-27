@@ -15,13 +15,15 @@
 .. autosummary::
     :toctree: .
     
-    croptype
+    download_arm_data
     
-    download_data
+    download_mplnet_data
     
     download_neon_data
     
     download_noaa_psl_data
+    
+    download_surfrad_data
     
     get_airnow_bounded_obs
     
@@ -31,10 +33,16 @@
     
     get_arm_doi
     
-    get_asos
+    get_asos_data
     
-    get_product_avail
+    get_crop_type
     
-    get_site_products
+    get_improve_data
+    
+    get_mplnet_meta
+    
+    get_neon_product_avail
+    
+    get_neon_site_products
     
 
