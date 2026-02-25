@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -47,9 +47,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -65,7 +65,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="act.discovery.download_ameriflux_data" href="act.discovery.download_ameriflux_data.html" />
-    <link rel="prev" title="act.corrections.correct_wind" href="act.corrections.correct_wind.html" /> 
+    <link rel="prev" title="act.corrections.correct_wind_for_ship_motion" href="act.corrections.correct_wind_for_ship_motion.html" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="0.0" /> 
@@ -173,7 +173,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../source/auto_examples/index.html">
+  <a class="nav-link nav-internal" href="../../auto_examples/index.html">
     ACT Example Gallery
   </a>
 </li>
@@ -313,7 +313,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../source/auto_examples/index.html">
+  <a class="nav-link nav-internal" href="../../auto_examples/index.html">
     ACT Example Gallery
   </a>
 </li>
@@ -381,12 +381,13 @@
 <li class="toctree-l2"><a class="reference internal" href="act.corrections.correct_dl.html">act.corrections.correct_dl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.corrections.correct_mpl.html">act.corrections.correct_mpl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.corrections.correct_rl.html">act.corrections.correct_rl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="act.corrections.correct_wind.html">act.corrections.correct_wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.corrections.correct_wind_for_ship_motion.html">act.corrections.correct_wind_for_ship_motion</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">act.discovery</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="act.discovery.download_ameriflux_data.html">act.discovery.download_ameriflux_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.discovery.download_arm_data.html">act.discovery.download_arm_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.discovery.download_arm_data_mod.html">act.discovery.download_arm_data_mod</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.discovery.download_mplnet_data.html">act.discovery.download_mplnet_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.discovery.download_neon_data.html">act.discovery.download_neon_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.discovery.download_noaa_psl_data.html">act.discovery.download_noaa_psl_data</a></li>
@@ -521,6 +522,7 @@
 <li class="toctree-l3"><a class="reference internal" href="act.plotting.TimeSeriesDisplay.set_xrng.html">act.plotting.TimeSeriesDisplay.set_xrng</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.plotting.TimeSeriesDisplay.set_yrng.html">act.plotting.TimeSeriesDisplay.set_yrng</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.plotting.TimeSeriesDisplay.time_height_scatter.html">act.plotting.TimeSeriesDisplay.time_height_scatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.plotting.TimeSeriesDisplay.wind_quiver_plot.html">act.plotting.TimeSeriesDisplay.wind_quiver_plot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="act.plotting.WindRoseDisplay.html">act.plotting.WindRoseDisplay</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -583,6 +585,7 @@
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.add_not_equal_to_test.html">act.qc.QCFilter.add_not_equal_to_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.add_outside_test.html">act.qc.QCFilter.add_outside_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.add_persistence_test.html">act.qc.QCFilter.add_persistence_test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.add_relative_variability_test.html">act.qc.QCFilter.add_relative_variability_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.add_step_change_test.html">act.qc.QCFilter.add_step_change_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.add_test.html">act.qc.QCFilter.add_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.available_bit.html">act.qc.QCFilter.available_bit</a></li>
@@ -595,6 +598,7 @@
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.datafilter.html">act.qc.QCFilter.datafilter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.get_masked_data.html">act.qc.QCFilter.get_masked_data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.get_qc_test_mask.html">act.qc.QCFilter.get_qc_test_mask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.merge_qc_variables.html">act.qc.QCFilter.merge_qc_variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.normalized_rradiance_test.html">act.qc.QCFilter.normalized_rradiance_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.remove_test.html">act.qc.QCFilter.remove_test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.qc.QCFilter.set_test.html">act.qc.QCFilter.set_test</a></li>
@@ -626,8 +630,10 @@
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.aeri2irt.html">act.retrievals.aeri2irt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calc_sp2_diams_masses.html">act.retrievals.calc_sp2_diams_masses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_dsh_from_dsdh_sdn.html">act.retrievals.calculate_dsh_from_dsdh_sdn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_gradient_pbl.html">act.retrievals.calculate_gradient_pbl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_irradiance_stats.html">act.retrievals.calculate_irradiance_stats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_longwave_radiation.html">act.retrievals.calculate_longwave_radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_modified_gradient_pbl.html">act.retrievals.calculate_modified_gradient_pbl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_net_radiation.html">act.retrievals.calculate_net_radiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_pbl_heffter.html">act.retrievals.calculate_pbl_heffter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="act.retrievals.calculate_pbl_liu_liang.html">act.retrievals.calculate_pbl_liu_liang</a></li>
@@ -758,12 +764,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                    <section id="act-discovery">
-<h1>act.discovery<a class="headerlink" href="#act-discovery" title="Permalink to this heading">#</a></h1>
+<h1>act.discovery<a class="headerlink" href="#act-discovery" title="Link to this heading">#</a></h1>
 <p class="rubric">Description</p>
-<span class="target" id="module-act.discovery"></span><p>This module contains procedures for exploring and downloading data
+<p id="module-act.discovery">This module contains procedures for exploring and downloading data
 from a variety of web services</p>
 <p class="rubric">Functions</p>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_ameriflux_data.html#act.discovery.download_ameriflux_data" title="act.discovery.download_ameriflux_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_ameriflux_data</span></code></a>(user_id, user_email, ...)</p></td>
 <td><p>This tool will allows users to download Ameriflux data.</p></td>
@@ -771,46 +777,49 @@ from a variety of web services</p>
 <tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_arm_data.html#act.discovery.download_arm_data" title="act.discovery.download_arm_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_arm_data</span></code></a>(username, token, ...[, ...])</p></td>
 <td><p>This tool will help users utilize the ARM Live Data Webservice to download ARM data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_mplnet_data.html#act.discovery.download_mplnet_data" title="act.discovery.download_mplnet_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_mplnet_data</span></code></a>([version, level, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_arm_data_mod.html#act.discovery.download_arm_data_mod" title="act.discovery.download_arm_data_mod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_arm_data_mod</span></code></a>(username, token, file_list)</p></td>
+<td><p>This function allows for downloading ARM data from ARM's data discovery mod API: <a class="reference external" href="https://adc.arm.gov/armlive/">https://adc.arm.gov/armlive/</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_mplnet_data.html#act.discovery.download_mplnet_data" title="act.discovery.download_mplnet_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_mplnet_data</span></code></a>([version, level, ...])</p></td>
 <td><p>Function to download data from the NASA MPL Network Data <a class="reference external" href="https://mplnet.gsfc.nasa.gov/mplnet_web_services.cgi?download">https://mplnet.gsfc.nasa.gov/mplnet_web_services.cgi?download</a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_neon_data.html#act.discovery.download_neon_data" title="act.discovery.download_neon_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_neon_data</span></code></a>(site_code, product_code, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_neon_data.html#act.discovery.download_neon_data" title="act.discovery.download_neon_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_neon_data</span></code></a>(site_code, product_code, ...)</p></td>
 <td><p>Returns a list of data products available for a NEON site.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_noaa_psl_data.html#act.discovery.download_noaa_psl_data" title="act.discovery.download_noaa_psl_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_noaa_psl_data</span></code></a>([site, instrument, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_noaa_psl_data.html#act.discovery.download_noaa_psl_data" title="act.discovery.download_noaa_psl_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_noaa_psl_data</span></code></a>([site, instrument, ...])</p></td>
 <td><p>Function to download data from the NOAA PSL Profiler Network Data Library <a class="reference external" href="https://psl.noaa.gov/data/obs/datadisplay/">https://psl.noaa.gov/data/obs/datadisplay/</a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_surfrad_data.html#act.discovery.download_surfrad_data" title="act.discovery.download_surfrad_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_surfrad_data</span></code></a>([site, startdate, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_surfrad_data.html#act.discovery.download_surfrad_data" title="act.discovery.download_surfrad_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_surfrad_data</span></code></a>([site, startdate, ...])</p></td>
 <td><p>Function to download data from the NOAA Surface Radiation Budget network.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_airnow_bounded_obs.html#act.discovery.get_airnow_bounded_obs" title="act.discovery.get_airnow_bounded_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_bounded_obs</span></code></a>(token, start_date, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_airnow_bounded_obs.html#act.discovery.get_airnow_bounded_obs" title="act.discovery.get_airnow_bounded_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_bounded_obs</span></code></a>(token, start_date, ...)</p></td>
 <td><p>Get AQI values or data concentrations for a specific date and time range and set of parameters within a geographic area of intrest <a class="reference external" href="https://docs.airnowapi.org/">https://docs.airnowapi.org/</a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_airnow_forecast.html#act.discovery.get_airnow_forecast" title="act.discovery.get_airnow_forecast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_forecast</span></code></a>(token, date[, zipcode, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_airnow_forecast.html#act.discovery.get_airnow_forecast" title="act.discovery.get_airnow_forecast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_forecast</span></code></a>(token, date[, zipcode, ...])</p></td>
 <td><p>This tool will get current or historical AQI values and categories for a reporting area by either Zip code or Lat/Lon coordinate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_airnow_obs.html#act.discovery.get_airnow_obs" title="act.discovery.get_airnow_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_obs</span></code></a>(token[, date, zipcode, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_airnow_obs.html#act.discovery.get_airnow_obs" title="act.discovery.get_airnow_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_obs</span></code></a>(token[, date, zipcode, ...])</p></td>
 <td><p>This tool will get current or historical observed AQI values and categories for a reporting area by either Zip code or Lat/Lon coordinate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_arm_doi.html#act.discovery.get_arm_doi" title="act.discovery.get_arm_doi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_arm_doi</span></code></a>(datastream, startdate, enddate)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_arm_doi.html#act.discovery.get_arm_doi" title="act.discovery.get_arm_doi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_arm_doi</span></code></a>(datastream, startdate, enddate)</p></td>
 <td><p>This function will return a citation with DOI, if available, for specified datastream and date range</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_asos_data.html#act.discovery.get_asos_data" title="act.discovery.get_asos_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asos_data</span></code></a>(time_window[, lat_range, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_asos_data.html#act.discovery.get_asos_data" title="act.discovery.get_asos_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asos_data</span></code></a>(time_window[, lat_range, ...])</p></td>
 <td><p>Returns all of the station observations from the Iowa Mesonet from either a given latitude and longitude window or a given station code.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_crop_type.html#act.discovery.get_crop_type" title="act.discovery.get_crop_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_crop_type</span></code></a>([lat, lon, year])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_crop_type.html#act.discovery.get_crop_type" title="act.discovery.get_crop_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_crop_type</span></code></a>([lat, lon, year])</p></td>
 <td><p>Function for working with the CropScape API to get a crop type based on the lat,lon, and year entered.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_improve_data.html#act.discovery.get_improve_data" title="act.discovery.get_improve_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_improve_data</span></code></a>([site_id, parameter_id, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_improve_data.html#act.discovery.get_improve_data" title="act.discovery.get_improve_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_improve_data</span></code></a>([site_id, parameter_id, ...])</p></td>
 <td><p>Retrieve IMPROVE data for the given site and variable ids and store it in an xarray dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_mplnet_meta.html#act.discovery.get_mplnet_meta" title="act.discovery.get_mplnet_meta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mplnet_meta</span></code></a>([sites, method, year, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_mplnet_meta.html#act.discovery.get_mplnet_meta" title="act.discovery.get_mplnet_meta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mplnet_meta</span></code></a>([sites, method, year, ...])</p></td>
 <td><p>Returns a list of meta data from the NASA MPL Network Data <a class="reference external" href="https://mplnet.gsfc.nasa.gov/mplnet_web_services.cgi?metadata">https://mplnet.gsfc.nasa.gov/mplnet_web_services.cgi?metadata</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_neon_product_avail.html#act.discovery.get_neon_product_avail" title="act.discovery.get_neon_product_avail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neon_product_avail</span></code></a>(site_code, product_code)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_neon_product_avail.html#act.discovery.get_neon_product_avail" title="act.discovery.get_neon_product_avail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neon_product_avail</span></code></a>(site_code, product_code)</p></td>
 <td><p>Returns a list of data products available for a NEON site NEON sites can be found through the NEON website <a class="reference external" href="https://www.neonscience.org/field-sites/explore-field-sites">https://www.neonscience.org/field-sites/explore-field-sites</a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_neon_site_products.html#act.discovery.get_neon_site_products" title="act.discovery.get_neon_site_products"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neon_site_products</span></code></a>(site_code[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_neon_site_products.html#act.discovery.get_neon_site_products" title="act.discovery.get_neon_site_products"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neon_site_products</span></code></a>(site_code[, ...])</p></td>
 <td><p>Returns a list of data products available for a NEON site NEON sites can be found through the NEON website <a class="reference external" href="https://www.neonscience.org/field-sites/explore-field-sites">https://www.neonscience.org/field-sites/explore-field-sites</a></p></td>
 </tr>
 </tbody>
@@ -832,12 +841,12 @@ from a variety of web services</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="act.corrections.correct_wind.html"
+       href="act.corrections.correct_wind_for_ship_motion.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">act.corrections.correct_wind</p>
+        <p class="prev-next-title">act.corrections.correct_wind_for_ship_motion</p>
       </div>
     </a>
     <a class="right-next"
@@ -903,7 +912,7 @@ from a variety of web services</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
